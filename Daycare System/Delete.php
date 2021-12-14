@@ -12,6 +12,7 @@
     <head>
         <style>
             body{
+                
                 background-image: url("assets/img/background-forms.jpg");
                 color: white;
                 text-align: center
