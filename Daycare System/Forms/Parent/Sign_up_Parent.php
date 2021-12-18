@@ -21,7 +21,6 @@
 ?>
 <html>
     <head>
-    <!-- <link rel="stylesheet" href="style.css"> -->
         <meta charset="utf-8">
         <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
         <style>
@@ -54,7 +53,7 @@
 
     <body> 
         <section class="container wrapper">
-        <a href = ../../index.php><img src="../../assets/img/navbar-logo.svg" width="300px" /></a>
+            <a href = ../../index.php><img src="../../assets/img/navbar-logo.svg" width="300px" /></a>
             <h2 class="display-4 pt-3"> Sign up:</h2>
             <p class="text-center">Welcome Parents Please fill this form to create an account.</p>
             <br>
@@ -116,15 +115,8 @@
                             </td>
                         </td>
                     </tr>
-                </table>
-                
-                                
-            </form>
-            
-            <br>
-            <br>            
-            <!-- <a  href = ../../index.php><img src="../../assets/img/home-symbol.jpg" width="75px" /></a> -->
-            
+                </table>          
+            </form>          
         </section>
     </body>
 </html>

@@ -2,7 +2,6 @@
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
     //connect to db
-    //$conn = mysqli_connect('localhost', 'root', 'Pcsa0000', 'daycare');
     include '../../DB/connect_to_db.php';
     
     // Initialize sessions
@@ -19,6 +18,7 @@
         header("location: ../Employee/Shift_form.php");
         exit;
     }
+    
     //session variables
     $id = $_SESSION["id"];
     $username = $_SESSION["username"];
