@@ -1,5 +1,6 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Pcsa0000";
+#$password = "";
 ?>
