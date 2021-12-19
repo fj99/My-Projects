@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- @author: Felix -->
+<html lang="en">
+<head>
+    <style>
+        img{max-width:100%;}
+
+        .inbox_msg 
+        {
+            border: 1px solid #c4c4c4;
+            clear: both;
+            overflow: hidden;
+        }
+
+        .incoming_msg_img 
+        {
+            display: inline-block;
+            width: 6%;
+        }
+
+        .received_msg 
+        {
+            display: inline-block;
+            padding: 0 0 0 10px;
+            vertical-align: top;
+            width: 92%;
+        }
+
+        .received_withd_msg p 
+        {
+            background: #ebebeb none repeat scroll 0 0;
+            border-radius: 3px;
+            color: #646464;
+            font-size: 14px;
+            margin: 0;
+            padding: 5px 10px 5px 12px;
+            width: 100%;
+        }
+
+        .received_withd_msg {width: 57%;}
+
+        .mesgs 
+        {
+            float: left;
+            padding: 30px 15px 0 25px;
+            width: 60%;
+        }
+
+        .sent_msg p 
+        {
+            background: #05728f none repeat scroll 0 0;
+            border-radius: 3px;
+            font-size: 14px;
+            margin: 0; color:#fff;
+            padding: 5px 10px 5px 12px;
+            width:100%;
+        }
+
+        .outgoing_msg
+        { 
+            overflow:hidden;
+            margin:26px 0 26px;
+        }
+
+        .sent_msg 
+        {
+        float: right;
+        width: 46%;
+        }
+
+        .outgoing_msg_img{
+            float: right;
+            width: 6%;
+        }
+
+        .input_msg_write input {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        border: medium none;
+        color: white;
+        font-size: 15px;
+        min-height: 48px;
+        width: 100%;
+        }
+
+        .type_msg {border-top: 1px solid #c4c4c4;position: relative;}
+
+        .msg_send_btn 
+        {
+            background: #05728f none repeat scroll 0 0;
+            border: medium none;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            font-size: 17px;
+            height: 33px;
+            position: absolute;
+            right: 0;
+            top: 11px;
+            width: 33px;
+        }
+
+        .messaging 
+        { 
+            padding: 0 0 50px 0;
+            max-width:1170px; 
+            margin:auto;
+        }
+
+        #announce_person{color: white;}
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>My Chat App</title>
+</head>
+<body style="background-image: url('https://wallpaperaccess.com/full/1616109.jpg')">
+    <h3 class=" text-center text-primary" style="font-size: 20px;">You are in chat room {{room}}</h3>
+    <form id="message_input_form">
+        <div class="messaging">
+            <div class="inbox_msg" >
+                <div class="mesgs">                        
+                    <div class="incoming_msg">
+                        <div class="incoming_msg_img"><i class="fas fa-comment fa-2x text-secondary fa-flip-horizontal"></i>
+                        </div>
+                        <div class="received_msg">
+                            <div class="received_withd_msg">
+                                <p id="send_msg"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outgoing_msg">
+                        <div class="sent_msg" >
+                            <p id="messages"></p>
+                        </div>
+                        <div class="outgoing_msg_img"><i class="fas fa-comment fa-2x text-primary"></i></div>
+                    </div>
+
+                    <div id="announce_person">
+                        <i class="fa fa-user fa-lg text-secondary"></i>
+                    </div>
+                    <div class="type_msg">
+                        <div class="input_msg_write">
+                            <input type="text" class="write_msg" placeholder="Type a message" id="message_input" />
+                            <button class="btn btn-outline-primary" type="submit"><i class="far fa-paper-plane" aria-hidden="true"></i></button>
+                            <a class="btn btn-danger" href="/">Leave the chat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script>
+    const socket = io.connect("http://127.0.0.1:5000");
+    socket.on('connect', function () {
+        socket.emit('join_room', 
+        {
+            username: "{{ username }}",
+            room: "{{ room }}"
+        });
+
+        let message_input = document.getElementById('message_input');
+
+        document.getElementById('message_input_form').onsubmit = function (e) 
+        {
+            e.preventDefault();
+            let message = message_input.value.trim();
+            if (message.length) 
+            {
+                socket.emit('send_message', 
+                {
+                    username: "{{ username }}",
+                    room: "{{ room }}",
+                    message: message
+                })
+            }
+            message_input.value = '';
+            message_input.focus();
+        }
+    });
+
+    window.onbeforeunload = function () 
+    {
+        socket.emit('leave_room', 
+        {
+            username: "{{ username }}",
+            room: "{{ room }}"
+        })
+    };
+
+    socket.on('receive_message', function (data) 
+    {
+        if (data.username !== "{{username}}")
+        {
+            console.log(data);
+            const newNode = document.createElement('div');
+            newNode.innerHTML = `<b>${data.username}:&nbsp;</b> ${data.message}`;
+            document.getElementById('send_msg').appendChild(newNode);
+        }
+        else
+        {
+            console.log(data);
+            const newNode = document.createElement('div');
+            newNode.innerHTML = `<b>${data.username}:&nbsp;</b> ${data.message}`;
+            document.getElementById('messages').appendChild(newNode);
+        }
+      });
+
+    socket.on('join_room_announcement', function (data) {
+        console.log(data);
+        if (data.username !== "{{ username }}") 
+        {
+            const newNode = document.createElement('div');
+            newNode.innerHTML = `<b class="text-success">${data.username}</b> has joined the chat`;
+            document.getElementById('announce_person').appendChild(newNode);
+        }
+    });
+
+    socket.on('leave_room_announcement', function (data) 
+    {
+        console.log(data);
+        const newNode = document.createElement('div');
+        newNode.innerHTML = `<b class=text-danger>${data.username}</b> has left the chat`;
+        document.getElementById('announce_person').appendChild(newNode);
+    });
+</script>
+</html>
