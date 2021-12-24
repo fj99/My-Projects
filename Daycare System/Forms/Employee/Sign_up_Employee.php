@@ -47,6 +47,10 @@
             {
                 padding-left: 20%;
             }
+            .center {
+                margin-left: auto;
+                margin-right: auto;
+            }
         </style>
     </head>
 
@@ -57,7 +61,7 @@
             <p class="text-center">Welcome Employees Please fill this form to create an account.</p>
             <br>
             <form action = welcome_Employee.php method="POST"> 
-                <table Border="0">
+                <table Border="0" class="center">
                     <tr>
                         <td>
                             Username : <br><br>

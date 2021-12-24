@@ -51,40 +51,118 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
         <meta charset="utf-8">
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
+        <style>
+            body{
+                background-image: url("../../assets/img/background-forms.jpg");
+                color: white;
+            }
+            .wrapper a{
+                padding-left: 20%;
+            }
+            .wrapper{ 
+            width: 500px; 
+            padding: 20px; 
+            }
+            .wrapper h2 {text-align: center;}
+            .wrapper form .form-group span {color: red;}
+            .submit 
+            {
+                -moz-box-sizing: border-box; /* Firefox, other Gecko */
+                height: 35px; 
+                width:75px; 
+                font-size: 20px;
+            }
+            .end
+            {
+               
+            }
+            .center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </head>
 
     <body> 
-        <h2>Welcome To our Daycare <?php echo $fname; ?> <?php echo $lname; ?> </h2>
-        <h3>Your Username is <?php echo $username; ?> </h3><br>
-        <h3>Your email is <?php echo $email; ?> </h3><br>
-
-
-        <h3>Your date of birth is <?php echo $Date; ?> </h3><br>
-        <h3>Your Password is <?php echo $Pss; ?> </h3><br>
-           
-        <form action="<?php echo $_SERVER['PHP_SELF']; ?>"  method="POST"> 
-
-            First Name: <input type="text" name = "FirstName" value = <?php echo $fname;?>  ><br>
+        <section class="container wrapper">
+            <a href = ../../index.php><img src="../../assets/img/navbar-logo.svg" width="300px" /></a>
+            <h2 class="display-4 pt-3">Welcome To our Daycare <?php echo $fname; ?> <?php echo $lname; ?> </h2>
+            <p class="text-center">Welcome Parents Please fill this form to update your information.</p>
             <br>
-
-            Last Name: <input type="text" name = "LastName" value = <?php echo $lname;?> ><br>
-            <br>
-            
-            E-mail: <input type="email" name = "email" value = <?php echo $email;?> ><br>
-            <br>
-
-            Date of Birth: <input type="date" name = "DateOfBirth" value = <?php echo $Date;?> ><br>
-            <br>
-            
-            Password: <input type="text" name = "pass_field" value = <?php echo $Pss;?> ><br>
-            <br>
-
-            <input class="submit" name = "submit" type="submit">            
-        </form>
-        <br>
-        <br>
-        <a  href = ../../index.php><img src="../../assets/img/home-symbol.jpg" width="50px" /></a>
+            <table Border="0" class="center">
+                <tr>
+                    <th colspan="2" class="text-center">
+                        <h3>Your Username is <?php echo $username; ?> </h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="text-center">
+                        <h3>Your email is <?php echo $email; ?> </h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="text-center">
+                        <h3>Your date of birth is <?php echo $Date; ?> </h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="text-center">
+                        <h3>Your Password is <?php echo $Pss; ?> </h3> <br><br>
+                    </th>
+                </tr>
+                
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>"  method="POST"> 
+                    <tr>
+                        <td>
+                            First Name: <br><br>
+                        </td>
+                        <td>    
+                            <input type="text" name = "FirstName" value = <?php echo $fname;?>> <br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Last Name:<br><br>
+                        </td>
+                        <td>
+                            <input type="text" name = "LastName" value = <?php echo $lname;?> ><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            E-mail: <br><br>
+                        </td>
+                        <td>
+                            <input type="email" name = "email" value = <?php echo $email;?> ><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date of Birth: <br><br>
+                        </td>
+                        <td>
+                            <input type="date" name = "DateOfBirth" value = <?php echo $Date;?> ><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Password: <br><br>
+                        </td>
+                        <td>
+                            <input type="text" name = "pass_field" value = <?php echo $Pss;?> ><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <td class = "end">
+                                <input type="submit" class="submit" value = "submit" >
+                            </td>
+                        </td>
+                    </tr>                           
+                </form>
+            </table> 
+        </section>
     </body>
 </html>

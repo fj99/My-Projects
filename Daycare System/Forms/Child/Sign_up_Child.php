@@ -54,7 +54,11 @@
             }
             .end
             {
-                padding-left: 20%;
+                
+            }
+            .center {
+                margin-left: auto;
+                margin-right: auto;
             }
         </style>
     </head>
@@ -63,29 +67,63 @@
         <section class="container wrapper">
             <a href = ../../index.php><img src="../../assets/img/navbar-logo.svg" width="300px" /></a>
             <h2 class="display-4 pt-3"> Sign up:</h2>
-            <p class="text-center">Welcome Parents Please fill this form to create an account.</p>
+            <p class="text-center">Welcome Parents Please fill this form to register your kids.</p>
             <br>
             <form action = welcome_Child.php method="POST">   
-
-                Your email <?php echo$email?><br>
-                <br>
-
-                First Name of the Child <input type="text" name = "ChildFirst" required><br>
-                <br>
-
-                Last Name of the Child <input type="text" name = "ChildLast" required><br>
-                <br>   
-                
-                What is the sex of the child <input type="text" name = "sex" required><br>
-                <br>
-
-                Medical record of the child <input type="file" name = "MD_record"> <br>
-                <br>
-
-                Date of Birth of the Child <input type="date" name = "DateOfBirth" required><br>
-                <br>
-            
-                <input type="submit">            
+                <table Border="0" class="center">
+                    <tr>
+                        <th colspan="2" class="text-center">
+                            <h3>Your email is <?php echo $email; ?> </h3> <br>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            First Name of the Child <br><br>
+                        </td>
+                        <td>
+                            <input type="text" name = "ChildFirst" required><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Last Name of the Child <br><br>
+                        </td>
+                        <td>
+                            <input type="text" name = "ChildLast" required><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            What is the sex of the child <br><br>
+                        </td>
+                        <td>
+                            <input type="text" name = "sex" required><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date of Birth of the Child <br><br>
+                        </td>
+                        <td>
+                            <input type="date" name = "DateOfBirth" required><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>                            
+                            Medical record of the child <br><br>
+                        </td>
+                        <td>
+                            <input type="file" name = "MD_record"> <br><br>
+                        </td>
+                    </tr>                    
+                    <tr>
+                        <td>
+                            <td class = "end">
+                                <input type="submit" class="submit" value = "submit" >
+                            </td>
+                        </td>
+                    </tr>
+                </table>            
             </form>
         
             <button onclick="location.href='Update_child'" type="button">

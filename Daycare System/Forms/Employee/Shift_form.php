@@ -38,47 +38,108 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
+        <style>
+            body{
+                background-image: url("../../assets/img/background-forms.jpg");
+                color: white;
+            }
+            .wrapper a{
+                padding-left: 20%;
+            }
+            .wrapper{ 
+            width: 500px; 
+            padding: 20px; 
+            }
+            .wrapper h2 {text-align: center;}
+            .wrapper form .form-group span {color: red;}
+            .submit 
+            {
+                -moz-box-sizing: border-box; /* Firefox, other Gecko */
+                height: 35px; 
+                width:75px; 
+                font-size: 20px;
+            }
+            .end
+            {
+                
+            }
+            .center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </head>
 
     <body> 
-        Employee Shift form<br> 
-        <br>
-        Welcome <?php echo $fname?> <?php echo $lname?>  :<br>
-        <br>
-        <form action = welcome_shift.php  method="POST"> 
-
-            Username <?php echo $_SESSION["username"];?>  <br>
+        <section class="container wrapper">
+            <a href = ../../index.php><img src="../../assets/img/navbar-logo.svg" width="300px" /></a> 
+            <h2 class="display-4 pt-3">Welcome To our Daycare <?php echo $fname; ?> <?php echo $lname; ?> </h2>
+            <p class="text-center">Welcome Employee Please fill this form to select your shift.</p>
             <br>
-
-            Shift Date: <input type="date" name = "Shift_Date" required><br>
+            <form action = welcome_shift.php  method="POST"> 
+                <table Border="0" class="center">
+                    <tr>
+                        <td>
+                            Username <br><br>
+                        </td>
+                        <td>
+                            <?php echo $_SESSION["username"];?>  <br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Shift Date: <br><br>
+                        </td>
+                        <td>
+                            <input type="date" name = "Shift_Date" required><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>                            
+                            Shift Time Start: <br><br>
+                        </td>
+                        <td>
+                            <input type="time" name = "Shift_time_Start" required><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Shift Time End: <br><br>
+                        </td>
+                        <td>
+                            <input type="time" name = "Shift_time_End" required><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="child">Choose a child:</label> <br><br>
+                        </td>
+                        <td>
+                            <select name="child" >
+                            <?php 
+                            $result=mysqli_query($conn,'SELECT childID, childFirstName FROM child'); 
+                            while($row=mysqli_fetch_assoc($result)) 
+                                { ?>                    
+                                    <option value= <?php echo $row['childID']?> ><?php echo $row['childFirstName']?></option>                                     
+                                <?php
+                                }?>          
+                            </select> <br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <td class = "end">
+                                <input type="submit" class="submit" value = "submit" >
+                            </td>
+                        </td>
+                    </tr> 
+                </table>           
+            </form>
             <br>
-
-            Shift Time Start: <input type="time" name = "Shift_time_Start" required><br>
-            <br>
-
-            Shift Time End: <input type="time" name = "Shift_time_End" required><br>
-            <br>
-
-            <label for="child">Choose a child:</label>
-            <select name="child" >
-            <?php 
-               $result=mysqli_query($conn,'SELECT childID, childFirstName FROM child'); 
-               while($row=mysqli_fetch_assoc($result)) 
-                { ?>                    
-                    <option value= <?php echo $row['childID']?> ><?php echo $row['childFirstName']?></option>                                     
-                <?php
-                }?>          
-            </select> <br>
-            <br>
-
-            <input type="submit">            
-        </form>
-        <br>
-        <button onclick="location.href='Update_shift'" type="button">
-        click here to update</button>
-        <br>
-        <br>
-        <a  href = ../../index.php><img src="../../assets/img/home-symbol.jpg" width="50px" /></a>
+            <button onclick="location.href='Update_shift'" type="button">
+            click here to update</button>
+        </section>
     </body>
 </html>
 

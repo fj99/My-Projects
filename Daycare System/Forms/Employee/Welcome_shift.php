@@ -39,7 +39,10 @@
 
         if($result && $result2)
         {  
-            echo "Accounts Successfully Created";  
+            echo '<script>
+            alert("Shift Successfully Created");
+            </script>';  
+            $status = "Shift Successfully Created"; 
         } 
         else
         {  
@@ -48,7 +51,10 @@
     }
     else
     {
-        echo "Account already exist";
+        echo '<script>
+        alert("Shift already exist");
+        </script>';
+        $status = "Shift already exist";
     }    
 
     $sql = "SELECT childFirstName, childLastName, child_sex, child_Date_of_Birth FROM child WHERE childID = '".$childid."' ";
@@ -70,24 +76,58 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
+        <style>
+            body{
+                background-image: url("../../assets/img/background-forms.jpg");
+                color: white;
+                
+            }
+            
+            .wrapper{ 
+            width: 500px;
+            padding: 20px; 
+            }
+            .wrapper h2 {text-align: center;}
+            .wrapper form .form-group span {color: red;}
+            .submit 
+            {
+                height: 35px; 
+                width:75px; 
+                font-size: 20px;
+            }
+            .end
+            {
+                padding-left: 20%;
+            }
+            .center {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </head>
 
     <body>
-        <br> <br>
-        Welcome To our Daycare  <?php echo$fname?> <?php echo $lname?> <br>
-        Your shift date is <?php echo $shiftD?> <br>
-        Your shift time start is <?php echo $shiftS?> <br>
-        Your time worked is <?php echo $work?> <br>
-        Your email address is  <?php echo$email?> <br>
-        The Child's name is  <?php echo $First; ?> <?php echo $Last; ?> <br> 
-        The Sex of your child is  <?php echo $Sex; ?> <br>
-        Your Child's Date of Birth is     <?php echo $DateOfB; ?> <br>
-        <br>
-		<br>
-		<p>Sign in <a href="Sign_in.php">Sign in</a>.</p>
-        <br>
-        <br>
-        <a  href = ../../index.php><img src="../../assets/img/home-symbol.jpg" width="50px" /></a>
+        <section class="container wrapper">
+            <a href = ../../index.php style="padding-left: 20%;"><img src="../../assets/img/navbar-logo.svg" width="300px" /></a>
+            <br>
+            <h2 class="display-4 pt-3">Welcome To our Daycare <?php echo$fname?> <?php echo $lname?> </h2>
+            <br>
+        
+            <p class="text-center">
+                Your shift date is <?php echo $shiftD?> <br>
+                Your shift time start is <?php echo $shiftS?> <br>
+                Your time worked is <?php echo $work?> <br>
+                Your email address is  <?php echo$email?> <br>
+                The Child's name is  <?php echo $First; ?> <?php echo $Last; ?> <br> 
+                The Sex of your child is  <?php echo $Sex; ?> <br>
+                Your Child's Date of Birth is     <?php echo $DateOfB; ?> <br>
+            </p>
+            <br>
+            <p class="text-center"><?php echo $status?> </p>
+            <br>
+            <p class="text-center"><a href="Sign_in.php" >Sign in:<img src="../../assets/img/sign_in.png"></a></p>
+        </section>
     </body>
 </html>
 

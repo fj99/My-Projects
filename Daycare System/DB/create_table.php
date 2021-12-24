@@ -16,7 +16,7 @@ $table1 = "CREATE TABLE employee (
     Employee_phoneNumber TEXT NOT NULL , 
     Employee_Email VARCHAR(255) NOT NULL , 
     Employee_Address VARCHAR(255) NOT NULL , 
-    Position VARCHAR(255) , 
+    Position VARCHAR(255) Not NULL, 
     Employee_Date_of_Birth DATE NOT NULL ,
     Employee_Password VARCHAR(255) NOT NULL ,
     PRIMARY KEY (EmployeeID, username) 

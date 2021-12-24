@@ -1,6 +1,5 @@
 <?php
     //connect to db
-    //$conn = mysqli_connect('localhost', 'root', 'Pcsa0000', 'daycare');
     include 'DB/connect_to_db.php';    
 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -8,21 +7,24 @@
     session_start();
     $status = "Not Signed In";
     $signout = "<a hidden></a>";
-    $signin = '<a class="nav-link" href="Forms\Parent\Sign_in.php" ><img src="assets/img/SignIn.png" width="35px" height="40px"></a>';
-    
+    $parent = '<li class="nav-item"><a class="nav-link" href="Forms\Parent\Sign_in.php" >Parent<br><img src="assets/img/SignIn.png" width="35px" height="40px"></a></li>';
+    $employee = '<li class="nav-item"><a class="nav-link" href="Forms\Employee\Sign_in.php" >Employee<br><img src="assets/img/employee.png" width="35px" height="40px"></a></li>';
 
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
     {      
-        $signin ="<a hidden></a>";
-        $signout='<a class="nav-link" href="sign_out.php" ><img src="assets/img/SignOut.png" width="35px" height="40px"></a>';          
+        $parent = "<a hidden></a>";
+        $employee = "<a hidden></a>";
+             
 
         if($_SESSION['employee'])
         {
-            $status = "Employee";            
+            $status = "Employee";   
+            $signout='<a class="nav-link" href="sign_out.php" ><img src="assets/img/employee-out.png" width="35px" height="40px"></a>';              
         }
         elseif($_SESSION['parent'])
         {
-            $status = "Parent";            
+            $status = "Parent"; 
+            $signout='<a class="nav-link" href="sign_out.php" ><img src="assets/img/SignOut.png" width="35px" height="40px"></a>';                
         }
     }
     
@@ -63,10 +65,10 @@
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>                        
                         <li class="nav-item"><a class="nav-link" href="Delete.php">Delete</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="Forms\Employee\Sign_in.php">Sign In-Employees</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><?php echo$status;?></a></li>
-                        <li class="nav-item"><?php echo$signin;?></li>
-                        <li class="nav-item"><?php echo$signout;?></li>                        
+                        <?php echo $employee;?>                     
+                        <?php echo $parent;?>
+                        <li class="nav-item"><a class="nav-link" href="Status.php"><?php echo $status;?></a></li>
+                        <li class="nav-item"><?php echo $signout;?></li>                        
                     </ul>
                 </div>
             </div>
@@ -138,36 +140,20 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <h2 class="section-heading text-uppercase">Our Team</h2>
                     
                 </div>
+
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" style="margin:auto;">>
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="https://i.pinimg.com/736x/5b/9d/50/5b9d5065b8b90cf44433ae5d1e4db0b7.jpg" alt="..." />
                             <h4>Felix Fernandez</h4>
-                            <p class="text-muted">Backend</p>
+                            <p class="text-muted">Full-Stack Dev</p>
                            
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="https://i.pinimg.com/736x/5b/9d/50/5b9d5065b8b90cf44433ae5d1e4db0b7.jpg" alt="..." />
-                            <h4>Paul Johnson
-                            </h4>
-                            <p class="text-muted">Frontend and Bootstrap</p>
-                            
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="https://i.pinimg.com/736x/5b/9d/50/5b9d5065b8b90cf44433ae5d1e4db0b7.jpg" alt="..." />
-                            <h4>Frankely Rodriguez</h4>
-                            <p class="text-muted">Frontend and Bootstrap</p>
-                            
-                        </div>
-                    </div>
-                </div>
+                    </div>                    
+                </div>            
                 
             </div>
         </section>
