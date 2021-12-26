@@ -5,7 +5,7 @@
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     // Initialize sessions
     session_start();
-    $status = "Not Signed In";
+    $status = 'Not Signed In';
     $signout = "<a hidden></a>";
     $parent = '<li class="nav-item"><a class="nav-link" href="Forms\Parent\Sign_in.php" >Parent<br><img src="assets/img/SignIn.png" width="35px" height="40px"></a></li>';
     $employee = '<li class="nav-item"><a class="nav-link" href="Forms\Employee\Sign_in.php" >Employee<br><img src="assets/img/employee.png" width="35px" height="40px"></a></li>';

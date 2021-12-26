@@ -177,7 +177,10 @@
                                     $sql3 = "SELECT childFirstName, childLastName, child_sex, medicalRecord, child_Date_of_Birth, EmployeeID FROM child WHERE childID = $childID";
                                     $result3 = $conn->query($sql3); 
                                     $row3 = mysqli_fetch_assoc($result3);
-                                    //employee info
+                                    //check if there is employee info
+
+
+                                    //employee info                                
                                     $EmplID = $row3['EmployeeID'];
                                     $sql4 = "SELECT EmployeeFirstName, EmployeeLastName, Employee_phoneNumber, Employee_Email FROM employee WHERE EmployeeID = $EmplID";
                                     $result4 = $conn->query($sql4);
@@ -209,10 +212,12 @@
     }
     else
     {
-        echo '<script>
-        alert("Your not signed in redirecting to home");
-        </script>';
-        header('location: index.php');
+        echo "<script>
+        alert('Your not signed in redirecting to home');
+        </script>";
+        
+        header("refresh:0; url = http://localhost:8080/My-Projects/Daycare%20System/index.php"); 
+        
     }
 
 ?>

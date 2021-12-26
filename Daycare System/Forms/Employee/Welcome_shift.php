@@ -126,7 +126,7 @@
             <br>
             <p class="text-center"><?php echo $status?> </p>
             <br>
-            <p class="text-center"><a href="Sign_in.php" >Sign in:<img src="../../assets/img/sign_in.png"></a></p>
+            <p class="text-center"><a href="../../Status.php">Status page:<img src="../../assets/img/status.png"></a></p>
         </section>
     </body>
 </html>
