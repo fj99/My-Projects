@@ -178,7 +178,7 @@
                                     $result3 = $conn->query($sql3); 
                                     $row3 = mysqli_fetch_assoc($result3);
                                     //check if there is employee info
-
+                                    
 
                                     //employee info                                
                                     $EmplID = $row3['EmployeeID'];
