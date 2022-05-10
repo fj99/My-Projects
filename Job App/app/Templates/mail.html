@@ -1,0 +1,20 @@
+
+{% block content %}
+<html lang="en">
+    <body>
+        <h3>please enter the email credentials</h3>
+        <form action="/mail" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.email.label }}<br>
+                {{ form.email(size=32) }}
+            </p>
+            <p>
+                {{ form.message.label }}<br>
+                {{ form.message(size=32) }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </body>
+</html>
+{% endblock %}
