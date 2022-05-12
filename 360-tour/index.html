@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mid-Sprint-2</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes view-control-buttons">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-east-campus---academic-student-center">
+        <li class="text">East Campus - Academic Student Center</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-east-campus---academic-on-bridge">
+        <li class="text">East Campus - Academic On Bridge</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-north-campus---housing">
+        <li class="text">North Campus - Housing</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-north-campus---jess-dow--entrance-academic">
+        <li class="text">North Campus - Jess Dow  Entrance Academic</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-north-campus---jess-dow-field-entrance-north">
+        <li class="text">North Campus - Jess Dow Field Entrance North</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-north-campus---jess-dow-field">
+        <li class="text">North Campus - Jess Dow Field</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-north-campus---near-field-wintergreen-connection">
+        <li class="text">North Campus - Near Field Wintergreen Connection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-north-campus---townhouse-c">
+        <li class="text">North Campus - Townhouse C</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-north-campus">
+        <li class="text">North Campus</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-north_campus---resident-parking-lot">
+        <li class="text">North_campus - Resident Parking lot</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-west-campus---after-bridge">
+        <li class="text">West Campus - After Bridge</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-west-campus---after-intersection">
+        <li class="text">West Campus - After Intersection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-west-campus---basketball-courts">
+        <li class="text">West Campus - Basketball Courts</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-west-campus---brownell-2nd-floor">
+        <li class="text">West Campus - Brownell 2nd Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-west-campus---brownell-3rd-floor">
+        <li class="text">West Campus - Brownell 3rd Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-west-campus---brownell-common-area">
+        <li class="text">West Campus - Brownell Common Area</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-west-campus---brownell-connection">
+        <li class="text">West Campus - Brownell Connection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-west-campus---brownell-front">
+        <li class="text">West Campus - Brownell Front</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-west-campus---brownell-lobby">
+        <li class="text">West Campus - Brownell Lobby</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="19-west-campus---brownell-walkway">
+        <li class="text">West Campus - Brownell Walkway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="20-west-campus---chase-back-fixed">
+        <li class="text">West Campus - Chase Back fixed</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="21-west-campus---chase-lobby-back-entrance">
+        <li class="text">West Campus - Chase Lobby Back Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="22-west-campus---chase-lobby-front--entrance">
+        <li class="text">West Campus - Chase Lobby Front  Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="23-west-campus---chase-rec-room-entrance">
+        <li class="text">West Campus - Chase Rec Room Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="24-west-campus---chase-rec-room">
+        <li class="text">West Campus - Chase Rec Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="25-west-campus---chase">
+        <li class="text">West Campus - Chase</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="26-west-campus---conn-hall">
+        <li class="text">West campus - Conn Hall</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="27-west-campus---farham-hall">
+        <li class="text">West Campus - Farham Hall</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="28-west-campus---farham-lobby-entrance">
+        <li class="text">West Campus - Farham Lobby Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="29-west-campus---farham-st">
+        <li class="text">West Campus - Farham st</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="30-west-campus---hickerson-lobby-entrance">
+        <li class="text">West Campus - Hickerson Lobby Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="31-west-campus---hickerson-lobby">
+        <li class="text">West Campus - Hickerson Lobby</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="32-west-campus---hickerson-rec-room-entrance">
+        <li class="text">West Campus - Hickerson Rec Room Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="33-west-campus---hickerson-rec-room">
+        <li class="text">West Campus - Hickerson Rec Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="34-west-campus---neff-center">
+        <li class="text">West Campus - Neff Center</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="35-west-campus---wilkinson-parking-lot">
+        <li class="text">West Campus - Wilkinson Parking Lot</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="36-west-campus---schwartz-hall">
+        <li class="text">West Campus - Schwartz Hall</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="37-west-campus---stairs-by-conn-hall">
+        <li class="text">West Campus - Stairs by Conn Hall</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="38-west-campus---under-bridge">
+        <li class="text">West Campus - Under Bridge</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="39-west-campus---wilkinson-basketball-connection">
+        <li class="text">West Campus - Wilkinson Basketball Connection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="40-west-campus---wilkinson">
+        <li class="text">West Campus - Wilkinson</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="41-west-campus-residence-complex">
+        <li class="text">West Campus Residence Complex</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="42-wintergreen---jess-dow-field-connection">
+        <li class="text">Wintergreen - Jess Dow Field Connection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="43-wintergreen---north-side">
+        <li class="text">Wintergreen - North Side</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="44-wilkinson---2nd-floor-room">
+        <li class="text">Wilkinson - 2nd Floor Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="45-wilkinson---2nd-floor">
+        <li class="text">Wilkinson - 2nd Floor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="46-wilkinson---backentrance">
+        <li class="text">Wilkinson - Backentrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="47-wilkinson---entrance">
+        <li class="text">Wilkinson - Entrance</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="48-wilkinson---rec-room">
+        <li class="text">Wilkinson - Rec Room</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="49-wilkinson--lobby">
+        <li class="text">Wilkinson -Lobby</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="50-wintergreen---intersection">
+        <li class="text">Wintergreen - Intersection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="51-north-campus---midrise">
+        <li class="text">North Campus - Midrise</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="52-west-campus---intersection">
+        <li class="text">West Campus - Intersection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="53-west-campus---farham-lobby">
+        <li class="text">West Campus - Farham Lobby</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="54-west-campus---chase-lobby">
+        <li class="text">West Campus - Chase Lobby</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="55-west-campus---wilkinson-back">
+        <li class="text">West Campus - Wilkinson Back</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="56-west-campus---wilkinson">
+        <li class="text">West Campus - Wilkinson</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="57-west-campus---brownell-hall-back">
+        <li class="text">West Campus - Brownell Hall Back</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="58-west-campus----parking-brownell-connection">
+        <li class="text">West Campus -  Parking Brownell Connection</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="59-west-campus---hickerson">
+        <li class="text">West Campus - Hickerson</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="60-west-campus---near-residence-complex">
+        <li class="text">West Campus - Near Residence Complex</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
