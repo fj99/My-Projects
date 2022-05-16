@@ -129,8 +129,6 @@ def register():
         em = db.session.query(User).filter_by(email=email).first()
 
         if em is None:
-            #call func            
-            # check(name,fname,lname,email,number,role,pas)
             return redirect(url_for('check', name=name, fname=fname, lname=lname, email=email, number=number, role=role, pas=pas))
         else:                        
             session['error'] = "email already exists"
@@ -258,8 +256,6 @@ def change_password():
 @app.route('/applications', methods=['GET', 'POST'])
 def applications():
     job_data = []
-    # session['view'] = False
-    # session['delete'] = False
     if current_user.is_authenticated:
         if current_user.role == 'admin':
             job_data = db.session.query(job_posting).all()
@@ -278,17 +274,9 @@ def view_applications():
     id = request.form.get("jobid")
     try:
         if request.form['view'] == 'View Applications':
-            pos = request.form.get("position")
             job_applications = db.session.query(applicants, User).select_from(applicants).filter_by(JpostID = id).join(User, User.id == applicants.employee).all()
-            # files = send_file(BytesIO(job_applications.resume), attachment_filename=job_applications.fileName, as_attachment=True)
-            # count = 0
             job_post = db.session.query(job_posting).filter_by(jobid = id).first()
-            # for applicants,User in job_applications:
-            #     x = job_applications.applicants.resume
-            #     files[count]
-            #     count+=1
             return render_template('job_applications.html', data = job_applications, post = job_post.position)
-            # return render_template('job_applications.html', resumes=files, data = job_applications, post = job_post.position)
     except KeyError:
         pass
     if request.form['delete'] == 'Delete':
@@ -298,20 +286,27 @@ def view_applications():
         return redirect(url_for('index'))
     return "Error"
 
+@app.route('/resume/<index>', methods=['GET','POST'])
+def resume(index):
+    file = db.session.query(applicants).filter_by(postid = index).first()
+    return send_file(BytesIO(file.resume), attachment_filename=file.fileName, as_attachment=True)
+    
 
 @app.route('/mail', methods=['GET', 'POST'])
 def send_mail():
     mail_form = SendEmail()
-    if mail_form.validate_on_submit():
+    if mail_form.validate_on_submit() or request.method == 'POST':
+        name = request.form['name']
         recipient = mail_form.email.data
-        # message = mail_form.message.data
-        subject = 'Test Flask email'
-        message = "<h1>Testing</h1> <br> key"
+        message = mail_form.message.data
+        subject = "Suggestion or Report from {n}".format(n=name)
+        # message = "<h1>Testing</h1> <br> key"
 
         msg = Message(subject, recipients=[recipient], html =message)
         mail.send(msg)
         mail_form.email.data = ''
         mail_form.message.data = ''
+        return redirect(url_for('index'))
     return render_template('mail.html', form=mail_form)
 
 

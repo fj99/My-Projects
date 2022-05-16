@@ -1,20 +1,31 @@
+{% extends "base.html" %}
+{% block head %}
 
-{% block content %}
-<html lang="en">
-    <body>
-        <h3>please enter the email credentials</h3>
-        <form action="/mail" method="post" novalidate>
-            {{ form.hidden_tag() }}
-            <p>
-                {{ form.email.label }}<br>
-                {{ form.email(size=32) }}
-            </p>
-            <p>
-                {{ form.message.label }}<br>
-                {{ form.message(size=32) }}
-            </p>
-            <p>{{ form.submit() }}</p>
-        </form>
-    </body>
-</html>
+    <title> {% block title %}Mail{% endblock %} </title>
+
+    <section id="Mail" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 col-sm-12">
+                    <div class="home-info">
+                        <h3 class="heading_color">Please enter the email credentials</h3>                        
+                        <form action="/mail" method="post" novalidate>
+                            {{ form.hidden_tag() }}
+                            <p>
+                                {{ form.email.label }}<br>
+                                {{ form.email(size=32) }}
+                            </p>
+                            <p>
+                                {{ form.message.label }}<br>
+                                {{ form.message(size=32) }}
+                            </p>
+                            <p>{{ form.submit() }}</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
