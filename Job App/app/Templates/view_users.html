@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block head %}
+
+     <title> {% block title %}Search{% endblock %} </title>
+
+     <!-- forum -->
+     <section id="login_register" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-offset-3 col-md-6 col-sm-12">
+                         <div class="home-info">                            
+                            <table>
+                                <tr>
+                                    <th>Users</th>
+                                    <th>Username</th>                                        
+                                    <th>First Name</th>                                        
+                                    <th>Last Name</th>                                        
+                                    <th>Email</th>                                        
+                                </tr>
+                                {% for user in users %}
+                                    <tr>
+                                        <td>{{user.username}}</td>
+                                        <td>{{user.fname}}</td>                                            
+                                        <td>{{user.lname}}</td>                                            
+                                        <td>{{user.email}}</td>                                            
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+{% endblock %}

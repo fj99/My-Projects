@@ -48,12 +48,12 @@ class SearchUser(FlaskForm):
     user = StringField('Username:', validators=[DataRequired()])
     submit = SubmitField('Search')
 
-class SearchPost(FlaskForm):
-    post = StringField('Post:', validators=[DataRequired()])
-    submit = SubmitField('Post')
-
 class SendEmail(FlaskForm):
     email = StringField('Recipient: ', validators=[DataRequired()])
     message = TextAreaField('Your message:', validators=[DataRequired()])
     # message = StringField('Your message:', validators=[DataRequired()])
+    submit = SubmitField('Send')
+
+class ResetEmail(FlaskForm):
+    email = StringField('Email', validators=[DataRequired()])
     submit = SubmitField('Send')

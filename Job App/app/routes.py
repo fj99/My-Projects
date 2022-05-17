@@ -1,5 +1,6 @@
 import datetime
 from email import message
+from multiprocessing import log_to_stderr
 from attr import validate
 from app import app
 from io import BytesIO
@@ -8,7 +9,7 @@ from datetime import date
 from flask import Flask, render_template,  redirect, url_for, session, request, send_file
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
-from app.forms import SearchUser, LoginForm, AddUserForm, ChangePasswordForm, JobRequest, Jobapply, SendEmail,VerifyEmail
+from app.forms import SearchUser, LoginForm, AddUserForm, ChangePasswordForm, JobRequest, Jobapply, SendEmail,VerifyEmail, ResetEmail
 from app import db
 from app.models import User, job_posting, applicants
 import sys
@@ -17,6 +18,8 @@ import string
 
 mail = Mail(app)
 # app = Flask(__name__)
+lost = ''
+key = ''
 
 @app.route('/')
 def index():
@@ -52,13 +55,11 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
-key = ''
 
 @app.route('/check/<name>/<fname>/<lname>/<email>/<number>/<role>/<pas>', methods=['GET', 'POST'])
 def check(name,fname,lname,email,number,role,pas):
     form = check
     form = VerifyEmail()
-
     if not form.validate_on_submit():
         letters = string.ascii_lowercase
         global key
@@ -89,10 +90,10 @@ def check(name,fname,lname,email,number,role,pas):
         if user is None:
             subject = 'Welcome to Collaborative Information Center'
             message = '''
-                This is a message to {fname} {lname} from Collaborative Information Center letting you know your registered
-                Your username is {username} 
-                Your phone number is {number}
-                You signed up as a {role} 
+                Welcome to Collaborative Information Center {fname} {lname} <br>            
+                Your username is {username} <br>
+                Your phone number is {number} <br>
+                You signed up as a {role} <br>
             '''.format(fname=fname,lname=lname,username=name,number=number,role=role)
             
             msg = Message(subject, recipients=[email], html = message)
@@ -231,9 +232,8 @@ def jobs():
 
 
 @app.route('/change_password', methods=['GET', 'POST'])
+@login_required
 def change_password():
-    if not current_user.is_authenticated:
-        return redirect(url_for('index'))
     form = ChangePasswordForm()
     if form.new_pass.data == form.new_pass_retype.data:
         if form.validate_on_submit():
@@ -254,6 +254,7 @@ def change_password():
 
 
 @app.route('/applications', methods=['GET', 'POST'])
+@login_required
 def applications():
     job_data = []
     if current_user.is_authenticated:
@@ -287,6 +288,7 @@ def view_applications():
     return "Error"
 
 @app.route('/resume/<index>', methods=['GET','POST'])
+@login_required
 def resume(index):
     file = db.session.query(applicants).filter_by(postid = index).first()
     return send_file(BytesIO(file.resume), attachment_filename=file.fileName, as_attachment=True)
@@ -310,18 +312,76 @@ def send_mail():
     return render_template('mail.html', form=mail_form)
 
 
-@app.route('/search_user/<id>', methods=['GET', 'POST'])
-def search_by_name():
+@app.route('/search', methods=['GET', 'POST'])
+def search():
     form = SearchUser()
-    if form.validate_on_submit():
+    session['error'] = ''
+    if form.validate_on_submit() or request.method == 'POST':
         # Query DB table for matching name
-        record = db.session.query(User).filter_by(Username = form.user.data).all()
+        search = '%{data}%'.format(data = form.user.data)
+        record = db.session.query(User).filter(User.username.like(search)).all()
         if record:
             return render_template('view_users.html', users=record)
         else:
-            return render_template('not_found.html')
+            session['error'] = 'no user found'
     return render_template('search.html', form=form)
 
+@app.route('/verify', methods=['GET', 'POST'])
+def verify():
+    global lost
+    form = ChangePasswordForm()
+    if form.new_pass.data == form.new_pass_retype.data:
+        if form.validate_on_submit():
+            user = db.session.query(User).filter_by(id = lost).first()
+            check_pass = user.check_password(form.old_pass.data)
+            if check_pass:                            
+                user.set_password(form.new_pass.data)                 
+                db.session.commit()
+                print('Password changed successfully', file=sys.stderr)
+                return redirect(url_for('index'))
+            else:
+                print('Wrong Password Change failed', file=sys.stderr)
+                return redirect(url_for('change_password'))
+    else:
+        print('new password not the same', file=sys.stderr)
+        return redirect(url_for('change_passsword'))
+    return render_template('change_password.html', form = form)
 
-# if __name__ == '__main__':
-#     app.run(app, debug=True)
+@app.route('/reset_password', methods=['GET', 'POST'])
+def reset_password():
+    letters = string.ascii_lowercase
+    form = ResetEmail()
+    session['error'] = ''
+    if form.validate_on_submit() or request.method == 'POST':
+        email = form.email.data
+        users = db.session.query(User).filter_by(email=email).all()
+        user = db.session.query(User).filter_by(email = email).first()
+
+        if users:
+            global key
+            key = ''.join(random.choice(letters) for i in range(10))
+
+            user.set_password(key)
+            db.session.commit()
+            fname = user.fname
+            lname = user.lname
+
+            subject = 'Dream Beans password'
+            message = '''
+            <h1> Collaborative Information Center </h1>
+                This is a message to {fname} {lname} from Collaborative Information Center <br>
+                You forgot your password and it has now been reset to: <br>
+                <h1>{key}</h1>
+            '''.format(fname=fname,lname=lname,key=key)
+        
+            msg = Message(subject, recipients=[email], html = message)
+            mail.send(msg)
+            # switch routes
+            global lost
+            id = user.id
+            lost = id
+            # return redirect(url_for('verify', id=id))
+            return redirect(url_for('verify'))
+        else:
+            session['error'] = 'no email found'          
+    return render_template('email_verify.html', form=form)

@@ -2,8 +2,6 @@
 <html lang="en">
     <head>
         <title> {% block title %}{% endblock %} </title>
-        <!-- add block title to each page to give each page a different title -->
-        <!-- <title>The Dream Beans Webpage Application</title> -->
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -16,7 +14,6 @@
         <link rel="stylesheet" href="static/css/owl.carousel.css">
         <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
         <link rel="stylesheet" href="static/css/font-awesome.min.css">
-        <!-- for index need <link rel="stylesheet" href="static/css/style.css"> -->
         <link rel="stylesheet" href="static/css/style2.css">
     </head>
     <body>
@@ -39,7 +36,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a class="navbar-brand">Collaborative Information Center</a>
+                    <a href="/" class="navbar-brand">Collaborative Information Center</a>
                 </div>
                 
                 <!-- MENU LINKS -->
@@ -61,6 +58,7 @@
                             <li><a href="/change_password" class="smoothScroll">Change Password</a></li>
                         {% endif %}
                         {% if current_user.is_authenticated: %}
+                            <li><a href="/search" class="smoothScroll">Search User</a></li>
                             <li><a href="/logout" class="smoothScroll"> {{session['name']}} </a></li>
                         {% else: %}
                             <li><a href="/login" class="smoothScroll">Login</a></li>

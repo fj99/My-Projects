@@ -36,13 +36,13 @@
                          </button>
 
                          <!-- lOGO TEXT HERE -->
-                         <a class="navbar-brand">Collaborative Information Center</a>
+                         <a href="/" class="navbar-brand">Collaborative Information Center</a>
                     </div>
                     
                     <!-- MENU LINKS -->
                     <div class="collapse navbar-collapse">
                          <ul class="nav navbar-nav">
-                              <li><a href="/" class="smoothScroll">Home</a></li>
+                              <!-- <li><a href="/" class="smoothScroll">Home</a></li> -->
                               <li><a href="#feature" class="smoothScroll">Features</a></li>
                               {% if current_user.role == 'employer': %}
                                    <li><a href="/Jrequest" class="smoothScroll">Create Job Listing</a></li>
@@ -58,6 +58,7 @@
                                    <li><a href="/change_password" class="smoothScroll">Change Password</a></li>
                               {% endif %}
                               {% if current_user.is_authenticated: %}
+                                   <li><a href="/search" class="smoothScroll">Search User</a></li>
                                    <li><a href="/logout" class="smoothScroll"> {{session['name']}} </a></li>
                               {% else: %}
                                    <li><a href="/login" class="smoothScroll">Login</a></li>
