@@ -58,13 +58,13 @@
                             <li><a href="/change_password" class="smoothScroll">Change Password</a></li>
                         {% endif %}
                         {% if current_user.is_authenticated: %}
-                            <li><a href="/search" class="smoothScroll">Search User</a></li>
                             <li><a href="/logout" class="smoothScroll"> {{session['name']}} </a></li>
                         {% else: %}
                             <li><a href="/login" class="smoothScroll">Login</a></li>
                             <li><a href="/register" class="smoothScroll">Register</a></li>
                         {% endif %}
-                        <li><a href="/mail" class="smoothScroll">Contact</a></li>
+                            <li><a href="/search" class="smoothScroll">Search User</a></li>
+                            <li><a href="/mail" class="smoothScroll">Contact</a></li>
                     </ul>
                 </div>
             </div>

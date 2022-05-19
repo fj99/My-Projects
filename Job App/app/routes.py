@@ -311,13 +311,12 @@ def send_mail():
         return redirect(url_for('index'))
     return render_template('mail.html', form=mail_form)
 
-
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     form = SearchUser()
     session['error'] = ''
     if form.validate_on_submit() or request.method == 'POST':
-        # Query DB table for matching name
+        # make it search with spaces and for multiple columns
         search = '%{data}%'.format(data = form.user.data)
         record = db.session.query(User).filter(User.username.like(search)).all()
         if record:
