@@ -371,7 +371,8 @@ footer {
 }
 
 #feature .nav-tabs > li > a {
-  color: #999999;
+  color: #ffffff;
+  /* color: #999999; */
   font-size: 18px;
   border: 0;
   border-bottom: 3px solid transparent;
@@ -383,7 +384,7 @@ footer {
 #feature .nav-tabs > li.active > a:focus,
 #feature .nav-tabs > li.active > a:hover {
   background: transparent;
-  color: #fffcfc;
+  color: #29ca8e;
   /* color: #202020; */
   border-bottom: 3px solid #29ca8e;
 }
@@ -401,7 +402,7 @@ footer {
 }
 
 .tab-pane-item {
-  color: #ffffff;
+  color: #29ca8e;
   margin: 20px 0;
 }
 
