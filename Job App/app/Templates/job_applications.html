@@ -18,6 +18,7 @@
                                         <th>Candidate Name &nbsp;</th>
                                         <th>Email &nbsp;</th>
                                         <th>Phone Number &nbsp;</th>
+                                        <th>Information</th>
                                         <th>Address &nbsp;</th>
                                         <th>Resume &nbsp;</th>
                                     </tr>
@@ -28,6 +29,7 @@
                                             <td>{{user.fname + " " + user.lname}}</td>
                                             <td>{{ user.email }}</td>
                                             <td>{{ user.phone_number }}</td>
+                                            <td>{{ applicant.information }}</td>
                                             <td>{{ applicant.address }}</td>  
                                             <td><a href="/resume/{{applicant.postid}}" >Download Resume</a></td>                   
                                         </tr>
