@@ -7,7 +7,6 @@
 ## User can contact the system using this form from the homepage:
 ![contact form on the homepage to send the system some information](https://raw.githubusercontent.com/fj99/My-Projects/main/Job%20App/Presentation%20images/contact-system.png)
 
----
 ## But if user is not in the homepage they can use this mail form 
 ![mail](https://github.com/fj99/My-Projects/blob/main/Job%20App/Presentation%20images/mail.png?raw=true)
 
