@@ -66,6 +66,7 @@ a:active,
 a:focus {
   color: #29ca8e;
   outline: none;
+  border-bottom: 3px solid #29ca8e;
 }
 
 ::-webkit-scrollbar {
@@ -232,7 +233,6 @@ footer {
 }
 
 .custom-navbar .navbar-brand {
-  color: #ffffff;
   font-size: 25px;
   font-weight: 500;
   letter-spacing: -1px;
@@ -240,6 +240,10 @@ footer {
 
 .top-nav-collapse {
   background: #ffffff;
+}
+
+.top-nav-collapse .fa {
+  color: #656565;
 }
 
 .custom-navbar .navbar-nav {
@@ -257,6 +261,7 @@ footer {
 .custom-navbar .nav li a:hover {
   background: transparent;
   color: #29ca8e;
+  border-bottom: 3px solid #29ca8e;
 }
 
 .custom-navbar .navbar-nav > li > a:hover,
@@ -295,6 +300,10 @@ footer {
     -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
+  }
+
+  .custom-navbar.top-nav-collapse .fa {
+    color: #575757;
   }
 
   .top-nav-collapse .navbar-brand {
@@ -514,7 +523,8 @@ footer {
   }
 
   .custom-navbar {
-    background: #ffffff;
+    /* background: #ffffff; */
+    /* background: transparent; */
     -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
@@ -527,15 +537,21 @@ footer {
     padding: 5px;
   }
 
-  .custom-navbar .navbar-brand,
+  .custom-navbar .navbar-brand{
+    font-weight: normal;
+  }
+
   .top-nav-collapse .navbar-brand {
     color: #202020;
     font-weight: normal;
   }
 
-  .custom-navbar .nav li a,
+  .custom-navbar .nav li a{
+    color: white;
+  }
   .top-nav-collapse .nav li a {
     color: #656565;
+    /* color: white; */
   }
 
   .feature-image {
@@ -592,4 +608,25 @@ footer {
 
 .heading_color{
   color: black !important;
+}
+
+/*--------------------------------------------------------------
+# Header Social Links
+--------------------------------------------------------------*/
+.header-social-links {
+  padding-right: 15px;
+}
+
+.header-social-links a {
+  color: #ffffff;
+  padding-left: 15px;
+  display: inline-block;
+  line-height: 0px;
+  transition: 0.3s;
+  font-size: 16px;
+  /* float: right; */
+}
+
+.header-social-links a:hover,.header-social-links a:focus{
+  color: #29ca8e;
 }
