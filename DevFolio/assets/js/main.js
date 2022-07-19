@@ -129,6 +129,18 @@
     }
   }, true)
 
+  /** 
+    *close navbar by clicking outside of it
+  */
+  on('click', '.navbar', function (e) {
+    // if($('.row-offcanvas').hasClass("active") == true)
+    if (e.target.id == 'navbar') {
+      select('.navbar').classList.toggle('navbar-mobile')
+      select('.bi-x').classList.remove('bi-x')
+      select('.mobile-nav-toggle').classList.toggle('bi-list')
+    }
+  }, true)
+
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
