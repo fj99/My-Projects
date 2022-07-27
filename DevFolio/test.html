@@ -1,1 +1,65 @@
-const name = "adam" const nun = { 'asd' : nun , }
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    #target {
+      padding: 1em;
+      border: 2px solid red;
+    }
+  </style>
+
+  <body>
+    <!-- Testing double click functionality -->
+    <h1>Double-click only fires itself, not also click</h1>
+
+    <div id="target">click or double click me</div>
+
+    <div id="click">
+      <h2>Click actions triggered: </h2>
+    </div>
+
+    <div id="double-click">
+      <h2>Double-Click actions triggered: </h2>
+    </div>
+  </body>
+  <script>
+    function doClickAction() {
+      $("#click h2").append("•");
+    }
+    function doDoubleClickAction() {
+      $("#double-click h2").append("•");
+    }
+
+    var timer = 0;
+    var delay = 200;
+    var prevent = false;
+
+    $("#target")
+      .on("click", function () {
+        timer = setTimeout(function () {
+          if (!prevent) {
+            doClickAction();
+          }
+          prevent = false;
+        }, delay);
+      })
+      .on("dblclick", function () {
+        clearTimeout(timer);
+        prevent = true;
+        doDoubleClickAction();
+      });
+  </script>
+
+</html>
