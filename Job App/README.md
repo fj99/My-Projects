@@ -4,6 +4,9 @@
 - This app(website) lets user register, must verify email after, then employer gets to create job listing for employees to apply to and there’s email notifying them of everything as well as the employer can see all the employee’s information.
 ---
 # Presentation of App
+
+## Website:
+![This is the entire homepage](https://raw.githubusercontent.com/fj99/My-Projects/main/Job%20App/Presentation%20images/Children%20Daycare%20Full.png)
 ## User can contact the system using this form from the homepage:
 ![contact form on the homepage to send the system some information](https://raw.githubusercontent.com/fj99/My-Projects/main/Job%20App/Presentation%20images/contact-system.png)
 
