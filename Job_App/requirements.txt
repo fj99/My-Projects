@@ -1,0 +1,15 @@
+flask
+flask_sqlalchemy
+flask_login
+python-dotenv
+flask_mail
+flask_wtf
+wtforms 
+# wtforms.fields
+# wtforms.validators 
+Werkzeug
+# werkzeug.security 
+sqlalchemy
+# sqlalchemy.sql 
+# sqlalchemy.ext.declarative
+attr
