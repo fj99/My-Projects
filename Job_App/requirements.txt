@@ -1,3 +1,4 @@
+# pip install -r requirements.txt
 flask
 flask_sqlalchemy
 flask_login
@@ -13,3 +14,5 @@ sqlalchemy
 # sqlalchemy.sql 
 # sqlalchemy.ext.declarative
 attr
+# if attr.validate gives trouble:
+# pip install --upgrade jsonchema

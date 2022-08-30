@@ -7,16 +7,16 @@
 # Presentation of App
 
 ## Homepage:
-![This is the homepage](https://raw.githubusercontent.com/fj99/My-Projects/Card-app/Presentation%20images/Home.png)
+![This is the homepage](Presentation/Home.png)
 
 ## Card Form
-![This is the form to enter new cards into the system](https://raw.githubusercontent.com/fj99/My-Projects/Card-app/Presentation%20images/Card%20Form.png)
+![This is the form to enter new cards into the system](Presentation/Card%20Form.png)
 
 ## Form submitted
-![This Form has been submitted succesfully](https://raw.githubusercontent.com/fj99/My-Projects/Card-app/Presentation%20images/Confirmation.png)
+![This Form has been submitted succesfully](Presentation/Confirmation.png)
 
 ## Temp Card Form
-![This is the form to take out a card for the user to use](https://raw.githubusercontent.com/fj99/My-Projects/Card-app/Presentation%20images/Temporary%20Card%20%20Form.png)
+![This is the form to take out a card for the user to use](Presentation/Temporary%20Card%20Form.png)
 
 ## View
-![This is to view the all the cards status and see the users using which card](https://raw.githubusercontent.com/fj99/My-Projects/Card-app/Presentation%20images/View%20Cards.png)
+![This is to view the all the cards status and see the users using which card](Presentation/View%20Cards.png)
