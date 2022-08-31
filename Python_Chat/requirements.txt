@@ -2,3 +2,11 @@
  python-socketio == 4.6.0
  python-engineio ==  3.13.2 
  Flask-SocketIO  == 4.3.1
+ Werkzeug == 2.1
+ flask==2.1.3
+#  manual
+# pip install --upgrade python-socketio==4.6.0
+# pip install --upgrade python-engineio==3.13.2
+# pip install --upgrade Flask-SocketIO==4.3.1
+# pip install --upgrade Werkzeug==2.1
+# pip install --upgrade flask==2.1.3
