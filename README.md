@@ -24,6 +24,6 @@
 
 ---
 ## [Card app](https://github.com/fj99/My-Projects/tree/main/Card-app)
-- This was built using Code igniter4 so it can't be showcased on git-pages
+- This was built using Codeigniter 4 so it can't be showcased on git-pages
 
 - Built the app for the university of Southern Connecticut State University to keep track of their temporary ID cards they give out to residents who live on campus or students who are simply having trouble with their ID, and will be given a temporary ID until their issue s fixed.
