@@ -8,6 +8,5 @@
 	session_destroy();
 
 	// Redirect to home page
-	header('location: index.html');
+	header('location: index.php');
 	exit;
-?>
