@@ -32,9 +32,9 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'prd-mysql02.scsu.southernct.edu',
-        'username' => 'RLProgramPortal',
-        'password' => 'Ulive3now',
+        'hostname' => 'localhost',
+        'username' => 'root',
+        'password' => '',
         'database' => 'reslife',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',

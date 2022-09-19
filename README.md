@@ -20,5 +20,10 @@
 ## [Air Message](https://github.com/fj99/My-Projects/tree/main/Python%20Chat)
 - This was built using python Flask so it can't be showcased on git-pages
 
-- Built a python chat room encrypted end to end where users can make a username to identify and join a room with a room number that identifies the room they then can talk to other users in that room. Instant messaging web application using Flask (Python web development framework), and Socket.io for real time socket package transfers the goal is to not allow packet capture software like Wireshark to capture the network packets.
+- Built a python chat room encrypted end to end where users can make a username to identify and join a room with a room number that identifies the room they then can talk to other users in that room. Instant messaging web application using Flask (Python web development framework), and Socket.io for real time socket package transfers the goal is to not allow packet capture software like WireShark to capture the network packets.
 
+---
+## [Card app](https://github.com/fj99/My-Projects/tree/main/Card-app)
+- This was built using Code igniter4 so it can't be showcased on git-pages
+
+- Built the app for the university of Southern Connecticut State University to keep track of their temporary ID cards they give out to residents who live on campus or students who are simply having trouble with their ID, and will be given a temporary ID until their issue s fixed.
