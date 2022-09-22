@@ -881,3 +881,19 @@ body.view-control-buttons .viewControlButton {
 .viewControlButton-6 {
   margin-left: 105px;
 }
+
+.dropbtn {
+  height: 50px;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.center {
+  text-align: center;
+}
