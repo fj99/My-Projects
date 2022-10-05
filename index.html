@@ -1,3 +1,4 @@
+<!-- TODO: URL only work if written identically -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center justify-content-between">
 
-        <h1 class="logo"><a href="#">Portfolio</a></h1>
+        <h1 class="logo"><a class="nav-link scrollto" href="#">Portfolio</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="Website/assets/img/logo.png" alt="" class="img-fluid"></a> -->
 
@@ -40,7 +41,8 @@
             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
             <li><a class="nav-link scrollto" href="#about">About</a></li>
             <li><a class="nav-link scrollto" href="#services">Services</a></li>
-            <li class="nav-link scrollto dropdown"><a href="#work"><span>Projects</span> <i class="bi bi-chevron-down"></i></a>
+            <li class="dropdown"><a class="nav-link scrollto" href="#work"><span>Projects</span> <i
+                  class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="360-tour/">360 Tour</a></li>
                 <li><a href="Daycare_System/">Daycare System</a></li>
@@ -159,7 +161,7 @@
                       </h5>
                       <br>
                       <h5 class="title-left">
-                        <!-- Todo: make download work on phone as well -->
+                        <!-- TODO: make download work on phone as well -->
                         <a href="Resume.pdf" download="Felix-Fernandez-Resume">
                           Download Resume
                         </a>
@@ -349,7 +351,6 @@
       </div><!-- End Counter Section -->
 
       <!-- ======= Portfolio Section ======= -->
-      <!-- TODO: when calling work only work the url gets #work remove it -->
       <section id="work" class="portfolio-mf sect-pt4 route">
         <div class="container">
           <div class="row">
