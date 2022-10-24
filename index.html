@@ -31,7 +31,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center justify-content-between">
-
+        <!-- TODO: BUG this gives DOMException -->
         <h1 class="logo"><a class="nav-link scrollto" href="#">Portfolio</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="Website/assets/img/logo.png" alt="" class="img-fluid"></a> -->
@@ -117,22 +117,22 @@
                       <p class="title-s">Skill</p>
                       <span>HTML</span> <span class="pull-right">85%</span>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="85" aria-valuemin="0"
                           aria-valuemax="100"></div>
                       </div>
                       <span>CSS</span> <span class="pull-right">75%</span>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0"
                           aria-valuemax="100"></div>
                       </div>
                       <span>PHP</span> <span class="pull-right">90%</span>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="90" aria-valuemin="0"
                           aria-valuemax="100"></div>
                       </div>
                       <span>JAVASCRIPT</span> <span class="pull-right">80%</span>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                        <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="90" aria-valuemin="0"
                           aria-valuemax="100"></div>
                       </div>
                     </div>
@@ -723,6 +723,7 @@
                         </h5>
                       </div>
                       <div>
+                        <!-- TODO: refresh the page after message is sent -->
                         <form action="https://api.web3forms.com/submit" method="post">
                           <div class="row">
                             <div class="col-md-12 mb-3">
