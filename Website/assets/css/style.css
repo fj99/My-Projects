@@ -1485,11 +1485,17 @@ footer .credits a {
 }
 
 /* Transitions  */
-.hidden {
+/* .gone {
   opacity: 0;
   filter: blur(5px);
   transform: translate(-100%);
   transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+  .gone {
+    transition: none;
+  }
 }
 
 .show {
@@ -1524,4 +1530,4 @@ footer .credits a {
 
 .long:nth-child(4) {
   transition-delay: 600ms;
-}
+} */
