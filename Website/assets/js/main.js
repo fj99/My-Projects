@@ -5,6 +5,7 @@
   /**
    * Easy selector helper function
    */
+  //  TODO: BUG this gives DOMException
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {

@@ -23,7 +23,7 @@
 
     <!-- Template Main CSS File -->
     <link href="Website/assets/css/style.css" rel="stylesheet">
-
+    <script defer src="/Website/assets/js/app.js"></script>
   </head>
 
   <body>
@@ -31,8 +31,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center justify-content-between">
-        <!-- TODO: BUG this gives DOMException -->
-        <h1 class="logo"><a class="nav-link scrollto" href="#">Portfolio</a></h1>
+        <h1 class="logo"><a class="nav-link scrollto" href="index.html">Portfolio</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="Website/assets/img/logo.png" alt="" class="img-fluid"></a> -->
 
@@ -89,9 +88,11 @@
 
     <main id="main">
 
+      <section></section>
+
       <!-- ======= About Section ======= -->
       <section id="about" class="about-mf sect-pt4 route">
-        <div class="container">
+        <div class="container hidden">
           <div class="row">
             <div class="col-sm-12">
               <div class="box-shadow-full">
@@ -115,24 +116,24 @@
                     </div>
                     <div class="skill-mf">
                       <p class="title-s">Skill</p>
-                      <span>HTML</span> <span class="pull-right">85%</span>
+                      <span>HTML</span> <span class="pull-right">100%</span>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="85" aria-valuemin="0"
+                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
                           aria-valuemax="100"></div>
                       </div>
-                      <span>CSS</span> <span class="pull-right">75%</span>
+                      <span>CSS</span> <span class="pull-right">85%</span>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0"
+                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
                           aria-valuemax="100"></div>
                       </div>
-                      <span>PHP</span> <span class="pull-right">90%</span>
+                      <span>PHP</span> <span class="pull-right">100%</span>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="90" aria-valuemin="0"
+                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
                           aria-valuemax="100"></div>
                       </div>
-                      <span>JAVASCRIPT</span> <span class="pull-right">80%</span>
+                      <span>JAVASCRIPT</span> <span class="pull-right">95%</span>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="90" aria-valuemin="0"
+                        <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
                           aria-valuemax="100"></div>
                       </div>
                     </div>
@@ -196,7 +197,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="service-box">
                 <div class="service-ico">
                   <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
@@ -212,7 +213,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="service-box">
                 <div class="service-ico">
                   <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
@@ -226,7 +227,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="service-box">
                 <div class="service-ico">
                   <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
@@ -242,7 +243,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="service-box">
                 <div class="service-ico">
                   <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
@@ -256,7 +257,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="service-box">
                 <div class="service-ico">
                   <span class="ico-circle"><i class="bi bi-brightness-high"></i></span>
@@ -271,7 +272,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="service-box">
                 <div class="service-ico">
                   <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
@@ -295,7 +296,7 @@
         <div class="container position-relative">
           <div class="row">
             <!-- ?Works Completed -->
-            <div class="col-sm-3 col-lg-3">
+            <div class="col-sm-3 col-lg-3 long hidden">
               <div class="counter-box counter-box pt-4 pt-md-0">
                 <div class="counter-ico">
                   <span class="ico-circle"><i class="bi bi-check"></i></span>
@@ -308,7 +309,7 @@
               </div>
             </div>
             <!--? Yeas of EXP -->
-            <div class="col-sm-3 col-lg-3">
+            <div class="col-sm-3 col-lg-3 long hidden">
               <div class="counter-box pt-4 pt-md-0">
                 <div class="counter-ico">
                   <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
@@ -320,7 +321,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-3 col-lg-3">
+            <div class="col-sm-3 col-lg-3 long hidden">
               <!--? Clients -->
               <div class="counter-box pt-4 pt-md-0">
                 <div class="counter-ico">
@@ -333,7 +334,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-3 col-lg-3">
+            <div class="col-sm-3 col-lg-3 long hidden">
               <!--? Awards won -->
               <div class="counter-box pt-4 pt-md-0">
                 <div class="counter-ico">
@@ -367,7 +368,8 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
+            <!-- TODO make first 3 pictures 356 height Second row 365 height -->
+            <div class="col-md-4 serve hidden">
               <div class="work-box">
                 <a href="360-tour/">
                   <div class="work-img">
@@ -393,7 +395,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="work-box">
                 <a href="Daycare_System/">
                   <div class="work-img">
@@ -419,7 +421,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="work-box">
                 <a href="Job_App/">
                   <div class="work-img">
@@ -445,7 +447,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="work-box">
                 <a href="Python_Chat/">
                   <div class="work-img">
@@ -471,7 +473,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="work-box">
                 <a href="Card-app/">
                   <div class="work-img">
@@ -499,7 +501,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="work-box">
                 <a href="https://fj99.github.io/Kelly/index.html">
                   <div class="work-img">
@@ -639,7 +641,7 @@
             -->
 
             <!--* Second Card -->
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="card card-blog">
                 <div class="card-img">
                   <a href="#blog"><img src="Website/assets/img/post-3.jpg" alt="" class="img-fluid"></a>
@@ -672,7 +674,7 @@
             </div>
 
             <!--* Third Card -->
-            <div class="col-md-4">
+            <div class="col-md-4 serve hidden">
               <div class="card card-blog">
                 <div class="card-img">
                   <a href="#blog"><img src="Website/assets/img/post-1.jpg" alt="" class="img-fluid"></a>
@@ -710,7 +712,7 @@
       <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
         style="background-image: url(Website/assets/img/overlay-bg.jpg)">
         <div class="overlay-mf"></div>
-        <div class="container">
+        <div class="container hidden">
           <div class="row">
             <div class="col-sm-12">
               <div class="contact-mf">

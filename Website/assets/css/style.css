@@ -967,6 +967,8 @@ a:hover {
 
 .work-img img {
   transition: all 1s;
+  /* TODO */
+  /* height: ; */
 }
 
 .work-content {
@@ -1480,4 +1482,46 @@ footer .credits {
 
 footer .credits a {
   color: #fff;
+}
+
+/* Transitions  */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+
+.serve:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.serve:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.serve:nth-child(5) {
+  transition-delay: 200ms;
+}
+
+.serve:nth-child(6) {
+  transition-delay: 400ms;
+}
+
+.long:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.long:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.long:nth-child(4) {
+  transition-delay: 600ms;
 }
