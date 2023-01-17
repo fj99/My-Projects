@@ -8,7 +8,6 @@ class Card_model extends Model
 {
     protected $table1 = 'cards';
     protected $table2 = 'temp_cards';
-    // $this->table1
     protected $db;
 
     public function __construct()
@@ -27,6 +26,27 @@ class Card_model extends Model
 
         return $query;
     }
+    public function Cards_taken()
+    {
+        $db = $this->db;
+
+        $builder = $db->table('cards');
+        $builder->where('active', 1);
+        $query = $builder->get();
+        $db->close();
+
+        return $query;
+    }
+    public function All_Cards()
+    {
+        $db = $this->db;
+
+        $builder = $db->table('cards');
+        $query = $builder->get();
+        $db->close();
+
+        return $query;
+    }
 
     public function ShowAll()
     {
@@ -34,7 +54,7 @@ class Card_model extends Model
 
         $builder = $db->table('temp_cards');
         $builder->select('*');
-        $builder->join('cards', 'temp_cards.id = cards.id', 'right');
+        $builder->join('cards', 'temp_cards.card_id = cards.id', 'left');
         $query = $builder->get();
         $db->close();
 
@@ -73,25 +93,61 @@ class Card_model extends Model
 
     public function update_card()
     {
+        // TODO This needs to send emails if cards are overdue
         $db = $this->db;
-
         $today = date('Y-m-d');
 
         $builder = $db->table('temp_cards');
-        $builder->select('card_id');
+        $builder->select('card_number', 'administrator');
+        $builder->join('cards', 'temp_cards.card_id = cards.id', 'left');
         $builder->where('requested_date <', $today);
-        $id = $builder->get();
-        $query = false;
+        $name = $builder->get();
 
-        foreach ($id->getResult() as $row) {
-            $builder2 = $db->table('cards');
-            $builder2->set('active', '0');
-            $builder2->where('id', $row->card_id);
-            $builder2->update();
-            $query = $builder2->get();
+        $dee = "dahlmand1@southernct.edu";
+        $minaya = "minayac1@southernct.edu";
+        $palak = "patelp22@southernct.edu";
+
+        $email = \Config\Services::email();
+
+        foreach ($name->getResult() as $row) {
+
+            $email->setFrom('Reslife@southernct.edu', 'Reslife');
+            // $email->setTo($row->administrator);
+            $email->setTo('Fernandezf2@southernct.edu');
+            // $email->setCC('another@another-example.com');
+            // $email->setBCC('them@their-example.com');
+            $email->setSubject('Temporary Id expires');
+            $email->setMessage('Your temporary ID was due today the card number is' . $row->card_number);
+
+            $email->send();
         }
 
         $db->close();
-        return $query;
+    }
+
+    public function return_card($data)
+    {
+        $db = $this->db;
+        $date = date('Y-m-d');
+        $check = true;
+        $data2 = [
+            'returned_date' => $date,
+        ];
+
+        $builder = $db->table('temp_cards');
+        $builder->where("card_id", $data);
+        $builder->where("returned_date", null);
+        $builder->update($data2);
+
+        $data3 = [
+            "active" => 0,
+        ];
+
+        $builder2 = $db->table('cards');
+        $builder2->where("id", $data);
+        $builder2->update($data3);
+
+        $db->close();
+        return $check;
     }
 }

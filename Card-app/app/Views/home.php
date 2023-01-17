@@ -286,27 +286,17 @@
         <h1>These are the Card links for the app</h1>
         <!-- //* add text when you hover -->
         <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-3 g-3 center">
+            <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-2 g-2 center">
 
                 <div class="col">
                     <a href="view_cards">
                         <div class="card h-100 shadow-sm">
                             <!-- <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/operations_and_requests.png" class="card-img-top" alt=""> -->
                             <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/Remade%20Icons-06.png" class="card-img-top" alt="">
-                            <!-- <a href="view cards"> -->
-                            <!-- <div class="card-body">  -->
-                            <!-- <div class="clearfix mb-3"> 
-                                    <span class="float-start badge rounded-pill bg-success">View</span> 
-                                </div> 
-                                <div class="hidden">
-                                    <h5 class="card-title">This is to view all the cards and who took them out.</h5> 
-                                </div> -->
                             <div class="text-center my-4">
                                 <a href="view_cards" class="btn btn-warning">View</a>
                             </div>
                             <hr>
-                            <!-- </div>  -->
-                            <!-- </a> -->
                         </div>
                     </a>
                 </div>
@@ -317,12 +307,6 @@
                             <!-- <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/program_proposal.png" class="card-img-top" alt=""> -->
                             <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/Remade%20Icons-04.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <!-- <div class="clearfix mb-3"> 
-                                <span class="float-start badge rounded-pill bg-success">Form</span> 
-                            </div>
-                            <div class="hidden">
-                                <h5 class="card-title">This is a form to check out a temporary id card.</h5>
-                            </div> -->
                                 <div class="text-center my-4">
                                     <a href="card_form" class="btn btn-warning">Temp Card Form</a>
                                 </div>
@@ -338,15 +322,21 @@
                             <!-- <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/passes_and_other.png" class="card-img-top" > -->
                             <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/Remade%20Icons-05.png" class="card-img-top">
                             <div class="card-body">
-                                <!-- <div class="clearfix mb-3"> 
-                                <span class="float-start badge rounded-pill bg-success">Form</span> 
-                            </div> 
-                            <div class="hidden">
-                                <h5 class="card-title">This is a form to enter a card for users to checkout.</h5> 
-                            </div>  -->
                                 <div class="text-center my-4">
-                                    <!-- <div class="d-grid gap-2 my-4">  -->
                                     <a href="enter_cards" class="btn btn-warning">Card Form</a>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="card_return">
+                        <div class="card h-100 shadow-sm">
+                            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/return-icons.png" class="card-img-top">
+                            <div class="card-body">
+                                <div class="text-center my-4">
+                                    <a href="enter_cards" class="btn btn-warning">Return Card Form</a>
                                 </div>
                                 <hr>
                             </div>

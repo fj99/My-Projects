@@ -32,14 +32,15 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => 'root',
-        'password' => '',
+        'hostname' => 'prd-mysql02.scsu.southernct.edu',
+        'username' => 'RLProgramPortal',
+        'password' => 'Ulive3now',
         'database' => 'reslife',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
-        'DBDebug'  => (ENVIRONMENT !== 'production'),
+        'DBDebug'  => true, //* Testing
+        // 'DBDebug'  => (ENVIRONMENT !== 'production'),
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',

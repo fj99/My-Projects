@@ -14,6 +14,7 @@ CREATE TABLE temp_cards (
     card_id int NOT NULL,
     submission_date DATE NOT NULL,
     requested_date DATE NOT NULL,
+    returned_date DATE,
     reason_for_card VARCHAR(255) NOT NULL,
     administrator VARCHAR(255) NOT NULL,
     PRIMARY KEY(id),

@@ -625,8 +625,8 @@
 
 	.container-fluid {
 		width: 100%;
-		padding-right: 15px;
-		padding-left: 15px;
+		/* padding-right: 15px;
+		padding-left: 15px; */
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -11890,16 +11890,16 @@
 					<h4 class="text-center mb-4">Table that we will pull data from and insert cards</h4>
 					<div class="table-wrap">
 						<table class="table">
-							<thead class="thead-primary">
+							<thead class="thead-primary" onclick="myFunction('card')">
 								<tr>
 									<th>Card Number</th>
 									<th>Access Number</th>
 									<th>Active</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id="card">
 								<?php
-								foreach ($form_data->getResult() as $row) {
+								foreach ($card_data->getResult() as $row) {									
 									$i = $row->card_number;
 									$x = $row->access_number;
 									$a = $row->active;
@@ -11914,7 +11914,7 @@
 									echo "<td>$x</td>";
 									echo "<td>$a</td>";
 									echo "</tr>";
-								}
+								}								
 								?>
 							</tbody>
 						</table>
@@ -11923,31 +11923,33 @@
 				<div class="col-md-12">
 					<h4 class="text-center mb-4">Table that holds the Submission to the form</h4>
 					<div class="table-wrap">
-						<table class="table">
-							<thead class="thead-primary">
-								<tr>
-									<th>User</th>
-									<th>Card Number</th>
-									<th>Access Number</th>
-									<th>First Day </th>
-									<th>Last day</th>
-									<th>Reason for temp card</th>
-									<th>Administrator in charge of card</th>
-									<th>Active</th>
-								</tr>
-							</thead>
-							<tbody>
+						<table class="table">							
+								<thead class="thead-primary" onclick="myFunction('form')">
+									<tr>
+										<th>User</th>
+										<th>Card Number</th>
+										<th>Access Number</th>
+										<th>First Day </th>
+										<th>Requested day</th>
+										<th>Returned day</th>
+										<th>Reason for temp card</th>
+										<th>Administrator in charge of card</th>
+										<th>Active</th>
+									</tr>
+								</thead>
+							<tbody id ="form">
 								<?php
 								foreach ($form_data->getResult() as $row2) {
-									// foreach ($form_data as $row2) {
 									$u = $row2->user;
-									if ($u == '') {
+									$id = $row2->id;
+									if ($id == null) {
 										break;
 									}
 									$c = $row2->card_number;
 									$ac = $row2->access_number;
 									$s = $row2->submission_date;
 									$r = $row2->requested_date;
+									$r2 = $row2->returned_date;
 									$re = $row2->reason_for_card;
 									$a = $row2->administrator;
 									$active = $row2->active;
@@ -11955,6 +11957,9 @@
 										$active = "Not active";
 									} else {
 										$active = "Active";
+									}
+									if ($r2 == null) {
+										$r2 = "not returned";
 									}
 
 									echo "<tr>";
@@ -11964,6 +11969,7 @@
 									echo "<td>$ac</td>";
 									echo "<td>$s</td>";
 									echo "<td>$r</td>";
+									echo "<td>$r2</td>";
 									echo "<td>$re</td>";
 									echo "<td>$a</td>";
 									echo "<td>$active</td>";
@@ -11985,6 +11991,17 @@
 			</div>
 		</div>
 	</section>
+
+	<script>
+		function myFunction(x) {    
+			var tbody = document.getElementById(x);
+			if (tbody.style.display == 'none') {
+				tbody.style.display = '';
+			} else {
+				tbody.style.display = 'none';
+			}
+		}
+	</script>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/popper.js"></script>

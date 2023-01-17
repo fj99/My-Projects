@@ -42,7 +42,9 @@ $routes->get('/test', 'Home::test');
 $routes->get('/view_cards', 'Home::view_cards');
 $routes->get('/card_form', 'Home::card_form');
 $routes->get('/enter_cards', 'Home::enter_cards');
+$routes->get('/card_return', 'Home::card_return');
 
+$routes->post('/returning_card', 'Home::returning_card');
 $routes->post('/insert_card', 'Home::insert_card');
 $routes->post('/insert_temp', 'Home::insert_temp');
 
