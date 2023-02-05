@@ -1,0 +1,61 @@
+ERROR - 2022-12-16 10:58:23 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 10:58:23 --> Table 'reslife.notifications' doesn't exist
+CRITICAL - 2022-12-16 10:58:23 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\templates\header.php on line 41.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 4 APPPATH\Controllers\Home.php(24): view('templates/header', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 10:59:49 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 10:59:49 --> Table 'reslife.notifications' doesn't exist
+CRITICAL - 2022-12-16 10:59:49 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\home_page\home_page.php on line 9.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('home_page/home_page', [], true)
+ 4 APPPATH\Controllers\Home.php(26): view('home_page/home_page', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-16 11:00:36 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 11:00:36 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 11:02:49 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 11:02:49 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 11:03:22 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 11:03:22 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 11:03:22 --> Table 'reslife.staff' doesn't exist
+ERROR - 2022-12-16 11:03:22 --> Table 'reslife.users' doesn't exist
+ERROR - 2022-12-16 11:03:22 --> Table 'reslife.auth' doesn't exist
+ERROR - 2022-12-16 11:03:22 --> Table 'reslife.staff' doesn't exist
+ERROR - 2022-12-16 11:03:22 --> Table 'reslife.users' doesn't exist
+ERROR - 2022-12-16 11:03:22 --> Table 'reslife.auth' doesn't exist
+ERROR - 2022-12-16 12:21:55 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 12:21:55 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 13:15:42 --> Table 'reslife.notifications' doesn't exist
+ERROR - 2022-12-16 13:15:42 --> Table 'reslife.notifications' doesn't exist
+CRITICAL - 2022-12-16 15:10:33 --> Undefined index: id
+in APPPATH\Controllers\Home.php on line 100.
+ 1 APPPATH\Controllers\Home.php(100): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'APPPATH\\Controllers\\Home.php', 100, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 15:13:03 --> Undefined index: allhalls1
+in APPPATH\Controllers\Home.php on line 120.
+ 1 APPPATH\Controllers\Home.php(120): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allhalls1', 'APPPATH\\Controllers\\Home.php', 120, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-16 15:13:58 --> Undefined index: allhalls1
+in APPPATH\Controllers\Home.php on line 120.
+ 1 APPPATH\Controllers\Home.php(120): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allhalls1', 'APPPATH\\Controllers\\Home.php', 120, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

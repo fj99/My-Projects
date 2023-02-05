@@ -1,0 +1,262 @@
+CRITICAL - 2022-12-20 08:08:03 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Update_model.php on line 282.
+ 1 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 08:50:23 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Update_model.php on line 282.
+ 1 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 08:54:40 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Update_model.php on line 282.
+ 1 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 09:06:29 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Models\Update_model.php on line 284.
+ 1 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 09:07:11 --> Undefined variable: salt_pass
+in APPPATH\Models\Update_model.php on line 287.
+ 1 APPPATH\Models\Update_model.php(287): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: salt_pass', 'APPPATH\\Models\\Update_model.php', 287, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 09:07:47 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$hashpass
+in APPPATH\Models\Update_model.php on line 284.
+ 1 APPPATH\Models\Update_model.php(284): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$hashpass', 'APPPATH\\Models\\Update_model.php', 284, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 09:08:04 --> Undefined variable: salt_pass
+in APPPATH\Models\Update_model.php on line 286.
+ 1 APPPATH\Models\Update_model.php(286): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: salt_pass', 'APPPATH\\Models\\Update_model.php', 286, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:12:17 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Models\Update_model.php on line 180.
+ 1 APPPATH\Models\Update_model.php(287): App\Models\Update_Model->emailProgramPortalPassword(Object(CodeIgniter\Database\MySQLi\Result), 'e107798c95a0c03bcb65a3873566723ea84027b8455beb55f70867acf64920d1')
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:14:02 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$username
+in APPPATH\Models\Update_model.php on line 180.
+ 1 APPPATH\Models\Update_model.php(180): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$username', 'APPPATH\\Models\\Update_model.php', 180, [...])
+ 2 APPPATH\Models\Update_model.php(287): App\Models\Update_Model->emailProgramPortalPassword(Object(CodeIgniter\Database\MySQLi\Result), 'e107798c95a0c03bcb65a3873566723ea84027b8455beb55f70867acf64920d1')
+ 3 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:14:25 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Update_model.php on line 184.
+ 1 APPPATH\Models\Update_model.php(287): App\Models\Update_Model->emailProgramPortalPassword(Object(stdClass), 'e107798c95a0c03bcb65a3873566723ea84027b8455beb55f70867acf64920d1')
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:14:46 --> Undefined property: stdClass::$first_name
+in APPPATH\Models\Update_model.php on line 184.
+ 1 APPPATH\Models\Update_model.php(184): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$first_name', 'APPPATH\\Models\\Update_model.php', 184, [...])
+ 2 APPPATH\Models\Update_model.php(287): App\Models\Update_Model->emailProgramPortalPassword(Object(stdClass), 'e107798c95a0c03bcb65a3873566723ea84027b8455beb55f70867acf64920d1')
+ 3 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:15:18 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Update_model.php on line 197.
+ 1 APPPATH\Models\Update_model.php(287): App\Models\Update_Model->emailProgramPortalPassword(Object(stdClass), 'e107798c95a0c03bcb65a3873566723ea84027b8455beb55f70867acf64920d1')
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:15:42 --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+in APPPATH\Models\Update_model.php on line 204.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()', 'APPPATH\\Models\\Update_model.php', 204, [...])
+ 2 APPPATH\Models\Update_model.php(204): mail('fernandezf2@southernct.edu, louisem321@southernct.edu', 'Program Portal Password Reset', 'Dear Mary,<br><br>Your Program Portal password has been reset. Below are your login credentials. This does not affect your staff portal password which is still your SCSU banner password.<br><br>&emsp; 1.  Username: louisem321<br>&emsp; 2.  Password: e107798c95a0c03bcb65a3873566723ea84027b8455beb55f70867acf64920d1<br><br>&emsp; 3.  Once you are logged in, click \'Account Settings\' at the top of the blue navigation bar<br>&emsp; 4.  Change your password in the \'User Information\' section<br>&emsp; 5.  Done!<br><br>Best Regards,<br>The Office of Residence Life', 'MIME-Version: 1.0
+Content-type:text/html;charset=UTF-8
+From: reslife@southernct.edu
+')
+ 3 APPPATH\Models\Update_model.php(287): App\Models\Update_Model->emailProgramPortalPassword(Object(stdClass), 'e107798c95a0c03bcb65a3873566723ea84027b8455beb55f70867acf64920d1')
+ 4 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 09:18:23 --> Undefined index: job
+in APPPATH\Models\Update_model.php on line 305.
+ 1 APPPATH\Models\Update_model.php(305): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: job', 'APPPATH\\Models\\Update_model.php', 305, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 09:29:42 --> Undefined index: job
+in APPPATH\Models\Update_model.php on line 305.
+ 1 APPPATH\Models\Update_model.php(305): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: job', 'APPPATH\\Models\\Update_model.php', 305, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:21:21 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::row()
+in APPPATH\Models\Update_model.php on line 286.
+ 1 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:22:27 --> Undefined index: job
+in APPPATH\Models\Update_model.php on line 306.
+ 1 APPPATH\Models\Update_model.php(306): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: job', 'APPPATH\\Models\\Update_model.php', 306, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:22:36 --> Undefined index: job
+in APPPATH\Models\Update_model.php on line 303.
+ 1 APPPATH\Models\Update_model.php(303): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: job', 'APPPATH\\Models\\Update_model.php', 303, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-20 10:29:13 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 10:29:17 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 10:29:20 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 10:46:03 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 10:46:56 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 10:47:07 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 10:47:29 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 10:47:47 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 10:49:05 --> Table 'reslife.job' doesn't exist
+ERROR - 2022-12-20 12:54:56 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 12:55:04 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-20 12:59:32 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 874.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(734): CodeIgniter\Model->builder()
+ 3 APPPATH\Models\Update_model.php(215): CodeIgniter\Model->__get('job_table')
+ 4 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-20 13:00:06 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-20 13:05:38 --> Undefined index: job
+in APPPATH\Models\Update_model.php on line 304.
+ 1 APPPATH\Models\Update_model.php(304): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: job', 'APPPATH\\Models\\Update_model.php', 304, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 13:51:28 --> Undefined property: stdClass::$job
+in APPPATH\Models\Update_model.php on line 305.
+ 1 APPPATH\Models\Update_model.php(305): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$job', 'APPPATH\\Models\\Update_model.php', 305, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 13:52:01 --> Undefined index: pp_signature
+in APPPATH\Models\Update_model.php on line 307.
+ 1 APPPATH\Models\Update_model.php(307): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pp_signature', 'APPPATH\\Models\\Update_model.php', 307, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 13:59:16 --> Undefined index: permissions11
+in APPPATH\Models\Update_model.php on line 311.
+ 1 APPPATH\Models\Update_model.php(311): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: permissions11', 'APPPATH\\Models\\Update_model.php', 311, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 13:59:56 --> Undefined index: permissions11
+in APPPATH\Models\Update_model.php on line 312.
+ 1 APPPATH\Models\Update_model.php(312): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: permissions11', 'APPPATH\\Models\\Update_model.php', 312, [...])
+ 2 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-20 14:00:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:01:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:02:31 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:02:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:03:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:03:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:03:26 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:03:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:03:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:04:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:04:20 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:04:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:04:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:05:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:05:12 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:05:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:05:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:06:29 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:06:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:08:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:08:11 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:08:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:09:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:10:26 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:10:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:11:44 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:11:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:13:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:13:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:16:26 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:16:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:16:36 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:16:47 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:16:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:16:55 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:23:48 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:25:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:25:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:25:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:25:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:27:22 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:27:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:27:40 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:27:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+ERROR - 2022-12-20 14:27:52 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:32:44 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-20 14:32:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Office` = 0, `permissions` = 'dev,banned_list,housing_director,admins,adminS...' at line 1
+CRITICAL - 2022-12-20 14:43:18 --> Undefined property: App\Controllers\Home::$load
+in APPPATH\Controllers\Home.php on line 200.
+ 1 APPPATH\Controllers\Home.php(200): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Home::$load', 'APPPATH\\Controllers\\Home.php', 200, [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->hireEmployees()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

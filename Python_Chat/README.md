@@ -14,10 +14,11 @@
 ## Enter Room
 ![Enter room](Presentation/Enter%20Room.png)
 
-## Someone joined the room
-![]()
-## Send message in room
-![]()
+## Someone joined your room
+![second user joined the room](Presentation/join-room2.png)
 
-## receive message in room
-![]()
+## Send a message in your room
+![sent message](Presentation/send-message.png)
+
+## Receive a message in your room
+![received message](Presentation/receive-message.png)

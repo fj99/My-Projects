@@ -1,0 +1,18 @@
+CRITICAL - 2023-01-10 12:57:28 --> Undefined array key "user[0]"
+in APPPATH\Controllers\Home.php on line 208.
+ 1 APPPATH\Controllers\Home.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user[0]"', 'APPPATH\\Controllers\\Home.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-10 12:58:00 --> Array to string conversion
+in APPPATH\Views\updating\update_success.php on line 16.
+ 1 APPPATH\Views\updating\update_success.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\updating\\update_success.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\update_success.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_success', [], true)
+ 5 APPPATH\Controllers\Home.php(210): view('updating/update_success', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

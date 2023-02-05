@@ -1,0 +1,205 @@
+CRITICAL - 2022-12-19 10:49:24 --> Undefined index: allhalls1
+in APPPATH\Controllers\Home.php on line 120.
+ 1 APPPATH\Controllers\Home.php(120): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allhalls1', 'APPPATH\\Controllers\\Home.php', 120, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 10:58:50 --> Undefined index: allhalls_1
+in APPPATH\Controllers\Home.php on line 122.
+ 1 APPPATH\Controllers\Home.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allhalls_1', 'APPPATH\\Controllers\\Home.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 10:58:53 --> Undefined index: allhalls_1
+in APPPATH\Controllers\Home.php on line 122.
+ 1 APPPATH\Controllers\Home.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allhalls_1', 'APPPATH\\Controllers\\Home.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 11:01:52 --> Undefined index: allhalls_1
+in APPPATH\Controllers\Home.php on line 122.
+ 1 APPPATH\Controllers\Home.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allhalls_1', 'APPPATH\\Controllers\\Home.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 11:24:50 --> syntax error, unexpected ')'
+in APPPATH\Views\updating\update_users.php on line 314.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 3 APPPATH\Controllers\Home.php(86): view('updating/update_users', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:24:23 --> Undefined index: allhalls1
+in APPPATH\Controllers\Home.php on line 122.
+ 1 APPPATH\Controllers\Home.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allhalls1', 'APPPATH\\Controllers\\Home.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:50:28 --> A non-numeric value encountered
+in APPPATH\Controllers\Home.php on line 103.
+ 1 APPPATH\Controllers\Home.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Home.php', 103, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:51:09 --> A non-numeric value encountered
+in APPPATH\Controllers\Home.php on line 104.
+ 1 APPPATH\Controllers\Home.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\Home.php', 104, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:51:18 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 178.
+ 1 APPPATH\Controllers\Home.php(178): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 178, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:52:25 --> Undefined index: id
+in APPPATH\Controllers\Home.php on line 160.
+ 1 APPPATH\Controllers\Home.php(160): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', 'APPPATH\\Controllers\\Home.php', 160, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:53:15 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 180.
+ 1 APPPATH\Controllers\Home.php(180): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 180, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:53:26 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 181.
+ 1 APPPATH\Controllers\Home.php(181): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 181, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:53:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Home.php on line 180.
+ 1 APPPATH\Controllers\Home.php(180): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Home.php', 180, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:54:12 --> array_push() expects parameter 1 to be array, int given
+in APPPATH\Controllers\Home.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() expects parameter 1 to be array, int given', 'APPPATH\\Controllers\\Home.php', 107, [...])
+ 2 APPPATH\Controllers\Home.php(107): array_push(1, null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:54:40 --> array_push() expects parameter 1 to be array, int given
+in APPPATH\Controllers\Home.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() expects parameter 1 to be array, int given', 'APPPATH\\Controllers\\Home.php', 107, [...])
+ 2 APPPATH\Controllers\Home.php(107): array_push(1, null)
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:54:53 --> array_push() expects parameter 1 to be array, int given
+in APPPATH\Controllers\Home.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() expects parameter 1 to be array, int given', 'APPPATH\\Controllers\\Home.php', 107, [...])
+ 2 APPPATH\Controllers\Home.php(107): array_push(1, 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:55:31 --> array_push() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Home.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Home.php', 107, [...])
+ 2 APPPATH\Controllers\Home.php(107): array_push(null, 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:56:16 --> array_push() expects parameter 1 to be array, int given
+in APPPATH\Controllers\Home.php on line 107.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() expects parameter 1 to be array, int given', 'APPPATH\\Controllers\\Home.php', 107, [...])
+ 2 APPPATH\Controllers\Home.php(107): array_push(1, 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:56:52 --> Function name must be a string
+in APPPATH\Controllers\Home.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:57:53 --> array_push() expects parameter 1 to be array, int given
+in APPPATH\Controllers\Home.php on line 108.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() expects parameter 1 to be array, int given', 'APPPATH\\Controllers\\Home.php', 108, [...])
+ 2 APPPATH\Controllers\Home.php(108): array_push(1, 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:58:43 --> Undefined index: allroles1
+in APPPATH\Controllers\Home.php on line 190.
+ 1 APPPATH\Controllers\Home.php(190): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allroles1', 'APPPATH\\Controllers\\Home.php', 190, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 14:58:50 --> Undefined index: allroles1
+in APPPATH\Controllers\Home.php on line 190.
+ 1 APPPATH\Controllers\Home.php(190): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allroles1', 'APPPATH\\Controllers\\Home.php', 190, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 15:04:37 --> Function name must be a string
+in APPPATH\Models\Update_model.php on line 263.
+ 1 APPPATH\Controllers\Home.php(231): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 15:05:32 --> Function name must be a string
+in APPPATH\Models\Update_model.php on line 264.
+ 1 APPPATH\Controllers\Home.php(231): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 15:06:54 --> Undefined index: allroles11
+in APPPATH\Models\Update_model.php on line 264.
+ 1 APPPATH\Models\Update_model.php(264): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allroles11', 'APPPATH\\Models\\Update_model.php', 264, [...])
+ 2 APPPATH\Controllers\Home.php(231): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 15:09:28 --> Undefined index: allhalls10
+in APPPATH\Models\Update_model.php on line 271.
+ 1 APPPATH\Models\Update_model.php(271): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: allhalls10', 'APPPATH\\Models\\Update_model.php', 271, [...])
+ 2 APPPATH\Controllers\Home.php(231): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 15:12:23 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Models\Update_model.php on line 281.
+ 1 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 15:21:38 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Update_model.php on line 282.
+ 1 APPPATH\Controllers\Home.php(183): App\Models\Update_Model->updateUser([...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,361 @@
+ERROR - 2022-12-30 08:16:27 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:16:48 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:21:55 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:22:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 08:22:37 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:22:50 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:23:11 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:23:15 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:23:17 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:23:36 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:28:05 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:30:43 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:37:13 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:43:19 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:44:25 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:44:29 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:45:48 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:54:59 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:55:16 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 08:55:20 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 09:04:56 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 09:15:05 --> Undefined array key "username"
+in APPPATH\Controllers\Home.php on line 136.
+ 1 APPPATH\Controllers\Home.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Controllers\\Home.php', 136)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 09:18:05 --> Undefined array key "username"
+in APPPATH\Controllers\Home.php on line 136.
+ 1 APPPATH\Controllers\Home.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Controllers\\Home.php', 136)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 09:18:14 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 09:18:15 --> Undefined array key "permissions1"
+in APPPATH\Controllers\Home.php on line 145.
+ 1 APPPATH\Controllers\Home.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "permissions1"', 'APPPATH\\Controllers\\Home.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 09:18:27 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 09:18:36 --> Undefined array key "permissions1"
+in APPPATH\Controllers\Home.php on line 145.
+ 1 APPPATH\Controllers\Home.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "permissions1"', 'APPPATH\\Controllers\\Home.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 09:21:31 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 09:21:58 --> Undefined array key "permissions1"
+in APPPATH\Controllers\Home.php on line 145.
+ 1 APPPATH\Controllers\Home.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "permissions1"', 'APPPATH\\Controllers\\Home.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 09:24:15 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 09:24:45 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 09:24:49 --> Undefined array key "permissions1"
+in APPPATH\Controllers\Home.php on line 145.
+ 1 APPPATH\Controllers\Home.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "permissions1"', 'APPPATH\\Controllers\\Home.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 09:25:02 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 09:45:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+CRITICAL - 2022-12-30 09:45:44 --> Array to string conversion
+in APPPATH\Models\Update_model.php on line 332.
+ 1 APPPATH\Models\Update_model.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\Update_model.php', 332)
+ 2 APPPATH\Controllers\Home.php(199): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 09:48:20 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 09:58:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+CRITICAL - 2022-12-30 09:58:24 --> Array to string conversion
+in APPPATH\Models\Update_model.php on line 330.
+ 1 APPPATH\Models\Update_model.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\Update_model.php', 330)
+ 2 APPPATH\Controllers\Home.php(199): App\Models\Update_Model->updateUser([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 10:02:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:02:31 --> Operand should contain 1 column(s)
+ERROR - 2022-12-30 10:02:35 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:02:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 61, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:02:44 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:03:05 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:03:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:03:10 --> Operand should contain 1 column(s)
+ERROR - 2022-12-30 10:03:14 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:04:07 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:04:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:04:41 --> Operand should contain 1 column(s)
+ERROR - 2022-12-30 10:04:44 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:05:04 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 10:16:21 --> Undefined array key 9
+in APPPATH\Controllers\Home.php on line 160.
+ 1 APPPATH\Controllers\Home.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 9', 'APPPATH\\Controllers\\Home.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 10:17:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:17:40 --> Operand should contain 1 column(s)
+ERROR - 2022-12-30 10:17:44 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:17:50 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:18:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:18:41 --> Operand should contain 1 column(s)
+ERROR - 2022-12-30 10:21:22 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:21:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:21:29 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:21:32 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:21:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 61, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:21:50 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:22:15 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:23:43 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:26:07 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:26:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 6, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 10:26:14 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 10:26:26 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 10:47:51 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:48:24 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:51:18 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:51:42 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:53:38 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:54:04 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:54:12 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:55:15 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:55:22 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 10:57:21 --> Array callback has to contain indices 0 and 1
+in APPPATH\Controllers\Home.php on line 366.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 10:59:20 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 11:17:12 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2358): CodeIgniter\Database\BaseConnection->query('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...], false)
+ 6 APPPATH\Models\Update_model.php(437): CodeIgniter\Database\BaseBuilder->delete()
+ 7 APPPATH\Controllers\Home.php(366): App\Models\Update_Model->updateHD('70537527')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 11:19:12 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:19:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:19:56 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:20:15 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:20:18 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 6, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:20:23 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:20:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:27:23 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:27:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:27:34 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Hall` (`hall_id`))
+ERROR - 2022-12-30 11:27:38 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:27:50 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:29:18 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:29:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:29:20 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Hall` (`hall_id`))
+ERROR - 2022-12-30 11:32:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:32:14 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Hall` (`hall_id`))
+ERROR - 2022-12-30 11:32:52 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:33:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 77, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:33:03 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Hall` (`hall_id`))
+ERROR - 2022-12-30 11:33:07 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:33:11 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:33:23 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:33:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:33:27 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Hall` (`hall_id`))
+ERROR - 2022-12-30 11:33:31 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:33:41 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:42:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:42:17 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Hall` (`hall_id`))
+ERROR - 2022-12-30 11:42:21 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:43:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:43:31 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Hall` (`hall_id`))
+ERROR - 2022-12-30 11:56:13 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 11:56:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 11:56:27 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Halls` (`hall_id`) ON UPDATE CASCADE)
+ERROR - 2022-12-30 13:25:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 78, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 13:25:41 --> Cannot add or update a child row: a foreign key constraint fails (`reslife`.`hall_directors`, CONSTRAINT `hall_directors_ibfk_1` FOREIGN KEY (`hall_id`) REFERENCES `Halls` (`hall_id`) ON UPDATE CASCADE)
+CRITICAL - 2022-12-30 13:30:33 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2358): CodeIgniter\Database\BaseConnection->query('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...], false)
+ 6 APPPATH\Models\Update_model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 7 APPPATH\Controllers\Home.php(372): App\Models\Update_Model->updateHD('70537527')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 13:31:12 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2358): CodeIgniter\Database\BaseConnection->query('DELETE FROM `hall_directors`
+WHERE `num` = :num:', [...], false)
+ 6 APPPATH\Models\Update_model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 7 APPPATH\Controllers\Home.php(372): App\Models\Update_Model->updateHD('70537527')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 13:34:55 --> Object of class stdClass could not be converted to string
+in APPPATH\Models\Update_model.php on line 444.
+ 1 APPPATH\Controllers\Home.php(372): App\Models\Update_Model->updateHD('70537527')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 13:35:45 --> Object of class stdClass could not be converted to string
+in APPPATH\Models\Update_model.php on line 444.
+ 1 APPPATH\Controllers\Home.php(372): App\Models\Update_Model->updateHD('70537527')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 13:36:03 --> Object of class stdClass could not be converted to string
+in APPPATH\Models\Update_model.php on line 444.
+ 1 APPPATH\Controllers\Home.php(372): App\Models\Update_Model->updateHD('70537527')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 13:38:20 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Update_model.php on line 444.
+ 1 APPPATH\Controllers\Home.php(372): App\Models\Update_Model->updateHD('70537527')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 13:38:36 --> Object of type stdClass is not callable
+in APPPATH\Models\Update_model.php on line 444.
+ 1 APPPATH\Controllers\Home.php(372): App\Models\Update_Model->updateHD('70537527')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 13:38:55 --> Cannot use object of type stdClass as array
+in APPPATH\Models\Update_model.php on line 447.
+ 1 APPPATH\Controllers\Home.php(372): App\Models\Update_Model->updateHD('70537527')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->RemoveHD()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-30 13:39:58 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 13:40:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 61, auth_level` = 0, form_access` = 1,...' at line 1
+ERROR - 2022-12-30 13:40:15 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-30 13:43:18 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-30 14:26:20 --> Undefined variable $notification
+in APPPATH\Views\Notifications\notifications.php on line 8.
+ 1 APPPATH\Views\Notifications\notifications.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $notification', 'APPPATH\\Views\\Notifications\\notifications.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Notifications\\notifications.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Notifications/notifications', [], true)
+ 5 APPPATH\Controllers\Home.php(396): view('Notifications/notifications', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->viewNotifications()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 14:26:47 --> Undefined variable $notifications
+in APPPATH\Views\templates\header.php on line 42.
+ 1 APPPATH\Views\templates\header.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $notifications', 'APPPATH\\Views\\templates\\header.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Home.php(395): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->viewNotifications()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 14:26:55 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Views\Notifications\notifications.php on line 108.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Notifications/notifications', [], true)
+ 4 APPPATH\Controllers\Home.php(397): view('Notifications/notifications', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->viewNotifications()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-30 14:27:16 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Views\Notifications\notifications.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Notifications/notifications', [], true)
+ 4 APPPATH\Controllers\Home.php(397): view('Notifications/notifications', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->viewNotifications()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

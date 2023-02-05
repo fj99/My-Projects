@@ -1,0 +1,520 @@
+CRITICAL - 2022-07-27 10:00:47 --> Undefined property: App\Controllers\Home::$input
+in APPPATH\Controllers\Home.php on line 68.
+ 1 APPPATH\Controllers\Home.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$input', 'APPPATH\\Controllers\\Home.php', 68)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 10:01:10 --> Undefined property: App\Controllers\Home::$input
+in APPPATH\Controllers\Home.php on line 73.
+ 1 APPPATH\Controllers\Home.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$input', 'APPPATH\\Controllers\\Home.php', 73)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 10:01:32 --> Call to undefined function link_tag()
+in APPPATH\Views\templates\header.php on line 12.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('templates/header', [], true)
+ 4 APPPATH\Controllers\Home.php(75): view('templates/header', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 10:01:52 --> Invalid file: updating/validation_failure.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('updating/validation_failure.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/validation_failure', [], true)
+ 3 APPPATH\Controllers\Home.php(76): view('updating/validation_failure', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 10:08:30 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 10:08:30 --> Undefined array key "username"
+in APPPATH\Views\updating\validation_failure.php on line 12.
+ 1 APPPATH\Views\updating\validation_failure.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Views\\updating\\validation_failure.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\validation_failure.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/validation_failure', [], true)
+ 5 APPPATH\Controllers\Home.php(76): view('updating/validation_failure', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 10:10:38 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 10:11:27 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 10:24:40 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 10:24:40 --> Attempt to read property "job" on null
+in APPPATH\Models\Update_model.php on line 129.
+ 1 APPPATH\Models\Update_model.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "job" on null', 'APPPATH\\Models\\Update_model.php', 129)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 10:25:21 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 10:25:21 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$job
+in APPPATH\Models\Update_model.php on line 127.
+ 1 APPPATH\Models\Update_model.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$job', 'APPPATH\\Models\\Update_model.php', 127)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 10:25:40 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 10:25:40 --> Attempt to read property "job" on null
+in APPPATH\Models\Update_model.php on line 125.
+ 1 APPPATH\Models\Update_model.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "job" on null', 'APPPATH\\Models\\Update_model.php', 125)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 10:26:26 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 10:26:26 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$jobs
+in APPPATH\Models\Update_model.php on line 127.
+ 1 APPPATH\Models\Update_model.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$jobs', 'APPPATH\\Models\\Update_model.php', 127)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 12:31:15 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 12:31:16 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$jobs
+in APPPATH\Models\Update_model.php on line 127.
+ 1 APPPATH\Models\Update_model.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$jobs', 'APPPATH\\Models\\Update_model.php', 127)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 12:57:00 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 12:57:00 --> Attempt to read property "jobs" on null
+in APPPATH\Models\Update_model.php on line 125.
+ 1 APPPATH\Models\Update_model.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jobs" on null', 'APPPATH\\Models\\Update_model.php', 125)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:00:53 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:00:53 --> Attempt to read property "jobs" on null
+in APPPATH\Models\Update_model.php on line 125.
+ 1 APPPATH\Models\Update_model.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jobs" on null', 'APPPATH\\Models\\Update_model.php', 125)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:00:56 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:00:57 --> Attempt to read property "jobs" on null
+in APPPATH\Models\Update_model.php on line 125.
+ 1 APPPATH\Models\Update_model.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jobs" on null', 'APPPATH\\Models\\Update_model.php', 125)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:02:08 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:02:08 --> Attempt to read property "jobs" on null
+in APPPATH\Models\Update_model.php on line 125.
+ 1 APPPATH\Models\Update_model.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jobs" on null', 'APPPATH\\Models\\Update_model.php', 125)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:02:25 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:02:25 --> Attempt to read property "jobs" on null
+in APPPATH\Models\Update_model.php on line 125.
+ 1 APPPATH\Models\Update_model.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jobs" on null', 'APPPATH\\Models\\Update_model.php', 125)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:02:39 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:02:39 --> Undefined array key "jobs"
+in APPPATH\Models\Update_model.php on line 133.
+ 1 APPPATH\Models\Update_model.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jobs"', 'APPPATH\\Models\\Update_model.php', 133)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:03:00 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:03:00 --> Attempt to read property "jobs" on array
+in APPPATH\Models\Update_model.php on line 132.
+ 1 APPPATH\Models\Update_model.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jobs" on array', 'APPPATH\\Models\\Update_model.php', 132)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:07:40 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:07:40 --> Undefined array key "jobs"
+in APPPATH\Models\Update_model.php on line 133.
+ 1 APPPATH\Models\Update_model.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jobs"', 'APPPATH\\Models\\Update_model.php', 133)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 13:07:45 --> Undefined array key "jobs"
+in APPPATH\Models\Update_model.php on line 133.
+ 1 APPPATH\Models\Update_model.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jobs"', 'APPPATH\\Models\\Update_model.php', 133)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('123')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 13:20:05 --> Undefined array key "jobs"
+in APPPATH\Models\Update_model.php on line 133.
+ 1 APPPATH\Models\Update_model.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jobs"', 'APPPATH\\Models\\Update_model.php', 133)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('123')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 13:20:31 --> Undefined property: stdClass::$jobs
+in APPPATH\Models\Update_model.php on line 129.
+ 1 APPPATH\Models\Update_model.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jobs', 'APPPATH\\Models\\Update_model.php', 129)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('123')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 13:20:43 --> Undefined property: stdClass::$jobs
+in APPPATH\Models\Update_model.php on line 125.
+ 1 APPPATH\Models\Update_model.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jobs', 'APPPATH\\Models\\Update_model.php', 125)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('123')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 13:21:11 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$jobs
+in APPPATH\Models\Update_model.php on line 127.
+ 1 APPPATH\Models\Update_model.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$jobs', 'APPPATH\\Models\\Update_model.php', 127)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('123')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 13:22:25 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$job
+in APPPATH\Models\Update_model.php on line 127.
+ 1 APPPATH\Models\Update_model.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$job', 'APPPATH\\Models\\Update_model.php', 127)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('123')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:23:21 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:23:21 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:23:21 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:23:21 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::row()
+in APPPATH\Views\updating\update_users.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:26:18 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:26:18 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:26:18 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:26:18 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::row()
+in APPPATH\Views\updating\update_users.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:29:25 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:29:25 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:29:25 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:29:25 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:30:16 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 13:30:16 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:30:16 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:30:16 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:30:16 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:31:13 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 13:31:13 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:31:13 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:31:13 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:31:13 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:31:18 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 13:31:18 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:31:18 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:31:18 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:31:18 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:31:33 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 13:31:33 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:31:33 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:31:33 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:31:33 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:32:19 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 13:32:19 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:32:19 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:32:19 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:32:19 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:43:32 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 13:43:32 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:43:32 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:43:32 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:43:32 --> Call to a member function row() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:43:38 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 13:43:38 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 13:43:38 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 13:43:38 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 13:43:38 --> Call to a member function row() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:45:15 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:45:15 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...], false)
+ 6 APPPATH\Models\Update_model.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:45:46 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:45:46 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...], false)
+ 6 APPPATH\Models\Update_model.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-27 13:47:58 --> Undefined array key "id"
+in APPPATH\Controllers\Home.php on line 67.
+ 1 APPPATH\Controllers\Home.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Home.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 13:48:04 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 13:48:04 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...], false)
+ 6 APPPATH\Models\Update_model.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 14:09:32 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 14:09:32 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...], false)
+ 6 APPPATH\Models\Update_model.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 14:17:52 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 14:17:52 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `title`
+FROM `jobs`
+WHERE `id` = :id:', [...], false)
+ 6 APPPATH\Models\Update_model.php(135): CodeIgniter\Database\BaseBuilder->get()
+ 7 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 14:18:46 --> Unknown column 'username' in 'where clause'
+CRITICAL - 2022-07-27 14:18:46 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$job
+in APPPATH\Models\Update_model.php on line 127.
+ 1 APPPATH\Models\Update_model.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$job', 'APPPATH\\Models\\Update_model.php', 127)
+ 2 APPPATH\Controllers\Home.php(71): App\Models\Update_Model->getUsers('ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 14:18:57 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 14:18:57 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 14:18:57 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 14:18:57 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 14:18:57 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 14:19:35 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 14:19:35 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 14:19:35 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 14:19:35 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 14:19:35 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 14:19:59 --> Unknown column 'username' in 'where clause'
+ERROR - 2022-07-27 14:19:59 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 14:19:59 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 14:19:59 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 14:19:59 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-07-27 14:20:18 --> Unknown column 'title' in 'field list'
+ERROR - 2022-07-27 14:20:18 --> Table 'reslife.resworkorder' doesn't exist
+ERROR - 2022-07-27 14:20:18 --> Table 'reslife.resworkorder' doesn't exist
+CRITICAL - 2022-07-27 14:20:18 --> Call to a member function getRow() on bool
+in APPPATH\Views\updating\update_users.php on line 13.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/update_users', [], true)
+ 4 APPPATH\Controllers\Home.php(81): view('updating/update_users', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

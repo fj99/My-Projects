@@ -1,0 +1,171 @@
+CRITICAL - 2022-12-29 08:35:44 --> syntax error, unexpected token "}"
+in APPPATH\Models\Update_model.php on line 346.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Update_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Update_Model')
+ 3 APPPATH\Controllers\Home.php(53): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Update_Model')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->advancedSearch()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-29 08:47:27 --> Column 'hall_id' in where clause is ambiguous
+ERROR - 2022-12-29 08:47:37 --> Column 'hall_id' in where clause is ambiguous
+ERROR - 2022-12-29 08:48:30 --> Column 'hall_id' in where clause is ambiguous
+ERROR - 2022-12-29 08:55:28 --> Column 'hall_id' in where clause is ambiguous
+ERROR - 2022-12-29 08:56:56 --> Column 'hall_id' in where clause is ambiguous
+ERROR - 2022-12-29 09:03:35 --> Column 'hall_id' in where clause is ambiguous
+ERROR - 2022-12-29 09:40:49 --> Column 'hall_id' in where clause is ambiguous
+ERROR - 2022-12-29 09:51:29 --> Unknown column 's.hall_id' in 'where clause'
+ERROR - 2022-12-29 09:52:59 --> Unknown column 's.hall_id' in 'where clause'
+ERROR - 2022-12-29 09:54:11 --> Column 'job_id' in where clause is ambiguous
+ERROR - 2022-12-29 09:54:38 --> Unknown column 'staff.job_id' in 'on clause'
+ERROR - 2022-12-29 10:05:25 --> Unknown column 'staff.job_id' in 'on clause'
+ERROR - 2022-12-29 10:07:54 --> Unknown column 'staff.job_id' in 'on clause'
+ERROR - 2022-12-29 10:07:58 --> Unknown column 'staff.job_id' in 'on clause'
+ERROR - 2022-12-29 10:22:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`IN` = '(Select hall_id From staff)'
+AND `s`.`job_id` `IN` = '(Select job_id ...' at line 5
+ERROR - 2022-12-29 10:31:39 --> Operand should contain 1 column(s)
+CRITICAL - 2022-12-29 10:42:49 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Views\updating\advanced_search.php on line 23.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/advanced_search', [], true)
+ 4 APPPATH\Controllers\Home.php(62): view('updating/advanced_search', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->advancedSearch()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 11:44:41 --> Undefined property: stdClass::$hallname
+in APPPATH\Views\updating\advanced_search.php on line 39.
+ 1 APPPATH\Views\updating\advanced_search.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$hallname', 'APPPATH\\Views\\updating\\advanced_search.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\advanced_search.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/advanced_search', [], true)
+ 5 APPPATH\Controllers\Home.php(62): view('updating/advanced_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->advancedSearch()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-29 11:00:15 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 11:00:32 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:12:10 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:12:18 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-29 12:14:59 --> Undefined array key "id"
+in APPPATH\Controllers\Home.php on line 116.
+ 1 APPPATH\Controllers\Home.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Home.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 12:15:12 --> Undefined array key "id"
+in APPPATH\Controllers\Home.php on line 116.
+ 1 APPPATH\Controllers\Home.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Home.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-29 12:15:20 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:15:27 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:15:36 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:18:04 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:23:19 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:24:42 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:24:46 --> Unknown column 'Title' in 'field list'
+ERROR - 2022-12-29 12:25:51 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-29 12:34:37 --> Undefined variable $search
+in APPPATH\Views\updating\HD.php on line 32.
+ 1 APPPATH\Views\updating\HD.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $search', 'APPPATH\\Views\\updating\\HD.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\HD.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 5 APPPATH\Controllers\Home.php(336): view('updating/HD', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-29 12:35:55 --> Unknown column 'Title' in 'field list'
+CRITICAL - 2022-12-29 12:36:16 --> Undefined variable $search
+in APPPATH\Views\updating\HD.php on line 32.
+ 1 APPPATH\Views\updating\HD.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $search', 'APPPATH\\Views\\updating\\HD.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\HD.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 5 APPPATH\Controllers\Home.php(336): view('updating/HD', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 12:43:44 --> Call to a member function getResult() on null
+in APPPATH\Views\updating\HD.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 4 APPPATH\Controllers\Home.php(340): view('updating/HD', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 12:43:52 --> Call to a member function getResult() on null
+in APPPATH\Views\updating\HD.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 4 APPPATH\Controllers\Home.php(340): view('updating/HD', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 12:43:54 --> Call to a member function getResult() on null
+in APPPATH\Views\updating\HD.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 4 APPPATH\Controllers\Home.php(340): view('updating/HD', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 13:44:19 --> Undefined property: stdClass::$job_title
+in APPPATH\Views\updating\HD.php on line 47.
+ 1 APPPATH\Views\updating\HD.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$job_title', 'APPPATH\\Views\\updating\\HD.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\HD.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 5 APPPATH\Controllers\Home.php(340): view('updating/HD', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 13:44:21 --> Undefined property: stdClass::$job_title
+in APPPATH\Views\updating\HD.php on line 47.
+ 1 APPPATH\Views\updating\HD.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$job_title', 'APPPATH\\Views\\updating\\HD.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\HD.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 5 APPPATH\Controllers\Home.php(340): view('updating/HD', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 13:44:35 --> Undefined property: stdClass::$job_title
+in APPPATH\Views\updating\HD.php on line 47.
+ 1 APPPATH\Views\updating\HD.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$job_title', 'APPPATH\\Views\\updating\\HD.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\HD.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 5 APPPATH\Controllers\Home.php(340): view('updating/HD', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 13:44:44 --> Undefined property: stdClass::$active
+in APPPATH\Views\updating\HD.php on line 50.
+ 1 APPPATH\Views\updating\HD.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$active', 'APPPATH\\Views\\updating\\HD.php', 50)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\updating\\HD.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('updating/HD', [], true)
+ 5 APPPATH\Controllers\Home.php(340): view('updating/HD', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->Hall_Director()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-29 12:45:27 --> Unknown column 'Title' in 'field list'

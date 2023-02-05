@@ -1,0 +1,9 @@
+CRITICAL - 2022-08-12 13:26:38 --> syntax error, unexpected token "*"
+in APPPATH\Models\Update_model.php on line 254.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Update_model.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Update_Model')
+ 3 APPPATH\Controllers\Home.php(69): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Update_Model')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->updateSearch()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
