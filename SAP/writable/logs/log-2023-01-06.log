@@ -1,7 +1,0 @@
-CRITICAL - 2023-01-06 08:01:08 --> Undefined array key "maintenance_requests"
-in APPPATH\Controllers\Home.php on line 188.
- 1 APPPATH\Controllers\Home.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "maintenance_requests"', 'APPPATH\\Controllers\\Home.php', 188)
- 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->submitUpdate()
- 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
- 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

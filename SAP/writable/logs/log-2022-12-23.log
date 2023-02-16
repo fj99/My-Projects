@@ -1,9 +1,0 @@
-ERROR - 2022-12-23 09:08:04 --> Unknown column 'Title' in 'field list'
-ERROR - 2022-12-23 09:08:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 3, auth_level` = 0, form_access` = 1, ...' at line 1
-ERROR - 2022-12-23 09:08:15 --> Unknown column 'Title' in 'field list'
-ERROR - 2022-12-23 09:08:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 61, auth_level` = 0, form_access` = 1,...' at line 1
-ERROR - 2022-12-23 09:08:24 --> Unknown column 'Title' in 'field list'
-ERROR - 2022-12-23 09:08:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 61, auth_level` = 0, form_access` = 1,...' at line 1
-ERROR - 2022-12-23 09:08:32 --> Unknown column 'Title' in 'field list'
-ERROR - 2022-12-23 09:08:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UPDATE `auth` SET `hallid` = 7, job` = 61, auth_level` = 0, form_access` = 1,...' at line 1
-ERROR - 2022-12-23 09:08:40 --> Unknown column 'Title' in 'field list'
