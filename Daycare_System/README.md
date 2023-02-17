@@ -1,4 +1,3 @@
-# [Back to Website](../index.html)
 # Happy Children Daycare
 
 - This was built using php so it can't be showcased on git-pages

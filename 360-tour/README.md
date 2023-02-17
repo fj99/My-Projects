@@ -1,6 +1,7 @@
-# [Back to Website](../index.html)
 # 360 Tour
 
-- This will be a virtual tour of the universities’ campus in 360 so it feels like you are walking across campus.
+- Created a virtual tour for the university where you can virtually walk around the campus including the inside of buildings and some rooms.
+
+- [View Southern Site](https://inside.southernct.edu/virtual-tour)
 
 - [View Tour](https://fj99.github.io/My-Projects/360-tour/)

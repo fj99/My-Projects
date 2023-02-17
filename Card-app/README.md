@@ -1,4 +1,3 @@
-# [Back to Website](../index.html)
 # Card App
 - This was built using CodeIgniter 4 which is a php framework so it can't be showcased on git-pages
 
