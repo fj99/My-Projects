@@ -21,14 +21,88 @@ class Home extends Controller
         #endregion 
     }
 
+    public function header()
+    {
+        $search = [
+            "name" => "id",
+            "placeholder" => "Search",
+            "style" => "margin-top: 10px;float: right;padding: 5px;"
+        ];
+        return $search;
+    }
+
     public function index()
     {
         Home::show_errors();
-
-        $mod = new Notifications_model();
-        $data['notifications'] = $mod->getNotifications();
-
         helper('html');
+        helper('form');
+        helper('url');
+        $mod = new Notifications_model();
+
+        $id = [
+            "name" => "id",
+            "placeholder" => "ID",
+        ];
+        $user = [
+            "name" => "username",
+            "placeholder" => "user name",
+        ];
+        $job_title = [
+            ["name" => "job_title"], [
+                "" => "Job Drop Down",
+                "7" => "Operations Assistant Intern",
+                "8" => "LLC Intern",
+                "9" => "Programming Intern",
+                "10" => "Computer Programmer",
+                "11" => "Straight Line Hall Director",
+                "12" => "Upperclass Hall Director",
+                "13" => "Graphic Designer",
+                "14" => "University Assistant",
+                "15" => "Residence Life Assistant",
+                "16" => "Residence Life Assistant",
+                "19" => "Resident Advisor",
+                "20" => "Hall Council",
+                "21" => "Residence Hall Association",
+                "22" => "Programming Assistant",
+                "23" => "Desk Attendant",
+                "24" => "Marketing Specialist",
+                "26" => "Operations Assistant",
+                "25" => "Fails",
+            ]
+        ];
+        $halls = [
+            ["name" => "staff_portal_hall"], [
+                "" => "Halls Drop Down",
+                "1" => "Brownell",
+                "2" => "Chase",
+                "3" => "Farnham",
+                "4" => "Hickerson",
+                "5" => "Neff",
+                "6" => "North",
+                "7" => "Schwartz",
+                "8" => "West",
+                "9" => "Wilkinson",
+                "10" => "North Campus Midrise",
+                "11" => "North Campus Townhouses",
+            ]
+        ];
+        $active = [
+            ["name" => "active"], [
+                "1" => "Active",
+                "2" => "In-Active",
+                "" => "Both",
+            ]
+        ];
+
+        $data = [
+            "notifications" => $mod->getNotifications(),
+            "header" => Home::header(),
+            "id" => $id,
+            "user" => $user,
+            "job_title" => $job_title,
+            "halls" => $halls,
+            "active" => $active,
+        ];
 
         echo view('templates/header', $data);
         echo view('home_page/home_page', $data);
@@ -39,8 +113,9 @@ class Home extends Controller
     public function advancedSearch()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
+
         $input = [
             "id" => $_POST["id"],
             "username" => $_POST["username"],
@@ -48,10 +123,13 @@ class Home extends Controller
             "job_title" => $_POST["job_title"],
             "active" => $_POST["active"]
         ];
+
         $nod = new Notifications_model();
-        $data['notifications'] = $nod->getNotifications();
         $mod = new Update_Model();
+        $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
         $data['search'] = $mod->advancedSearch($input);
+
         if ($data['search'] == false) {
             echo view('templates/header', $data);
             echo view('templates/failure');
@@ -64,13 +142,15 @@ class Home extends Controller
             echo view('templates/footer');
         }
     }
+
     public function updateEmployees()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
 
         echo view('templates/header', $data);
         echo view('updating/updating_page', $data);
@@ -81,11 +161,12 @@ class Home extends Controller
     public function updateSearch()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
         $id = $_POST['id'];
         $mod = new Notifications_model();
         $data['notifications'] = $mod->getNotifications();
+        $data['header'] = Home::header();
         $mod2 = new Update_Model();
         $data['search'] = $mod2->getUsers($id);
         if ($data['search'] == 0) {
@@ -103,13 +184,32 @@ class Home extends Controller
         }
     }
 
+    public function ChangeName()
+    {
+        Home::show_errors();
+        helper('html');
+        helper('form');
+        $input = [
+            "id"  => $_POST["id"],
+            "fname" => $_POST["fname"],
+            "lname" => $_POST["lname"],
+            "username" => $_POST["username"],
+        ];
+        $mod = new Update_Model($input);
+        //* Check
+        $data["request"] = $mod->UpdateName($input);
+
+        return redirect()->to('/home');
+    }
+
     public function submitUpdate()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
         $mod = new Update_Model();
         $allhalls = array();
         $allroles = array();
@@ -221,10 +321,11 @@ class Home extends Controller
     public function hireEmployees()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
 
         echo view('templates/header', $data);
         echo view('hiring/hiring_page', $data);
@@ -235,6 +336,9 @@ class Home extends Controller
     public function manualHireEmployees()
     {
         Home::show_errors();
+        helper('html');
+        helper('form');
+
         //Pump Data into an Array
         $input = [
             "id" => $_POST['id'],
@@ -245,9 +349,9 @@ class Home extends Controller
             "hall" => $_POST['staff_portal_hall'],
         ];
 
-        helper('html');
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
         $mod = new Hire_model();
         $data['hiring'] = $mod->manuallyHireUsers($input);
         if ($data['hiring'] == false) {
@@ -265,10 +369,11 @@ class Home extends Controller
     public function deactivateEmployees()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
         echo view('templates/header', $data);
         echo view('deactivating/deactivating_page', $data);
         echo view('templates/javascript_functions');
@@ -278,10 +383,11 @@ class Home extends Controller
     public function confirmDeactivation()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
 
         $mod = new Deactivate_model();
         $data['validation'] = $mod->validateUser($_POST['id']);
@@ -301,10 +407,11 @@ class Home extends Controller
     public function manualDeactivateEmployees()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
 
         $mod = new Deactivate_model();
         $data['deactivating'] = $mod->manuallyDeactivateUsers($_POST['id']);
@@ -325,11 +432,12 @@ class Home extends Controller
     public function Wrong_page()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
 
         $mod = new Notifications_model();
         $data['notifications'] = $mod->getNotifications();
+        $data['header'] = Home::header();
         echo view('templates/header', $data);
         echo view('templates/wrong_page', $data);
         echo view('templates/javascript_functions');
@@ -339,11 +447,12 @@ class Home extends Controller
     public function Hall_Director()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
 
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
 
         $mod = new Update_Model();
         $data['search'] = $mod->HD();
@@ -357,11 +466,12 @@ class Home extends Controller
     public function RemoveHD()
     {
         Home::show_errors();
-
         helper('html');
+        helper('form');
 
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
 
         $mod = new Update_Model();
         $data['search'] = $mod->updateHD($_POST['id']);
@@ -388,11 +498,13 @@ class Home extends Controller
     public function viewNotifications()
     {
         Home::show_errors();
+        helper('html');
+        helper('form');
 
         $nod = new Notifications_model();
         $data['notifications'] = $nod->getNotifications();
+        $data['header'] = Home::header();
         $data['users'] = $nod->getProgrammers();
-        helper('html');
         echo view('templates/header', $data);
         echo view('Notifications/view_notifications', $data);
         echo view('templates/javascript_functions');
@@ -402,11 +514,13 @@ class Home extends Controller
     public function Notifications()
     {
         Home::show_errors();
+        helper('html');
+        helper('form');
 
         $mod = new Notifications_model();
         $data['notifications'] = $mod->getNotifications();
+        $data['header'] = Home::header();
         $data['Finished_notifications'] = $mod->getClosedNotifications();
-        helper('html');
         echo view('templates/header', $data);
         echo view('Notifications/notifications', $data);
         echo view('templates/javascript_functions');
@@ -416,6 +530,8 @@ class Home extends Controller
     public function addNotification()
     {
         Home::show_errors();
+        helper('html');
+        helper('form');
 
         if (isset($_POST['comments'])) {
             $comments = $_POST['comments'];
@@ -434,7 +550,8 @@ class Home extends Controller
         $data['check'] = $mod->addNotification($input);
 
         $data['notifications'] = $mod->getNotifications();
-        helper('html');
+        $data['header'] = Home::header();
+
         if ($data['check']) {
             echo view('templates/header', $data);
             echo view('templates/success');
@@ -451,6 +568,9 @@ class Home extends Controller
     public function closeNotification()
     {
         Home::show_errors();
+        helper('html');
+        helper('form');
+
         $input = [
             "id" => $_POST['id'],
             "user" => $_POST['user'],
@@ -461,7 +581,8 @@ class Home extends Controller
         $mod = new Notifications_model();
         $data['check'] = $mod->closeNotification($input);
         $data['notifications'] = $mod->getNotifications();
-        helper('html');
+        $data['header'] = Home::header();
+
         if ($data['check']) {
             echo view('templates/header', $data);
             echo view('templates/success');
@@ -489,6 +610,6 @@ class Home extends Controller
         $email->setMessage($mess);
 
         $email->send();
-        echo"yes";
+        echo "yes";
     }
 }

@@ -181,7 +181,7 @@
 <body>
     <div class="home">
         <a href="home">
-            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/home-icon(W).png" class="btn btn-primary">
+            <img src="<?= base_url('assets/home-icon(W).png') ?>" class="btn btn-primary" alt="">
         </a>
     </div>
     <div class="form-body">
@@ -213,7 +213,9 @@
 
                             <div class="form-button mt-3">
                                 <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                                <a class="btn btn-primary" href="card_read">Use Card Reader</a>
                             </div>
+
                         </form>
                     </div>
                 </div>

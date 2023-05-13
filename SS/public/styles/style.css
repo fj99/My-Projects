@@ -1,0 +1,250 @@
+.info_top {
+  /*
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  */
+
+}
+
+/*main wraper */
+#wrapper {
+  text-align: left;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.overnight {
+  display: none;
+
+}
+
+/*table that displays results in alternating colors */
+.alternate-table tr:nth-child(odd) {
+  background-color: #3399FF;
+}
+
+.alternate-table tr:nth-child(even) {
+  background-color: #D8D8D8;
+}
+
+.alternate-table th.header {
+  cursor: pointer;
+  background-color: gray;
+
+}
+
+/*the image div when button is clicked */
+.attention_div {
+  text-align: center;
+
+}
+
+/* the IMAGE inside orange div when button is clicked */
+.attention_div img {
+  width: 32px;
+  height: 32px;
+}
+
+.attention_div #police_img {
+  width: 256px;
+  height: 256px;
+}
+
+/*table that has all the student information */
+.centered_table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td {
+  font-weight: bold;
+}
+
+/*the h1 title on top of every page */
+.title {
+  text-align: center;
+}
+
+.attention_div {
+
+
+  background-color: #FF9933;
+  /*#ec0006;*/
+  width: 960px;
+  margin: 0 auto;
+  /*color: white;*/
+  font-family: "Helvetica", Times, Serif;
+  border: 1px solid black;
+}
+
+.info_top {
+  background-color: #e0e0e0;
+  width: 1080px;
+  margin: 0 auto;
+  border: 3px solid black;
+}
+
+.inner_info_top {
+  background-color: #e0e0e0;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.id_img {
+
+  border: 1px solid black;
+  margin-top: 5px;
+  min-height: 200px;
+  width: 245px;
+
+  background-image: url('https://prd-stuaff01.southernct.edu/residencelife/reslife/forms/misc/ss/images/reslifelogo2.png');
+  /* background-image: url('http://prd-stuaff01.southernct.edu/residencelife/reslife/forms/misc/owl.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button_guest {
+
+
+
+  background-color: #00539f;
+  font-size: 1.5em;
+  border: 2px solid #002b53;
+  color: #e0e0e0;
+
+  height: 40px;
+  width: 200px;
+
+  background: -webkit-linear-gradient(#007aed, #0053a1);
+  /* For Safari */
+  background: -o-linear-gradient(#007aed, #0053a1);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#007aed, #0053a1);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#007aed, #0053a1);
+  /* Standard syntax */
+
+
+}
+
+.button_guest:hover {
+
+  background-color: #007aed;
+
+
+
+  background: -webkit-linear-gradient(#0053a1, #007aed);
+  /* For Safari */
+  background: -o-linear-gradient(#0053a1, #007aed);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#0053a1, #007aed);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#0053a1, #007aed);
+  /* Standard syntax */
+
+
+}
+
+.button_guest:active {
+
+  border: 2px inset black;
+
+  background-color: #007aed;
+
+  background: linear-gradient(#004688, #007aed);
+  /* Standard syntax */
+
+  -webkit-transition: all 150ms ease;
+  -moz-transition: all 150ms ease;
+  -ms-transition: all 150ms ease;
+  -o-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+
+.button {
+
+  background: -webkit-linear-gradient(#007aed, #0053a1);
+  /* For Safari */
+  background: -o-linear-gradient(#007aed, #0053a1);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#007aed, #0053a1);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#007aed, #0053a1);
+  /* Standard syntax */
+
+  border: 1px solid #002b53;
+  color: #e0e0e0;
+
+  margin-left: 2px;
+
+  height: 25px;
+  width: 120px
+}
+
+.button:hover {
+
+  background-color: #007aed;
+
+  background: -webkit-linear-gradient(#0053a1, #007aed);
+  /* For Safari */
+  background: -o-linear-gradient(#0053a1, #007aed);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#0053a1, #007aed);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#0053a1, #007aed);
+  /* Standard syntax */
+
+  -webkit-transition: all 150ms ease;
+  -moz-transition: all 150ms ease;
+  -ms-transition: all 150ms ease;
+  -o-transition: all 150ms ease;
+  transition: all 150ms ease;
+
+}
+
+.button:active {
+
+  border: 1px inset black;
+
+  background-color: #007aed;
+
+  background: linear-gradient(#004688, #007aed);
+  /* Standard syntax */
+
+  -webkit-transition: all 150ms ease;
+  -moz-transition: all 150ms ease;
+  -ms-transition: all 150ms ease;
+  -o-transition: all 150ms ease;
+  transition: all 150ms ease;
+}
+
+.current_hall {
+
+  vertical-align: bottom;
+  padding-bottom: 9px;
+  font-size: 20px;
+  text-align: center;
+  background: #0053a1;
+  color: white;
+  border: 2px solid black;
+}
+
+.instructions_ul {
+  list-style: disc outside none;
+  margin-left: 40px;
+  text-align: left;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #003366;
+}
+
+.blue {
+  color: blue;
+}
+
+#instructions_div {
+  line-height: 170%;
+}

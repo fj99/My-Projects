@@ -24,7 +24,8 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    // public $baseURL = 'http://localhost:8080/';
+    public $baseURL = 'http://dev-pubweb06.scsu.southernct.edu/playground/felix/SCSU-Work/Card-app/public/';
 
     /**
      * --------------------------------------------------------------------------

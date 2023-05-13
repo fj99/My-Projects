@@ -1,6 +1,6 @@
 # 360 Tour
 
-- Created a virtual tour for the university where you can virtually walk around the campus including the inside of buildings and some rooms.
+- Developed a virtual university tour enabling users to explore the campus and building interiors virtually.
 
 - [View Southern Site](https://inside.southernct.edu/virtual-tour)
 

@@ -27,6 +27,24 @@ class Home extends Controller
     public function card_form()
     {
         Home::show_errors();
+        helper("form");
+
+        $form = [
+            'class' => "requires-validation",
+            'novalidate' => '',
+        ];
+
+        $request_date = [
+            "name" => "request_date",
+            "class" => "form-control",
+            "type" => "date",
+            'required' => true,
+        ];
+
+        $data = [
+            'form' => $form,
+            'request_date' => $request_date,
+        ];
 
         $mod = new Card_model();
         $data['card_numbers'] = $mod->ShowCards();
@@ -62,6 +80,14 @@ class Home extends Controller
         return view('card_form');
     }
 
+    public function card_read()
+    {
+        Home::show_errors();
+
+        helper('form');
+        return view('card_form_read');
+    }
+
     public function returning_card()
     {
         Home::show_errors();
@@ -78,7 +104,6 @@ class Home extends Controller
     {
         Home::show_errors();
 
-
         $data['number'] = $_POST['card_number'];
         $data['access'] = $_POST['access'];
 
@@ -90,8 +115,50 @@ class Home extends Controller
 
         $mod = new Card_model();
         $result['result'] = $mod->insert_card($all);
+        if ($result) {
+            return view("Form_submitted");
+        } else {
+            return view("Form_failed");
+        }
+    }
 
-        return view("Form_submitted");
+    public function insert_card_read()
+    {
+        Home::show_errors();
+
+        $card_info = $_POST['card_number'];
+        // Card info: %B6032777900513116^ACCESS CARD/000009097 ^?
+        // Find the position of the first "^" character
+        $pos = strpos($card_info, '^');
+
+        // Extract the first piece up to the "^" character
+        $access = substr($card_info, 1, $pos - 2);
+        $access = substr($access, 7, -1);
+
+        // Find the position of the second "/" character
+        $pos2 = strpos($card_info, '/', $pos);
+
+        // Extract the second piece between the "/" character and the "^" character
+        $number = substr($card_info, $pos2 + 1, -3);
+        $number = ltrim($number, '0');
+
+        // echo $access; // Output: 79005131 
+        // echo '<br>';
+        // echo $number; // Output: 9097
+
+        $input = [
+            'card_number' => $number,
+            'access_number' => $access,
+            'active' => '0',
+        ];
+
+        $mod = new Card_model();
+        $result = $mod->insert_card($input);
+        if ($result) {
+            return view("Form_submitted");
+        } else {
+            return view("Form_failed");
+        }
     }
 
     public function insert_temp()
@@ -133,12 +200,6 @@ class Home extends Controller
     {
         Home::show_errors();
 
-        Home::un_active();
-
-        $mod = new Card_model();
-        $data['form_data'] = $mod->ShowAll();
-        $data['card_data'] = $mod->All_Cards();
-
-        return view("Card_view", $data);
+        echo view("Form_failed");
     }
 }

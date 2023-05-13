@@ -27,15 +27,55 @@
             $tutorctr = false;
          }
          ?>
-         <h2>Update <?php echo $auth_data->name_first . " " . $auth_data->name_last . " <br>" . $auth_data->id . ", " . $auth_data->user . "" ?></h2>
+         <h2>Update <?php echo $auth_data->id ?> <br>
+         <!-- First Name : Last Name :  Username <br>
+         <?php echo $staff_data->first_name .":". $staff_data->last_name .":". $staff_data->username ?> <br> -->
+         <!-- <h2>Update <?php echo $auth_data->name_first . " " . $auth_data->name_last . " <br>" . $auth_data->id . ", " . $auth_data->user . "" ?></h2> -->
+         <?php
+            $label = '<label for="fname">First Name </label>';
+            $fn = '<label for="fname">First Name </label>';
+            $ln = '<label for="fname">Last Name </label>';
+            $user = '<label for="fname">Username </label>';
+            $br = "<br>";
+         ?>
+         <div id="ShowName">            
+            <?php 
+               echo $fn ;
+               echo $staff_data->first_name; 
+               echo $br;
+               echo $ln ;
+               echo $staff_data->last_name; 
+               echo $br;
+               echo $user ;
+               echo $staff_data->username; 
+            ?>
+         </div>
+
+         <form method="POST" action="submitUpdate">
+
+         <div id="ChangeName" class="hidden" >
+            <?php echo $fn;?>
+            <input type="text" name="fname" value="<?php echo $staff_data->first_name ?>">
+            <br>
+            <?php echo $ln;?>
+            <input type="text" name="lname" value="<?php echo $staff_data->last_name ?>">
+            <br>
+            <?php echo $user;?>
+            <input type="text" name="username" value="<?php echo $staff_data->username ?>">
+         </div>
+         </h2>
+
+         <a onclick="NameChange()">Click Here to Change Name</a>
+         <!-- <button onclick="NameChange()">Change Name</button>          -->
+              
          </body>
 
          <body onload="createReadableDataFields();">
-            <form method="POST" action="submitUpdate">
+            
                <input type="text" name="user_id" value="<?php echo $staff_data->id ?>" hidden>
-               <input type="text" name="username" value="<?php echo $staff_data->username ?>" hidden>
+               <!-- <input type="text" name="username" value="<?php echo $staff_data->username ?>" hidden>
                <input type="text" name="fname" value="<?php echo $staff_data->first_name ?>" hidden>
-               <input type="text" name="lname" value="<?php echo $staff_data->last_name ?>" hidden>
+               <input type="text" name="lname" value="<?php echo $staff_data->last_name ?>" hidden> -->
                <div class="simple_update_container">
                   <h3>Simple Update</h3>
                   <table class="app_table">
@@ -642,5 +682,25 @@
    function formAccessChanged(form) {
       var e = document.getElementById(form);
       e.value = 1;
+   }
+
+   function NameChange(){
+      // alert("yes")
+      var names = document.getElementById("ShowName");
+      var inputs = document.getElementById("ChangeName");
+      // alert(names.ClassName == "hidden")
+      if(names.ClassName == "hidden"){
+         names.style.display = "block"
+         inputs.style.display = "none"
+         // easy but not working
+         inputs.ClassName = "hidden";
+         names.ClassName = "";
+      }else{
+         inputs.style.display = "block"
+         names.style.display = "none"
+         // easy but not working
+         names.ClassName = "hidden";
+         inputs.ClassName = "";
+      }
    }
 </script>

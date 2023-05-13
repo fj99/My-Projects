@@ -5,19 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Staff Administration Portal</title>
-  <!-- <link rel="stylesheet" href="assets/styles.css">
-  <script src="https://kit.fontawesome.com/48c069f290.js"></script> -->
-  <style>
-  <?php include 'assets/styles.css'; ?>
-  </style>
-  <?php
-  // echo link_tag('http://scsu-work/SAP/public/assets/styles.css');
-  // echo link_tag('http://dev-pubweb06.scsu.southernct.edu/playground/felix/SCSU-Work/SAP/public/assets/styles.css');
-  echo script_tag('https://kit.fontawesome.com/48c069f290.js');
-  ?>
+  <link rel="stylesheet" href=<?php echo base_url("assets/styles.css"); ?> >  
+  <?php echo script_tag('https://kit.fontawesome.com/48c069f290.js'); ?>
 </head>
-
-
 
 <body>
   <div class="topnav" id="navbar">
@@ -32,10 +22,17 @@
       <li><a href="logout" style="float: right;" onclick="navActiveChanger(this)">Logout</a></li>
       <li><a href="returnToStaffPortal" style="float: right;" onclick="navActiveChanger(this)">Staff Portal</a></li>
 
-      <form id="search" method="Post" action="updateSearch">
+      <?php echo form_open("updateSearch", ["id" => "search"]); ?>
         <li><a href="javascript: submitForm()" style="float: right; " onclick="navActiveChanger(this)">Search</a></li>
-        <input type="text" placeholder="Search" name="id" style="margin-top: 10px;float: right;padding: 5px;">
-      </form>
+        <?php
+          // $header = [
+          //   "name" => "id",
+          //   "placeholder" => "Search",
+          //   "style" => "margin-top: 10px;float: right;padding: 5px;"
+          // ];
+          echo form_input($header);
+        ?>
+      <?php echo form_close(); ?>
 
       <li>
         <a href="viewNotifications" style="float: right; border-right: none;" class="notification">

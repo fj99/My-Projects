@@ -247,6 +247,9 @@ class Update_model extends Model
 
     $staff = [
       'job_id' => $sap_job_id,
+      'first_name' => $fname,
+      'last_name' => $lname,
+      'username' => $username,
       'program_report' => $program_report,
       'farnham_report' => $farnham_report,
       'schwartz_report' => $schwartz_report,
@@ -305,6 +308,9 @@ class Update_model extends Model
     }
 
     $user = [
+      'fname' => $fname,
+      'lname' => $lname,
+      'username' => $username,
       'hall' => $sap_hall,
       'role' => $program_portal_role,
       'role2' => $program_portal_role2,
@@ -335,6 +341,9 @@ class Update_model extends Model
     }
 
     $data = [
+      'name_first' => $fname,
+      'name_last' => $lname,
+      'user' => $username,
       "hallid" => $sap_hall,
       "job" => $job,
       "auth_level" => $auth_level,

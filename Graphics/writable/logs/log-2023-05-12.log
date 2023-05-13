@@ -1,0 +1,57 @@
+ERROR - 2023-05-12 13:35:40 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server.  in C:\wamp64\www\My-Projects\Graphics\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\wamp64\\www\\M...', 171, Array)
+#1 C:\wamp64\www\My-Projects\Graphics\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('prd-mysql02.scs...', 'RLProgramPortal', 'Ulive3now', 'reslife', 3306, '', 0)
+#2 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\wamp64\www\My-Projects\Graphics\app\Models\Graphics.php(83): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\wamp64\www\My-Projects\Graphics\app\Controllers\Home.php(74): App\Models\Graphics->GetGraphics('1', '', '', '', '')
+#7 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(925): App\Controllers\Home->index()
+#8 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\My-Projects\Graphics\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server.  in C:\wamp64\www\My-Projects\Graphics\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\wamp64\www\My-Projects\Graphics\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('prd-mysql02.scs...', 'RLProgramPortal', 'Ulive3now', 'reslife', 3306, '', 0)
+#1 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\My-Projects\Graphics\app\Models\Graphics.php(83): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\My-Projects\Graphics\app\Controllers\Home.php(74): App\Models\Graphics->GetGraphics('1', '', '', '', '')
+#6 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(925): App\Controllers\Home->index()
+#7 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\My-Projects\Graphics\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server.  in C:\wamp64\www\My-Projects\Graphics\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\My-Projects\Graphics\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\My-Projects\Graphics\app\Models\Graphics.php(83): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\My-Projects\Graphics\app\Controllers\Home.php(74): App\Models\Graphics->GetGraphics('1', '', '', '', '')
+#5 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(925): App\Controllers\Home->index()
+#6 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\My-Projects\Graphics\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\My-Projects\Graphics\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-05-12 13:35:40 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: This is usually a temporary error during hostname resolution and means that the local server did not receive a response from an authoritative server. 
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `graphic_request`
+WHERE `complete` != :complete:
+AND `complete` != :complete.1:
+ORDER BY `id` DESC
+ LIMIT 50', [...], false)
+ 3 APPPATH\Models\Graphics.php(83): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(74): App\Models\Graphics->GetGraphics('1', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public')
+ 5 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Table 03</title>
+	<title>Card Table</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11636,7 +11636,7 @@
 		}
 
 		abbr[title]::after {
-			content: " ("attr(title) ")";
+			content: " (" attr(title) ")";
 		}
 
 		pre {
@@ -11877,7 +11877,7 @@
 <body>
 	<section class="ftco-section">
 		<a href="home">
-			<img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/home-icon(B).png" class="btn btn-primary">
+			<img src="<?= base_url('assets/home-icon(B).png') ?>" class="btn btn-primary" alt="">
 		</a>
 		<div class="container">
 			<div class="row justify-content-center">
@@ -11899,7 +11899,7 @@
 							</thead>
 							<tbody id="card">
 								<?php
-								foreach ($card_data->getResult() as $row) {									
+								foreach ($card_data->getResult() as $row) {
 									$i = $row->card_number;
 									$x = $row->access_number;
 									$a = $row->active;
@@ -11914,7 +11914,7 @@
 									echo "<td>$x</td>";
 									echo "<td>$a</td>";
 									echo "</tr>";
-								}								
+								}
 								?>
 							</tbody>
 						</table>
@@ -11923,21 +11923,21 @@
 				<div class="col-md-12">
 					<h4 class="text-center mb-4">Table that holds the Submission to the form</h4>
 					<div class="table-wrap">
-						<table class="table">							
-								<thead class="thead-primary" onclick="myFunction('form')">
-									<tr>
-										<th>User</th>
-										<th>Card Number</th>
-										<th>Access Number</th>
-										<th>First Day </th>
-										<th>Requested day</th>
-										<th>Returned day</th>
-										<th>Reason for temp card</th>
-										<th>Administrator in charge of card</th>
-										<th>Active</th>
-									</tr>
-								</thead>
-							<tbody id ="form">
+						<table class="table">
+							<thead class="thead-primary" onclick="myFunction('form')">
+								<tr>
+									<th>User</th>
+									<th>Card Number</th>
+									<th>Access Number</th>
+									<th>First Day </th>
+									<th>Requested day</th>
+									<th>Returned day</th>
+									<th>Reason for temp card</th>
+									<th>Administrator in charge of card</th>
+									<th>Active</th>
+								</tr>
+							</thead>
+							<tbody id="form">
 								<?php
 								foreach ($form_data->getResult() as $row2) {
 									$u = $row2->user;
@@ -11993,7 +11993,7 @@
 	</section>
 
 	<script>
-		function myFunction(x) {    
+		function myFunction(x) {
 			var tbody = document.getElementById(x);
 			if (tbody.style.display == 'none') {
 				tbody.style.display = '';

@@ -182,7 +182,7 @@
 <body>
     <div class="home">
         <a href="home">
-            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/home-icon(W).png" class="btn btn-primary">
+            <img src="<?= base_url('assets/home-icon(W).png') ?>" class="btn btn-primary" alt="">
         </a>
     </div>
     <div class="form-body">
@@ -192,72 +192,74 @@
                     <div class="form-items">
                         <h3>Register For Temporary Card Today</h3>
                         <p>Fill in the data below.</p>
-                        <form action="insert_temp" method="post" class="requires-validation" novalidate>
+                        <?php
+                        echo form_open('insert_temp', $form);
+                        ?>
+                        <div class="col-md-12">
+                            <?php
+                            echo form_label("Date the Card will Expire:", "request_date");
+                            echo form_input($request_date);
+                            ?>
+                            <!-- <label for="request_date">Date the Card will Expire:</label>
+                                <input class="form-control" type="date" name="request_date" placeholder="" required> -->
+                            <div class="valid-feedback">Date field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
 
-                            <div class="col-md-12">
-                                <label for="request_date">Date the Card will Expire:</label>
-                                <input class="form-control" type="date" name="request_date" placeholder="" required>
-                                <div class="valid-feedback">Date field is valid!</div>
-                                <div class="invalid-feedback">Username field cannot be blank!</div>
-                            </div>
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="user" placeholder="Full Name" required>
+                            <div class="valid-feedback">Username field is valid!</div>
+                            <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
 
-                            <div class="col-md-12">
-                                <input class="form-control" type="text" name="user" placeholder="Full Name" required>
-                                <div class="valid-feedback">Username field is valid!</div>
-                                <div class="invalid-feedback">Username field cannot be blank!</div>
-                            </div>
+                        <div class="col-md-12">
+                            <input class="form-control" type="text" name="reason" placeholder="Reason for temporary Card" required>
+                            <div class="valid-feedback">Reason field is valid!</div>
+                            <div class="invalid-feedback">Reason field cannot be blank!</div>
+                        </div>
 
-                            <!-- <div class="col-md-12">
-                                <input class="form-control" type="text" name="admin" placeholder="Administrator in charge" required>
-                                <div class="valid-feedback">Administrator field is valid!</div>
-                                <div class="invalid-feedback">Administrator field cannot be blank!</div>
-                            </div>                             -->
+                        <div class="col-md-12">
+                            <select class="form-select mt-3" name="card" required>
+                                <option selected disabled value="">Card Number</option>
+                                <?php
+                                foreach ($card_numbers->getResult() as $row) {
+                                    $x = $row->id;
+                                    $i = $row->card_number;
+                                    echo "<option value='$x'>$i</option>";
+                                }
+                                ?>
+                            </select>
+                            <div class="valid-feedback">You selected a card number!</div>
+                            <div class="invalid-feedback">Please select a card number!</div>
+                        </div>
 
-                            <div class="col-md-12">
-                                <input class="form-control" type="text" name="reason" placeholder="Reason for temporary Card" required>
-                                <div class="valid-feedback">reason field is valid!</div>
-                                <div class="invalid-feedback">reason field cannot be blank!</div>
-                            </div>
+                        <div class="col-md-12 mt-3">
+                            <label class="mb-3 mr-1" for="admin">Admin: </label>
 
-                            <div class="col-md-12">
-                                <select class="form-select mt-3" name="card" required>
-                                    <option selected disabled value="">Card Number</option>
-                                    <?php
-                                    foreach ($card_numbers->getResult() as $row) {
-                                        $x = $row->id;
-                                        $i = $row->card_number;
-                                        echo "<option value='$x'>$i</option>";
-                                    }
-                                    ?>
-                                </select>
-                                <div class="valid-feedback">You selected a card number!</div>
-                                <div class="invalid-feedback">Please select a card number!</div>
-                            </div>
+                            <input type="radio" class="btn-check" name="admin" value="dee" id="dee" autocomplete="off" required>
+                            <label class="btn btn-sm btn-outline-secondary" for="dee">Dee</label>
 
-                            <div class="col-md-12 mt-3">
-                                <label class="mb-3 mr-1" for="admin">Admin: </label>
+                            <input type="radio" class="btn-check" name="admin" value="christian" id="christian" autocomplete="off" required>
+                            <label class="btn btn-sm btn-outline-secondary" for="christian">Christian</label>
 
-                                <input type="radio" class="btn-check" name="admin" value="dee" id="dee" autocomplete="off" required>
-                                <label class="btn btn-sm btn-outline-secondary" for="dee">Dee</label>
+                            <input type="radio" class="btn-check" name="admin" value="palak" id="palak" autocomplete="off" required>
+                            <label class="btn btn-sm btn-outline-secondary" for="palak">Palak</label>
+                            <div class="valid-feedback mv-up">You selected an Admin!</div>
+                            <div class="invalid-feedback mv-up">Please select an Admin!</div>
+                        </div>
 
-                                <input type="radio" class="btn-check" name="admin" value="christian" id="christian" autocomplete="off" required>
-                                <label class="btn btn-sm btn-outline-secondary" for="christian">Christian</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label">I confirm that all the data is correct</label>
+                            <div class="invalid-feedback">Please confirm that the entered data is all correct!</div>
+                        </div>
 
-                                <input type="radio" class="btn-check" name="admin" value="palak" id="palak" autocomplete="off" required>
-                                <label class="btn btn-sm btn-outline-secondary" for="palak">Palak</label>
-                                <div class="valid-feedback mv-up">You selected an Admin!</div>
-                                <div class="invalid-feedback mv-up">Please select an Admin!</div>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label">I confirm that all the data is correct</label>
-                                <div class="invalid-feedback">Please confirm that the entered data is all correct!</div>
-                            </div>
-
-                            <div class="form-button mt-3">
-                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
-                            </div>
+                        <div class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <?php
+                        echo form_close();
+                        ?>
                         </form>
                     </div>
                 </div>

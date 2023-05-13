@@ -291,8 +291,7 @@
                 <div class="col">
                     <a href="view_cards">
                         <div class="card h-100 shadow-sm">
-                            <!-- <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/operations_and_requests.png" class="card-img-top" alt=""> -->
-                            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/Remade%20Icons-06.png" class="card-img-top" alt="">
+                            <img src="<?= base_url('assets/ClipBoard.png') ?>" class="card-img-top" alt="">
                             <div class="text-center my-4">
                                 <a href="view_cards" class="btn btn-warning">View</a>
                             </div>
@@ -304,8 +303,7 @@
                 <div class="col">
                     <a href="card_form">
                         <div class="card h-100 shadow-sm">
-                            <!-- <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/program_proposal.png" class="card-img-top" alt=""> -->
-                            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/Remade%20Icons-04.png" class="card-img-top" alt="">
+                            <img src="<?= base_url('assets/Contract.png') ?>" class="card-img-top" alt="">
                             <div class="card-body">
                                 <div class="text-center my-4">
                                     <a href="card_form" class="btn btn-warning">Temp Card Form</a>
@@ -319,8 +317,7 @@
                 <div class="col">
                     <a href="enter_cards">
                         <div class="card h-100 shadow-sm">
-                            <!-- <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/passes_and_other.png" class="card-img-top" > -->
-                            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/Remade%20Icons-05.png" class="card-img-top">
+                            <img src="<?= base_url('assets/Card.png') ?>" class="card-img-top" alt="">
                             <div class="card-body">
                                 <div class="text-center my-4">
                                     <a href="enter_cards" class="btn btn-warning">Card Form</a>
@@ -333,7 +330,7 @@
                 <div class="col">
                     <a href="card_return">
                         <div class="card h-100 shadow-sm">
-                            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/return-icons.png" class="card-img-top">
+                            <img src="<?= base_url('assets/Return_icon.png') ?>" class="card-img-top" alt="">
                             <div class="card-body">
                                 <div class="text-center my-4">
                                     <a href="enter_cards" class="btn btn-warning">Return Card Form</a>

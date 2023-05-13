@@ -1,32 +1,6 @@
 # Card App
-- This was built using CodeIgniter 4 which is a php framework so it can't be showcased on git-pages
+- Developed using the CodeIgniter 4 framework; not displayable on Git-pages.
 
-- This app for the university of Southern Connecticut State University to keep track of their temporary ID cards they give out to residents who live on campus or students who are simply having trouble with their ID, and will be given a temporary ID until their issue s fixed.
-
-# Presentation of App
-
-## Home
-![Home](Presentation/Home.png)
-
-## Enter a new temporary ID card into the db
-![Card Form](Presentation/Card%20Form.png)
-
-## Confirmation Page
-![Confirmation Page](Presentation/Confirmation.png)
-
-
-## Form to request a new
-![Temp Card Form](Presentation/Temporary%20Card%20Form.png)
-
-## Email Reminding user ID is due
-![Email](Presentation/email.png)
-
-## Return Card Form
-![Return card form](Presentation/return%20form.png)
-
-## View of the cards and who has it
-- This view can close the tables by simply clicking the header
-
-![View Cards](Presentation/View%20Cards.png)
-
-![Tables hidden](Presentation/View%20Cards%20Hidden.png)
+- Developed an application for the Southern Connecticut State University to handle temporary ID cards for residents or students having trouble with their IDs, offering an interim solution until their issues are resolved.
+ 
+## [View App Presentation](https://github.com/fj99/My-Projects/blob/main/Job_App/Presentation.md)

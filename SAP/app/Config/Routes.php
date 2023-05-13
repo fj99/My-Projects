@@ -73,6 +73,7 @@ $routes->post('/closeNotification', 'Home::closeNotification');
 
 $routes->get('/Notifications', 'Home::Notifications');
 $routes->post('/addNotification', 'Home::addNotification');
+$routes->post('/ChangeName', 'Home::ChangeName');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

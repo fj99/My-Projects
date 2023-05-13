@@ -308,7 +308,8 @@
             <br>
             If you are having trouble please submit a tech request<a href="https://prd-stuaff01.southernct.edu/residencelife/reslife/forms/misc/tech_request_form.php">Here</a>
             <br>
-            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/new_scsu_logo.png">
+            <img src="<?= base_url('assets/new_scsu_logo.png') ?>" alt="">
+            <!-- <img src="http://dev-pubweb06.scsu.southernct.edu/playground/felix/SCSU-Work/Portal/img/new_scsu_logo.png"> -->
             <div class="card-body">
               <div class="text-center my-4">
                 <a href="home" class="btn btn-warning">Home</a>

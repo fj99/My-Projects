@@ -6,14 +6,14 @@ use CodeIgniter\Model;
 
 class Card_model extends Model
 {
-    protected $table1 = 'cards';
+    protected $cards = 'cards';
     protected $table2 = 'temp_cards';
     protected $db;
 
-    public function __construct()
-    {
-        $this->db = \Config\Database::connect('local');
-    }
+    // public function __construct()
+    // {
+    //     $this->db = \Config\Database::connect('default');
+    // }
 
     public function ShowCards()
     {
@@ -26,6 +26,7 @@ class Card_model extends Model
 
         return $query;
     }
+
     public function Cards_taken()
     {
         $db = $this->db;
@@ -37,6 +38,7 @@ class Card_model extends Model
 
         return $query;
     }
+    
     public function All_Cards()
     {
         $db = $this->db;
@@ -78,22 +80,28 @@ class Card_model extends Model
         $db->close();
 
         return $query and $query2;
-    }
+    }    
 
     public function insert_card($data)
     {
         $db = $this->db;
-
-        $builder = $db->table('cards');
-        $query = $builder->insert($data);
-        $db->close();
-
-        return $query;
+        $table = $this->cards;
+        $builder = $db->table($table);
+        $builder->where("card_number", $data["card_number"]);        
+        $query = $builder->get();
+        $check = $query->getNumRows();
+        if($check<0){
+            $query = $builder->insert($data);
+            $db->close();
+            return $query;
+        }else{
+            $db->close();
+            return false;
+        }
     }
 
     public function update_card()
     {
-        // TODO This needs to send emails if cards are overdue
         $db = $this->db;
         $today = date('Y-m-d');
 
@@ -101,7 +109,7 @@ class Card_model extends Model
         $builder->select('card_number', 'administrator');
         $builder->join('cards', 'temp_cards.card_id = cards.id', 'left');
         $builder->where('requested_date <', $today);
-        $name = $builder->get();
+        $query = $builder->get();
 
         $dee = "dahlmand1@southernct.edu";
         $minaya = "minayac1@southernct.edu";
@@ -109,15 +117,22 @@ class Card_model extends Model
 
         $email = \Config\Services::email();
 
-        foreach ($name->getResult() as $row) {
+        foreach ($query->getResult() as $row) {
+            // $name = $row->administrator;
+            if ($row->administrator = "dee") {
+                $to = "dahlmand1@southernct.edu";
+            } elseif ($row->administrator = "christian") {
+                $to = "minayac1@southernct.edu";
+            } elseif ($row->administrator = "palak") {
+                $to = "patelp22@southernct.edu";
+            }
 
             $email->setFrom('Reslife@southernct.edu', 'Reslife');
-            // $email->setTo($row->administrator);
-            $email->setTo('Fernandezf2@southernct.edu');
-            // $email->setCC('another@another-example.com');
-            // $email->setBCC('them@their-example.com');
+            // $email->setTo('Fernandezf2@southernct.edu');
+            $email->setTo($to);
+            $email->setCC($dee);
             $email->setSubject('Temporary Id expires');
-            $email->setMessage('Your temporary ID was due today the card number is' . $row->card_number);
+            $email->setMessage('This temporary ID was due today the card number is' . $row->card_number);
 
             $email->send();
         }

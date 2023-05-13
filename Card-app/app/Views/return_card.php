@@ -181,7 +181,7 @@
 <body>
     <div class="home">
         <a href="home">
-            <img src="https://prd-stuaff01.southernct.edu/residencelife/reslife/portal/images/Card_app/home-icon(W).png" class="btn btn-primary">
+            <img src="<?= base_url('assets/home-icon(W).png') ?>" class="btn btn-primary" alt="">
         </a>
     </div>
     <div class="form-body">

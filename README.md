@@ -1,38 +1,60 @@
-# [My Website](https://fj99.github.io/My-Projects/)
+# [My Portfolio](https://fj99.github.io/My-Projects/)
 
 ## [360 Tour](https://github.com/fj99/My-Projects/tree/main/360-tour)
-- Created a virtual tour for the university where you can virtually walk around the campus including the inside of buildings and some rooms.
+- Developed a virtual university tour enabling users to explore the campus and building interiors virtually.
 
 - [View Southern Site](https://inside.southernct.edu/virtual-tour)
 
-- [View Tour](https://fj99.github.io/My-Projects/360-tour/)
----
-## [SAP](https://github.com/fj99/My-Projects/tree/main/SAP)
-- This was built using Codeigniter 4 which is a php framework 
-
-- The Staff Administration Portal is a client-server web application designed to simplify
-employee permission changes within the entirety of the Residence Life’s system
+- [Experience Tour](https://fj99.github.io/My-Projects/360-tour/)
 
 ---
-## [Happy Children Daycare](https://github.com/fj99/My-Projects/tree/main/Daycare%20System)
-- This was built using php so it can't be showcased on git-pages
+## [Card App](https://github.com/fj99/My-Projects/tree/main/Card-app)
+- Developed using the CodeIgniter 4 framework; not displayable on Git-pages.
 
-- Built a website where parents can go in register/sign in give a way to contact them and register their children for daycare fill in all the information for their kids and a way to contact the employee in charge of their child and employees can also register/sign in to select when they can work, and the system will then give them the kids available to take care of and they have access to those kids information only as well as the parent’s information to contact them.
-
----
-## [Collaborative Information Center](https://github.com/fj99/My-Projects/tree/main/Job%20App)
-- This was built using python Flask so it can't be showcased on git-pages
-
-- This app(website) lets user register, must verify email after, then employer gets to create job listing for employees to apply to and there’s email notifying them of everything as well as the employer can see all the employee’s information.
+- Developed an application for the Southern Connecticut State University to handle temporary ID cards for residents or students having trouble with their IDs, offering an interim solution until their issues are resolved.
 
 ---
-## [Air Message](https://github.com/fj99/My-Projects/tree/main/Python%20Chat)
-- This was built using python Flask so it can't be showcased on git-pages
+## [Happy Children Daycare](https://github.com/fj99/My-Projects/tree/main/Daycare_System)
+- Created with PHP; cannot be displayed on Git-pages
 
-- Built a python chat room encrypted end to end where users can make a username to identify and join a room with a room number that identifies the room they then can talk to other users in that room. Instant messaging web application using Flask (Python web development framework), and Socket.io for real time socket package transfers the goal is to not allow packet capture software like WireShark to capture the network packets.
+- Developed a website for parents to register, sign in, provide contact details, and enroll their children in daycare while facilitating communication with assigned caretakers. Employees can also register, sign in, and view their work schedules and assigned children's information.
 
 ---
-## [Card app](https://github.com/fj99/My-Projects/tree/main/Card-app)
-- This was built using Codeigniter 4 so it can't be showcased on git-pages
+## [Graphics Portal](https://github.com/fj99/My-Projects/tree/main/Graphics)
+- Constructed with CodeIgniter 4, PHP, JavaScript, HTML, and CSS
 
-- Built the app for the university of Southern Connecticut State University to keep track of their temporary ID cards they give out to residents who live on campus or students who are simply having trouble with their ID, and will be given a temporary ID until their issue s fixed.
+- Developed an app for Southern Connecticut State University's graphic designers to manage and maintain a list of requests, functioning as a ticket system.
+
+---
+## [Collaborative Information Center](https://github.com/fj99/My-Projects/tree/main/Job_App)
+- Developed using Python Flask cannot be showcased on Git-pages
+
+- The app enables user registration with email verification, job listing creation by employers, and job applications from employees. Email notifications keep both parties informed, and employers can access employee information.
+
+---
+## [OA Portal](https://github.com/fj99/My-Projects/tree/main/OA-Portal)
+- Constructed using CodeIgniter 4, PHP, JavaScript, HTML, and CSS but cannot be showcased on Git-pages
+
+- Developed an app for Southern Connecticut State University's Operation Assistants to manage and maintain a list of requests, operating as a ticket system.
+
+---
+## [Air Message](https://github.com/fj99/My-Projects/tree/main/Python_Chat)
+- Built using Python Flask cannot be showcased on Git-pages
+
+- Developed an encrypted end-to-end instant messaging web application using Flask and Socket.io for real-time communication. Users create a username and join chat rooms using a room number, preventing packet capture software like WireShark from intercepting network packets.
+
+---
+## [Staff Admin Portal (SAP)](https://github.com/fj99/My-Projects/tree/main/SAP)
+- Crafted with CodeIgniter 4, a PHP framework
+
+- The Staff Administration Portal is a web application streamlining employee permission management within the Residence Life system.
+
+---
+## [Sign in System (SS)](https://github.com/fj99/My-Projects/tree/main/SS)
+- Built using CodeIgniter 4, a PHP framework
+
+- The Sign in System, designed for specific computer access, monitors student guests, services, packages, and keys in dormitories.
+
+- Developed a secure sign-in system for Res-Life, accessible only to authorized computers, to manage student entries and guest tracking.
+
+---
