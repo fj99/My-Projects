@@ -4,4 +4,4 @@
 
 - [View Southern Site](https://inside.southernct.edu/virtual-tour)
 
-- [View Tour](https://fj99.github.io/My-Projects/360-tour/)
+- [View Tour](https://fj99.github.io/360-Tour/)
