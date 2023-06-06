@@ -26,16 +26,41 @@
 - Developed an app for Southern Connecticut State University's graphic designers to manage and maintain a list of requests, functioning as a ticket system.
 
 ---
+## [Hotel Booking Cancellation Prediction](https://github.com/fj99/My-Projects/tree/main/Hotel_Booking_Cancellation_Prediction)
+- Developed using Python.
+
+- The increasing number of cancellations in the hotel industry demands a Machine Learning-based solution to predict which bookings are likely to be canceled. Hotels are grappling with this issue and have sought data-driven solutions from your firm. After analyzing the provided data, I identified the factors that strongly influence booking cancellations. I then built a predictive model capable of forecasting which bookings are likely to be canceled in advance. These insights can be utilized to formulate profitable policies for cancellations and refunds.
+
+---
 ## [Collaborative Information Center](https://github.com/fj99/My-Projects/tree/main/Job_App)
 - Developed using Python Flask cannot be showcased on Git-pages
 
 - The app enables user registration with email verification, job listing creation by employers, and job applications from employees. Email notifications keep both parties informed, and employers can access employee information.
 
 ---
+## [Netflix Movie Recommendation](https://github.com/fj99/My-Projects/tree/main/Netflix_Movie_recommendation)
+- Developed using Python.
+
+- Online streaming platforms like **Netflix** have a vast collection of movies in their repository. To enhance customer satisfaction and improve revenue, I built a **Recommendation System** that suggests relevant movies to users based on their historical interactions. The techniques employed in this project extend beyond movies and can be applied to any item for which a recommendation system is desired.
+
+This project encompasses the following recommendation systems:
+- Knowledge/Rank-based recommendation system
+- Similarity-based Collaborative Filtering
+- Matrix Factorization-based Collaborative Filtering
+
+---
 ## [OA Portal](https://github.com/fj99/My-Projects/tree/main/OA-Portal)
 - Constructed using CodeIgniter 4, PHP, JavaScript, HTML, and CSS but cannot be showcased on Git-pages
 
 - Developed an app for Southern Connecticut State University's Operation Assistants to manage and maintain a list of requests, operating as a ticket system.
+
+---
+## [Pima Indians Diabetes Analysis](https://github.com/fj99/My-Projects/tree/main/Pima_Indians_Diabetes_Analysis)
+- Built using Python
+
+- A few years ago research was done on a tribe in America which is called the Pima tribe. In this tribe, it was found that the ladies are prone to diabetes very early. Several constraints were placed on the selection of these instances from a larger database. In particular, all patients were females at least 21 years old of Pima tribe. 
+
+- Here, I'am analyzing different aspects of Diabetes in the Pima Diabetes Analysis by doing Exploratory Data Analysis.
 
 ---
 ## [Air Message](https://github.com/fj99/My-Projects/tree/main/Python_Chat)

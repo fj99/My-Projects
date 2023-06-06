@@ -968,7 +968,9 @@ a:hover {
 .work-img img {
   transition: all 1s;
   /* TODO */
-  /* height: ; */
+  min-height: 13em;
+  max-height: 14em;
+  /* height: 12em; */
 }
 
 .work-content {
@@ -1482,6 +1484,15 @@ footer .credits {
 
 footer .credits a {
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Transitions  */
