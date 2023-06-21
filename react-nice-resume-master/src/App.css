@@ -1,0 +1,44 @@
+.center {
+  text-align: center;
+
+}
+
+.white {
+  color: aliceblue;
+}
+
+.off-white {
+  color: gainsboro;
+}
+
+#id {
+  background-color: darkmagenta;
+}
+
+.custom-btn {
+  color: goldenrod !important;
+}
+
+.custom-btn2 {
+  border: none !important;
+  outline: none !important;
+  padding: .7rem 0px;
+  font-size: large;
+  margin: auto;
+  display: block;
+  width: fit-content;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}

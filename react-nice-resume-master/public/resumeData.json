@@ -1,0 +1,192 @@
+{
+  "main": {
+    "nav": [
+      "Home",
+      "About",
+      "Education",
+      "Experience",
+      "Projects",
+      "Contact Me"
+    ],
+    "name": "Felix Fernandez",
+    "description": [
+      "Full Stack Developer",
+      "Web Developer",
+      "WebMaster Assistant",
+      "Freelancer"
+    ],
+    "profile_pic": "images/profilepic.jpg",
+    "bio": "Innovative, deadline-driven and problem solving Full Stack Developer with 4 + years of experience designing and developing for a corporation everyday. I love technology and problem solving I'm always looking how to make things more efficient, and when the opportunity arrives I always try to teach myself new things since I love learning.",
+    "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "fj99.fernandez@gmail.com",
+    "phone": "203-691-0817",
+    "github": "https://github.com/fj99",
+    "project": "#portfolio",
+    "address": {
+      "street": "(Your Street)",
+      "city": "(Your City)",
+      "state": "(Your State)",
+      "zip": "(Your Zip/Postal Code)"
+    },
+    "website": "https://fj99.github.io/My-Projects/",
+    "resume": "Resume.pdf",
+    "social": [
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/felix-fernandez-92a0021b5/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "github",
+        "url": "https://github.com/fj99",
+        "className": "fa fa-github"
+      }
+    ]
+  },
+  "resume": {
+    "message": "Here you can create a short write-up of your skills to show off to employers",
+    "education": [
+      {
+        "image": "images/MIT_Logo.png",
+        "school": "Massachusetts Institute of Technology (MIT)",
+        "degree": "Certification in Data Science and Machine Learning",
+        "comment": "Top 10 in my class",
+        "graduated": "May 2023",
+        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      },
+      {
+        "image": "images/Southern_Connecticut_State_University.png",
+        "school": "Southern Connecticut State University",
+        "degree": "Computer Science",
+        "comment": "Minor in Mathematics",
+        "graduated": "May 2023",
+        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      },
+      {
+        "image": "images/UConn-University-of-Connecticut-Logo.png",
+        "school": "University of Connecticut",
+        "degree": "Associate in Mechanical Engineering",
+        "comment": "Minor in Computer Science and Mathematics",
+        "graduated": "May 2019",
+        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+      }
+    ],
+    "work": [
+      {
+        "company": "Southern Connecticut State University",
+        "title": "Full Stack Developer",
+        "years": "Sept 2019 - Present",
+        "description": "I programmed, updated, and maintained various web apps, department websites, applications, and databases. As part of this work, I restructured and redesigned web apps to improve their integration with databases. Additionally, I created and edited forms for upload on multiple servers and websites. To enhance workflow and application maintenance, I consolidated 12 databases into a single comprehensive database. I was responsible for maintaining and managing the Guest Sign-in System, utilizing PHP and MySQL databases. Furthermore, I updated and managed the Student Staff Portal using JavaScript, and implemented APIs for data retrieval and Cron-Jobs for data pushing and process automation in the Student Sign-in System. I also debugged and modified the schema of the Staff Admin Portal for improved onboarding of new staff. Successfully upgrading the entire system to a new server was another achievement. Alongside these tasks, I developed and updated websites, both front and back end. I implemented Cron Jobs on Linux to generate notification actions and created a fully functional developer instance for testing purposes, ensuring separation from live sites. I also utilized Git for system backups and documented processes using Confluence. Currently, I am leading a team of developers in the department and providing training to new student programmers in the Department of Residence Life."
+      }
+    ],
+    "skills": [
+      {
+        "name": "SQL",
+        "level": "95%"
+      },
+      {
+        "name": "Python",
+        "level": "95%"
+      },
+      {
+        "name": "PHP",
+        "level": "95%"
+      },
+      {
+        "name": "C#",
+        "level": "85%"
+      },
+      {
+        "name": "JAVA",
+        "level": "80%"
+      },
+      {
+        "name": "JS",
+        "level": "75%"
+      },
+      {
+        "name": "REACT JS",
+        "level": "50%"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Netflix Movie Recommendation",
+        "category": "Data Science",
+        "date": "May. 2023",
+        "image": "images/portfolio/01.jpg",
+        "url": "../../Netflix_Movie_Recommendation/Project_Movie_Recommendation_Learners_Notebook_final.html",
+        "description": "Online streaming platforms like Netflix have a vast collection of movies in their repository. To enhance customer satisfaction and improve revenue, I built a **Recommendation System** that suggests relevant movies to users based on their historical interactions. The techniques employed in this project extend beyond movies and can be applied to any item for which a recommendation system is desired. This project encompasses the following recommendation systems: - Knowledge/Rank-based recommendation system - Similarity-based Collaborative Filtering- Matrix Factorization-based Collaborative Filtering"
+      },
+      {
+        "title": "Hotel Booking Cancellation Prediction",
+        "category": "Data Science",
+        "image": "images/portfolio/02.jpg",
+        "url": "../../Hotel_Booking_Cancellation_Prediction/CHT_Graded_Project_Learner_Notebook.html",
+        "description": "The increasing number of cancellations in the hotel industry demands a Machine Learning-based solution to predict which bookings are likely to be canceled. Hotels are grappling with this issue and have sought data-driven solutions from your firm. After analyzing the provided data, I identified the factors that strongly influence booking cancellations. I then built a predictive model capable of forecasting which bookings are likely to be canceled in advance. These insights can be utilized to formulate profitable policies for cancellations and refunds."
+      },
+      {
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "images/portfolio/03.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title": "Resume Website",
+        "category": "A React based resume website template",
+        "image": "images/portfolio/04.jpg",
+        "url": "http://www.timbakerdev.com"
+      },
+      {
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "images/portfolio/05.jpg",
+        "url": "http://www.smirkspace.com"
+      },
+      {
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "images/portfolio/06.jpg",
+        "url": "https://www.canadianwanderlust.com"
+      },
+      {
+        "title": "Fury Fighting Gear",
+        "category": "(offline now) A fighting gear company I started",
+        "image": "images/portfolio/01.jpg",
+        "url": "http://www.timbakerdev.com"
+      },
+      {
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "images/portfolio/02.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title": "Original Thai Food",
+        "category": "Website I built for a restaurant I like in Thailand",
+        "image": "images/portfolio/03.jpg",
+        "url": "http://www.timbakerdev.com/originalthaifood.github.io"
+      },
+      {
+        "title": "Resume Website",
+        "category": "A React based resume website template",
+        "image": "images/portfolio/04.jpg",
+        "url": "http://www.timbakerdev.com"
+      },
+      {
+        "title": "Smirkspace",
+        "category": "(MVP Only) A React and Meteor based chat University project.",
+        "image": "images/portfolio/05.jpg",
+        "url": "http://www.smirkspace.com"
+      },
+      {
+        "title": "Canadian Wanderlust",
+        "category": "My Travel Blog for my post-university travels",
+        "image": "images/portfolio/06.jpg",
+        "url": "https://www.canadianwanderlust.com"
+      }
+    ]
+  }
+}
