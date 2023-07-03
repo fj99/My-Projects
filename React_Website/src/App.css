@@ -1,0 +1,69 @@
+.center {
+  text-align: center;
+}
+
+.white {
+  color: aliceblue !important;
+}
+
+.off-white {
+  color: gainsboro !important;
+}
+
+.custom-btn {
+  color: goldenrod !important;
+}
+
+.custom-expand {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#portfolio {
+  background: transparent !important;
+}
+
+#resume {
+  background-color: #000524 !important;
+}
+
+* {
+  text-wrap: balance;
+  /* add this to everything */
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: beige !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: lightblue !important;
+}
+
+.custm-bg {
+  position: fixed !important;
+  z-index: -1;
+}
+
+.Project_links,
+.Project_links:hover,
+.Project_links:visited,
+.Project_links:active {
+  color: inherit;
+}
+
+.img-wrapper {
+  overflow: hidden;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.25);
+  z-index: -1;
+  padding-bottom: 2em;
+}

@@ -8,6 +8,12 @@
 - [Experience Tour](https://fj99.github.io/My-Projects/360-tour/)
 
 ---
+## [Air Message](https://github.com/fj99/My-Projects/tree/main/Air_Chat)
+- Built using Python Flask cannot be showcased on Git-pages
+
+- Developed an encrypted end-to-end instant messaging web application using Flask and Socket.io for real-time communication. Users create a username and join chat rooms using a room number, preventing packet capture software like WireShark from intercepting network packets.
+
+---
 ## [Card App](https://github.com/fj99/My-Projects/tree/main/Card-app)
 - Developed using the CodeIgniter 4 framework; not displayable on Git-pages.
 
@@ -61,12 +67,6 @@ This project encompasses the following recommendation systems:
 - A few years ago research was done on a tribe in America which is called the Pima tribe. In this tribe, it was found that the ladies are prone to diabetes very early. Several constraints were placed on the selection of these instances from a larger database. In particular, all patients were females at least 21 years old of Pima tribe. 
 
 - Here, I'am analyzing different aspects of Diabetes in the Pima Diabetes Analysis by doing Exploratory Data Analysis.
-
----
-## [Air Message](https://github.com/fj99/My-Projects/tree/main/Python_Chat)
-- Built using Python Flask cannot be showcased on Git-pages
-
-- Developed an encrypted end-to-end instant messaging web application using Flask and Socket.io for real-time communication. Users create a username and join chat rooms using a room number, preventing packet capture software like WireShark from intercepting network packets.
 
 ---
 ## [Staff Admin Portal (SAP)](https://github.com/fj99/My-Projects/tree/main/SAP)
