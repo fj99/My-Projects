@@ -27,8 +27,6 @@
     "bio": "Innovative, deadline-driven and problem solving Full Stack Developer with 4 + years of experience designing and developing for a corporation everyday. I love technology and problem solving I'm always looking how to make things more efficient, and when the opportunity arrives I always try to teach myself new things since I love learning.",
     "email": "fj99.fernandez@gmail.com",
     "phone": "203-691-0817",
-    "github": "https://github.com/fj99",
-    "linkedin": "https://www.linkedin.com/in/felix-fernandez-92a0021b5/",
     "project": "#portfolio",
     "contactmessage": "If you wish to get in touch with me just state your name and your business and I will get back to you as soon as I get the chance. ",
     "contact_side_heading": "",
@@ -40,7 +38,6 @@
       }
     ],
     "address": {
-      "street": "(Your Street)",
       "city": "(Your City)",
       "state": "(Your State)",
       "zip": "(Your Zip/Postal Code)"
@@ -71,7 +68,7 @@
         "degree": "Certification in Data Science and Machine Learning",
         "comment": "Top 10 in my class",
         "graduated": "May 2023",
-        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "description": ""
       },
       {
         "image": "images/Southern_Connecticut_State_University.png",
@@ -79,7 +76,7 @@
         "degree": "Computer Science",
         "comment": "Minor in Mathematics",
         "graduated": "May 2023",
-        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "description": ""
       },
       {
         "image": "images/UConn-University-of-Connecticut-Logo.png",
@@ -87,7 +84,7 @@
         "degree": "Associate in Mechanical Engineering",
         "comment": "Minor in Computer Science and Mathematics",
         "graduated": "May 2019",
-        "description": "Describe your experience at school, what you learned, what useful skills you have acquired etc."
+        "description": ""
       }
     ],
     "work": [
