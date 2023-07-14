@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
 // import { IoIosCall } from "react-icons/io";
-import { FaPhone, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
 
 class About extends Component {
   render() {
@@ -10,15 +10,21 @@ class About extends Component {
     const name = this.props.data.name;
     const profile_pic = this.props.data.profile_pic;
     const bio = this.props.data.bio;
-    const street = this.props.data.address.street;
     const city = this.props.data.address.city;
     const state = this.props.data.address.state;
     const zip = this.props.data.address.zip;
     const phone = this.props.data.phone;
     const email = this.props.data.email;
     const resume = this.props.data.resume;
-    const linkedin = this.props.data.linkedin;
-
+    const network = this.props.data.social[0];
+    const networkElement = (
+      <>
+        <i className={network.className}></i>{" "}
+        <a href={network.url} target="_blank">
+          {name}
+        </a>
+      </>
+    );
 
     return (
       <section id="about">
@@ -39,12 +45,9 @@ class About extends Component {
                 <div className="columns contact-details">
                   <h2>Contact Details</h2>
                   <p className="address">
-                    <FaLinkedin /> <a href={linkedin} target="_blank">{name}</a>
-                    {/* <span>{name}</span> 
-                    <br />
-                    <span>
-                      {street}
-                      <br />
+                    {networkElement}
+                    {/* <FaLinkedin /> <a href={linkedin} target="_blank">{name}</a> */}
+                    {/* <FaMapMarkerAlt /> <span>
                       {city} {state}, {zip}
                     </span> */}
                     <br />

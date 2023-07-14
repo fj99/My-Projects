@@ -89,7 +89,11 @@ class Background extends Component {
             },
             scale: 1,
             type: "inline",
-            url: "https://particles.js.org/images/google.svg"
+            // url: "https://particles.js.org/images/google.svg"
+            // url: "https://raw.githubusercontent.com/fj99/My-Files/64b1b7de0f61638ca0c7ca859f92ea75745cae01/sky.svg?token=AQOIZGLV2MBCUU7H3YF64WLEUMSHI"
+            // url: "https://raw.githubusercontent.com/fj99/My-Files/deacacf880375da64efd5b59319d7653baa6be23/pattern.svg?token=AQOIZGJ7DFJ26ZNOND7M4WTEUMTME"
+            // url: "https://raw.githubusercontent.com/fj99/My-Files/deacacf880375da64efd5b59319d7653baa6be23/space-bg.svg?token=AQOIZGOD3NBHLX4ZOWFEAOTEUMTPS"
+            url: "https://raw.githubusercontent.com/fj99/My-Files/main/FF_logo.png?token=GHSAT0AAAAAACDSY2CCRMGO45M6RUBI6DJIZFDHIKQ"
           },
           background: {
             color: "#000000",
