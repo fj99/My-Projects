@@ -46,7 +46,7 @@ class Portfolio extends Component {
     const projects = this.props.data.projects.map((project) => {
       return (
         <Card sx={{ maxWidth: 500 }} key={project.id} className="portfolio-card">
-          <a className="Project_links" href={project.url} target="_blank" >
+          <a className="Project_links" href={project.url}>
             <CardActionArea className="img-wrapper">
               <CardMedia
                 className="hover-zoom"

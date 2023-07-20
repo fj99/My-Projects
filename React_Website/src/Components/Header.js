@@ -29,6 +29,14 @@ const Header = (props) => {
   const github = props.data.github;
   const name = props.data.name;
   const nav = props.data.navbar;
+  // const network = this.props.data.social[0];
+  // const networkElement = (
+  //   <>
+  //     <a href={network.url} className="button btn github-btn">
+  //       <i className="fa fa-github"></i>Github
+  //     </a>
+  //   </>
+  // );
 
   return (
     <header id="home">
@@ -99,9 +107,10 @@ const Header = (props) => {
               <a href={project} className="button btn project-btn">
                 <i className="fa fa-book"></i>Projects
               </a>
-              <a href={github} className="button btn github-btn">
+              <a href={github} target="_blank" className="button btn github-btn">
                 <i className="fa fa-github"></i>Github
               </a>
+              {/* {networkElement} */}
             </ul>
           </Fade>
         </div>
