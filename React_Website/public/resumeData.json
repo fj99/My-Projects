@@ -90,27 +90,37 @@
     ],
     "work": [
       {
+        "company": "PetVetCare",
+        "title": "Full Stack Developer",
+        "years": "August 2023 - Now",
+        "description": "I specialize in architecting and implementing Extract, Transform, Load (ETL) processes, notably spearheading the development of a sophisticated system geared towards automating critical End-of-Month (EOM) financial procedures. My technical prowess is showcased through the strategic utilization of Angular for front-end development, C#.NET Core API for robust back-end architecture, and MS SQL for efficient database management. In addition to my core responsibilities, I play a pivotal role as an integral member of the AI team, contributing to advanced predictive analytics for revenue and other financial metrics. My contributions extend beyond ETL refinement to encompass addressing diverse financial requirements and report generation."
+      },
+      {
         "company": "Southern Connecticut State University",
         "title": "Full Stack Developer",
-        "years": "Sept 2019 - Present",
+        "years": "Sept 2019 - August 2023",
         "description": "I programmed, updated, and maintained various web apps, department websites, applications, and databases. As part of this work, I restructured and redesigned web apps to improve their integration with databases. Additionally, I created and edited forms for upload on multiple servers and websites. To enhance workflow and application maintenance, I consolidated 12 databases into a single comprehensive database. I was responsible for maintaining and managing the Guest Sign-in System, utilizing PHP and MySQL databases. Furthermore, I updated and managed the Student Staff Portal using JavaScript, and implemented APIs for data retrieval and Cron-Jobs for data pushing and process automation in the Student Sign-in System. I also debugged and modified the schema of the Staff Admin Portal for improved onboarding of new staff. Successfully upgrading the entire system to a new server was another achievement. Alongside these tasks, I developed and updated websites, both front and back end. I implemented Cron Jobs on Linux to generate notification actions and created a fully functional developer instance for testing purposes, ensuring separation from live sites. I also utilized Git for system backups and documented processes using Confluence. Currently, I am leading a team of developers in the department and providing training to new student programmers in the Department of Residence Life."
       }
     ],
     "skills": [
       {
         "name": "Python",
-        "level": "95%"
+        "level": "100%"
       },
       {
         "name": "SQL",
         "level": "95%"
       },
       {
-        "name": "PHP",
+        "name": "Angular",
         "level": "95%"
       },
       {
         "name": "C#",
+        "level": "95%"
+      },
+      {
+        "name": "PHP",
         "level": "85%"
       },
       {
@@ -119,17 +129,33 @@
       },
       {
         "name": "JS",
-        "level": "75%"
+        "level": "80%"
       },
       {
         "name": "REACT JS",
-        "level": "50%"
+        "level": "60%"
       }
     ]
   },
   "portfolio": {
     "portfolio_title": "Check Out Some of My Works.",
     "projects": [
+      {
+        "title": "PeVetMasterAPI",
+        "category": "Full Stack Development",
+        "date": "Feb. 2024",
+        "image": "",
+        "url": "",
+        "description": "To automate and enhance finance end of month process along with some other personalized task needed."
+      },
+      {
+        "title": "DataFarm",
+        "category": "Full Stack Development",
+        "date": "Nov. 2023",
+        "image": "",
+        "url": "",
+        "description": "To automate and enhance finance end of month process along with some other personalized task needed."
+      },
       {
         "title": "Netflix Movie Recommendation",
         "category": "Data Science",
