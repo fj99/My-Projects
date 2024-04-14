@@ -141,6 +141,22 @@
     "portfolio_title": "Check Out Some of My Works",
     "projects": [
       {
+        "title": "PeVetMasterAPI",
+        "category": "Full Stack Development",
+        "date": "Feb. 2024",
+        "image": "",
+        "url": "",
+        "description": "To automate and enhance finance end of month process along with some other personalized task needed."
+      },
+      {
+        "title": "DataFarm",
+        "category": "Full Stack Development",
+        "date": "Nov. 2023",
+        "image": "",
+        "url": "",
+        "description": "To automate and enhance finance end of month process along with some other personalized task needed."
+      },
+      {
         "title": "Netflix Movie Recommendation",
         "category": "Data Science",
         "date": "May. 2023",
