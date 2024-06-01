@@ -144,7 +144,7 @@
         "title": "Extract Master",
         "category": "Full Stack Development",
         "date": "April. 2024",
-        "image": "images/portfolio/Extract Master.jpg",
+        "image": "images/portfolio/Extract_Master.jpg",
         "url": "ExtractMaster/",
         "description": "Developed a centralized ETL (Extract, Transform, Load) system that would allows for all extraction types and allow the data to be transformed to any data type to be pushed to any database. The system would also have a data score on the front for users to check what happened to the extraction and change the configuration of it."
       },
