@@ -93,7 +93,7 @@
         "company": "PetVetCare",
         "title": "Full Stack Developer",
         "years": "August 2023 - Now",
-        "description": "I specialize in architecting and implementing Extract, Transform, Load (ETL) processes, notably spearheading the development of a sophisticated system geared towards automating critical End-of-Month (EOM) financial procedures. My technical prowess is showcased through the strategic utilization of Angular for front-end development, C#.NET Core API for robust back-end architecture, and MS SQL for efficient database management. In addition to my core responsibilities, I play a pivotal role as an integral member of the AI team, contributing to advanced predictive analytics for revenue and other financial metrics. My contributions extend beyond ETL refinement to encompass addressing diverse financial requirements and report generation."
+        "description": "I specialize in developing and implementing Extract, Transform, Load (ETL) processes, notably spearheading the development of a sophisticated system geared towards automating critical End-of-Month (EOM) financial procedures. My technical prowess is showcased through the strategic utilization of Angular for front-end development, C#.NET Core API for robust back-end architecture, and MS SQL for efficient database management. In addition to my core responsibilities, I play a pivotal role as an integral member of the AI team, contributing to advanced predictive analytics for revenue and other financial metrics. My contributions extend beyond ETL refinement to encompass addressing diverse financial requirements and report generation."
       },
       {
         "company": "Southern Connecticut State University",
@@ -120,15 +120,15 @@
         "level": "95%"
       },
       {
-        "name": "PHP",
-        "level": "85%"
+        "name": "JS",
+        "level": "90%"
       },
       {
         "name": "JAVA",
         "level": "80%"
       },
       {
-        "name": "JS",
+        "name": "PHP",
         "level": "80%"
       },
       {
@@ -140,6 +140,22 @@
   "portfolio": {
     "portfolio_title": "Check Out Some of My Works",
     "projects": [
+      {
+        "title": "Extract Master",
+        "category": "Full Stack Development",
+        "date": "April. 2024",
+        "image": "images/portfolio/Extract_Master.jpg",
+        "url": "ExtractMaster/",
+        "description": "Developed a centralized ETL (Extract, Transform, Load) system that would allows for all extraction types and allow the data to be transformed to any data type to be pushed to any database. The system would also have a data score on the front for users to check what happened to the extraction and change the configuration of it."
+      },
+      {
+        "title": "DataFarm",
+        "category": "Full Stack Development",
+        "date": "Nov. 2023",
+        "image": "images/portfolio/DataFarm.jpg",
+        "url": "DataFarm/",
+        "description": "Developed a system that completely automates the End Of Month process (EOM) for finance and provides them with live data in their reports."
+      },
       {
         "title": "Netflix Movie Recommendation",
         "category": "Data Science",
