@@ -28,9 +28,9 @@
 
 ## [DataFarm](https://github.com/fj99/My-Projects/tree/main/DataFarm)
 
-- Developed using Angular FrameWork for the front end, and C# .Net Core FrameWork for the backend.
+- Utilized Angular for the front-end development and C# ASP.NET Core for the back-end architecture.
 
-- Developed a system that would automate process for finance like the end of month (EOM).
+- Implemented a comprehensive system that fully automates the End of Month (EOM) financial process, ensuring seamless integration and real-time data availability for enhanced accuracy and efficiency in financial reporting.
 
 ---
 
@@ -39,6 +39,14 @@
 - Created with PHP; cannot be displayed on Git-pages
 
 - Developed a website for parents to register, sign in, provide contact details, and enroll their children in daycare while facilitating communication with assigned caretakers. Employees can also register, sign in, and view their work schedules and assigned children's information.
+
+---
+
+## [Extract Master](https://github.com/fj99/My-Projects/tree/main/ExtractMaster)
+
+- Developed using Angular for the front-end and C# .NET Core for the back-end, this application is not compatible with GitHub Pages for deployment.
+
+- Engineered a centralized ETL (Extract, Transform, Load) system that accommodates all extraction types and enables data transformation into any format for seamless integration with any database. This system includes a data scoring feature, allowing users to review extraction processes and modify configurations as needed. Additionally, it empowers users to create new ETL processes by simply completing the required parameters.
 
 ---
 
