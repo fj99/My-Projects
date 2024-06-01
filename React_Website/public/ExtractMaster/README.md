@@ -1,4 +1,5 @@
 # Extract Master
-- Created using angular for the front end and C# .Net Core for the backend, cannot be displayed on gitPages
 
-- Developed a centralized ETL (Extract, Transform, Load) system that would allows for all extraction types and allow the data to be transformed to any data type to be pushed to any database. The system would also have a data score on the front for users to check what happened to the extraction and change the configuration of it.
+- Developed using Angular for the front-end and C# .NET Core for the back-end, this application is not compatible with GitHub Pages for deployment.
+
+- Engineered a centralized ETL (Extract, Transform, Load) system that accommodates all extraction types and enables data transformation into any format for seamless integration with any database. This system includes a data scoring feature, allowing users to review extraction processes and modify configurations as needed. Additionally, it empowers users to create new ETL processes by simply completing the required parameters.

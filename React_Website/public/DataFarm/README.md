@@ -1,4 +1,5 @@
 # DataFarm
-- Created using angular for the front end and C# .Net Core for the backend, cannot be displayed on gitPages
 
-- Developed a system that completely automates the End Of Month process (EOM) for finance and provides them with live data in their reports.
+- Utilized Angular for the front-end development and C# ASP.NET Core for the back-end architecture.
+
+- Implemented a comprehensive system that fully automates the End of Month (EOM) financial process, ensuring seamless integration and real-time data availability for enhanced accuracy and efficiency in financial reporting.
