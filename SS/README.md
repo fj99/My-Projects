@@ -4,7 +4,7 @@
 - The Sign in System, designed for specific computer access, monitors student guests, services, packages, and keys in dormitories.
 
 - Developed a secure sign-in system for Res-Life, accessible only to authorized computers, to manage student entries and guest tracking.
-
+<!-- 
 # Presentation of Sign in System
 
 ## Home
@@ -135,4 +135,4 @@ This page is a log of all the students banned
 
 ## Support Form
 This page is if anything goes wrong they can report it.
-![Support Form](Presentation/Support.png)
+![Support Form](Presentation/Support.png) -->

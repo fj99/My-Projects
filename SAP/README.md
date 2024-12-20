@@ -1,9 +1,10 @@
 # Staff Admin Portal (SAP)
+
 - Crafted with CodeIgniter 4, a PHP framework
 
 - The Staff Administration Portal is a web application streamlining employee permission management within the Residence Life system.
 
-# Presentation of App
+<!-- # Presentation of App
 ## Home
 ![This is the entire homepage](Presentation%20images/Home.png)
 
@@ -47,5 +48,4 @@
 ![confirm deactivation](Presentation%20images/deactivate-confirm.png)
 
 ## View and edit Hall directors
-![Hall Directors](Presentation%20images/Hall-Directors.png)
-
+![Hall Directors](Presentation%20images/Hall-Directors.png) -->
