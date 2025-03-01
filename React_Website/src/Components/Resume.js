@@ -2,47 +2,47 @@ import React, { Component, useState, useEffect } from "react";
 import Slide from "react-reveal";
 
 class Resume extends Component {
-  getRandomColor() {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
   constructor(props) {
     super(props);
-    this.state = { position: 0, contentWidth: 0, containerWidth: 0 };
-    this.contentRef = React.createRef(); // For measuring content width
-    this.containerRef = React.createRef(); // For measuring visible container width
+    this.state = {
+      positions: Array(3).fill(0), // One position per row
+      contentWidth: 0,
+      containerWidth: 0,
+    };
+    this.contentRefs = Array(3).fill(null).map(() => React.createRef());
+    this.containerRef = React.createRef();
   }
 
   componentDidMount() {
     this.updateWidths();
 
-    this.interval = setInterval(() => {
-      this.setState((prevState) => ({
-        position:
-          prevState.position < this.state.containerWidth
-            ? prevState.position + 5 // Increase speed here if needed
-            : -this.state.contentWidth // Reset faster
-      }));
-    }, 30); // Adjust speed
+    this.intervals = this.state.positions.map((_, rowIndex) =>
+      setInterval(() => {
+        this.setState((prevState) => {
+          const newPositions = [...prevState.positions];
+          newPositions[rowIndex] =
+            newPositions[rowIndex] < this.state.containerWidth
+              ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 5 : 3) // Alternate speeds for a cool effect
+              : -this.state.contentWidth; // Reset off-screen
+          return { positions: newPositions };
+        });
+      }, 30)
+    );
 
     window.addEventListener("resize", this.updateWidths);
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    this.intervals.forEach(clearInterval);
     window.removeEventListener("resize", this.updateWidths);
   }
 
   updateWidths = () => {
-    if (this.contentRef.current && this.containerRef.current) {
+    if (this.containerRef.current) {
+      const contentWidths = this.contentRefs.map(ref => ref.current?.offsetWidth || 0);
       this.setState({
-        contentWidth: this.contentRef.current.offsetWidth, // Get width of moving content
-        containerWidth: this.containerRef.current.offsetWidth, // Get width of visible container
+        contentWidth: Math.max(...contentWidths), // Get max width to reset correctly
+        containerWidth: this.containerRef.current.offsetWidth,
       });
     }
   };
@@ -67,22 +67,17 @@ class Resume extends Component {
       );
     });
 
-    const skills = this.props.data.skills.map((skills) => {
-      const backgroundColor = this.getRandomColor();
-      const className = "bar-expand " + skills.name.toLowerCase();
-      const width = skills.level;
-      return (
-        <img
-          src={skills.link}
-          alt={skills.name}
-          style={{ height: "50px" }}
-        />
-        // <li key={skills.name}>
-        //   <span style={{ width, backgroundColor }} className={className}></span>
-        //   <em className="white">{skills.name}</em>
-        // </li>
-      );
-    });
+    const skillsMatrix = [];
+    const rowCount = 3; // Adjust the number of rows as needed
+
+    if (this.props.data && this.props.data.skills) {
+      // Split skills into multiple rows dynamically
+      for (let i = 0; i < rowCount; i++) {
+        skillsMatrix.push(
+          this.props.data.skills.filter((_, index) => index % rowCount === i)
+        );
+      }
+    }
 
     return (
       <section id="resume">
@@ -116,24 +111,33 @@ class Resume extends Component {
                     style={{
                       position: "relative",
                       width: "100%",
-                      height: "100px",
+                      height: "200px",
                       overflow: "hidden",
-                      // border: "1px solid red", // Debugging, remove later
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "10px",
+                      border: "1px solid red", // Debugging
                     }}
                   >
-                    <div
-                      ref={this.contentRef} // Measure moving content
-                      style={{
-                        position: "absolute",
-                        left: `${this.state.position}px`,
-                        whiteSpace: "nowrap",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "20px",
-                      }}
-                    >
-                      {skills}
-                    </div>
+                    {skillsMatrix.map((row, rowIndex) => (
+                      <div
+                        key={rowIndex}
+                        ref={this.contentRefs[rowIndex]}
+                        style={{
+                          position: "absolute",
+                          left: `${this.state.positions[rowIndex]}px`,
+                          whiteSpace: "nowrap",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "20px",
+                          top: `${rowIndex * 60}px`, // Space out rows
+                        }}
+                      >
+                        {row.map((skill, imgIndex) => (
+                          <img key={imgIndex} src={skill.link} alt={skill.name} style={{ height: "50px" }} />
+                        ))}
+                      </div>
+                    ))}
                   </div>
                 </ul>
               </div>

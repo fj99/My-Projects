@@ -22,3 +22,5 @@
 - Machine Learning Algorithms
 - Data Mining
 - Linux
+
+{skills}
