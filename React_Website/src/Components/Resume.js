@@ -4,26 +4,32 @@ import Slide from "react-reveal";
 class Resume extends Component {
   constructor(props) {
     super(props);
+    const rowCount = 4; // Adjust to test different row counts
+
     this.state = {
-      positions: Array(3).fill(0), // One position per row
-      contentWidth: 0,
-      containerWidth: 0,
+      positions: Array(rowCount).fill(0), // Position for each row
+      contentWidths: Array(rowCount).fill(0), // Content width tracking
+      containerHeight: rowCount * 60, // Dynamic height based on rowCount
+      rowCount,
     };
-    this.contentRefs = Array(3).fill(null).map(() => React.createRef());
-    this.containerRef = React.createRef();
+
+    this.contentRefs = Array(rowCount).fill(null).map(() => React.createRef());
+    this.containerRef = React.createRef(); // Correct ref initialization
   }
 
   componentDidMount() {
     this.updateWidths();
 
+    // Create independent intervals for each row
     this.intervals = this.state.positions.map((_, rowIndex) =>
       setInterval(() => {
         this.setState((prevState) => {
           const newPositions = [...prevState.positions];
           newPositions[rowIndex] =
-            newPositions[rowIndex] < this.state.containerWidth
-              ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 5 : 3) // Alternate speeds for a cool effect
-              : -this.state.contentWidth; // Reset off-screen
+            newPositions[rowIndex] < this.containerRef.current.offsetWidth
+              ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 4 : 2) // Alternating speeds
+              : -prevState.contentWidths[rowIndex]; // Reset smoothly
+
           return { positions: newPositions };
         });
       }, 30)
@@ -41,8 +47,8 @@ class Resume extends Component {
     if (this.containerRef.current) {
       const contentWidths = this.contentRefs.map(ref => ref.current?.offsetWidth || 0);
       this.setState({
-        contentWidth: Math.max(...contentWidths), // Get max width to reset correctly
-        containerWidth: this.containerRef.current.offsetWidth,
+        contentWidths,
+        containerHeight: this.state.rowCount * 60, // Adjust height dynamically
       });
     }
   };
@@ -67,17 +73,10 @@ class Resume extends Component {
       );
     });
 
-    const skillsMatrix = [];
-    const rowCount = 3; // Adjust the number of rows as needed
-
-    if (this.props.data && this.props.data.skills) {
-      // Split skills into multiple rows dynamically
-      for (let i = 0; i < rowCount; i++) {
-        skillsMatrix.push(
-          this.props.data.skills.filter((_, index) => index % rowCount === i)
-        );
-      }
-    }
+    // **Split skills dynamically into `rowCount` rows**
+    const skillsMatrix = Array.from({ length: this.state.rowCount }, (_, i) =>
+      this.props.data.skills.filter((_, index) => index % this.state.rowCount === i)
+    );
 
     return (
       <section id="resume">
@@ -111,11 +110,12 @@ class Resume extends Component {
                     style={{
                       position: "relative",
                       width: "100%",
-                      height: "200px",
+                      height: `${this.state.containerHeight}px`, // Dynamically adjusts height
                       overflow: "hidden",
                       display: "flex",
                       flexDirection: "column",
-                      gap: "10px",
+                      justifyContent: "center", // Center all rows properly
+                      gap: "15px",
                       border: "1px solid red", // Debugging
                     }}
                   >
@@ -130,7 +130,7 @@ class Resume extends Component {
                           display: "flex",
                           alignItems: "center",
                           gap: "20px",
-                          top: `${rowIndex * 60}px`, // Space out rows
+                          top: `${(this.state.containerHeight / this.state.rowCount) * rowIndex}px`, // Proper spacing
                         }}
                       >
                         {row.map((skill, imgIndex) => (
