@@ -1,0 +1,23 @@
+# Skills:
+- C#
+- .NET Core 
+- ASP.NET Core
+- System Administration
+- Data Architect
+- SQL
+- Extract, Transform, Load (ETL) Specialist
+- Data Science
+- Git
+- Azure
+- Angular 
+- React
+- AI
+- Machine Learning
+- Data Analysis
+- Data Modeling
+- Data Management
+- Data Warehousing
+- Statistical Data Analysis
+- Machine Learning Algorithms
+- Data Mining 
+- Linux

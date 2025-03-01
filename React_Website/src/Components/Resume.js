@@ -11,6 +11,19 @@ class Resume extends Component {
     return color;
   }
 
+  LoopingSection() {
+    const [direction, setDirection] = useState('forward'); // State to control animation direction
+    useEffect(() => {
+      const handleAnimationEnd = () => {
+        setDirection(prevDirection => (prevDirection === 'forward' ? 'backward' : 'forward'));
+      };
+      // Add event listener to detect animation end
+      return () => {
+        // Cleanup logic
+      };
+    }, []);
+  }
+
   render() {
     if (!this.props.data) return null;
 
@@ -43,6 +56,11 @@ class Resume extends Component {
         </li>
       );
     });
+
+    <div className={`looping-section ${direction}`}>
+      {/* Your content here */}
+      <p>This text will loop across the screen</p>
+    </div>
 
     return (
       <section id="resume">
@@ -79,5 +97,7 @@ class Resume extends Component {
     );
   }
 }
+
+
 
 export default Resume;
