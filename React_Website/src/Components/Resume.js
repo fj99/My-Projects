@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Slide from "react-reveal";
 
 class Resume extends Component {
@@ -11,18 +11,41 @@ class Resume extends Component {
     return color;
   }
 
-  LoopingSection() {
-    const [direction, setDirection] = useState('forward'); // State to control animation direction
-    useEffect(() => {
-      const handleAnimationEnd = () => {
-        setDirection(prevDirection => (prevDirection === 'forward' ? 'backward' : 'forward'));
-      };
-      // Add event listener to detect animation end
-      return () => {
-        // Cleanup logic
-      };
-    }, []);
+  constructor(props) {
+    super(props);
+    this.state = { position: 0, contentWidth: 0, containerWidth: 0 };
+    this.contentRef = React.createRef(); // For measuring content width
+    this.containerRef = React.createRef(); // For measuring visible container width
   }
+
+  componentDidMount() {
+    this.updateWidths();
+
+    this.interval = setInterval(() => {
+      this.setState((prevState) => ({
+        position:
+          prevState.position < this.state.containerWidth
+            ? prevState.position + 5 // Increase speed here if needed
+            : -this.state.contentWidth // Reset faster
+      }));
+    }, 30); // Adjust speed
+
+    window.addEventListener("resize", this.updateWidths);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+    window.removeEventListener("resize", this.updateWidths);
+  }
+
+  updateWidths = () => {
+    if (this.contentRef.current && this.containerRef.current) {
+      this.setState({
+        contentWidth: this.contentRef.current.offsetWidth, // Get width of moving content
+        containerWidth: this.containerRef.current.offsetWidth, // Get width of visible container
+      });
+    }
+  };
 
   render() {
     if (!this.props.data) return null;
@@ -48,19 +71,18 @@ class Resume extends Component {
       const backgroundColor = this.getRandomColor();
       const className = "bar-expand " + skills.name.toLowerCase();
       const width = skills.level;
-
       return (
-        <li key={skills.name}>
-          <span style={{ width, backgroundColor }} className={className}></span>
-          <em className="white">{skills.name}</em>
-        </li>
+        <img
+          src={skills.link}
+          alt={skills.name}
+          style={{ height: "50px" }}
+        />
+        // <li key={skills.name}>
+        //   <span style={{ width, backgroundColor }} className={className}></span>
+        //   <em className="white">{skills.name}</em>
+        // </li>
       );
     });
-
-    <div className={`looping-section ${direction}`}>
-      {/* Your content here */}
-      <p>This text will loop across the screen</p>
-    </div>
 
     return (
       <section id="resume">
@@ -85,12 +107,38 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              <p>{skillmessage}</p>
+              <p>{this.props.skillmessage}</p>
 
               <div className="bars">
-                <ul className="skills">{skills}</ul>
+                <ul className="skills">
+                  <div
+                    ref={this.containerRef} // Measure container
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100px",
+                      overflow: "hidden",
+                      // border: "1px solid red", // Debugging, remove later
+                    }}
+                  >
+                    <div
+                      ref={this.contentRef} // Measure moving content
+                      style={{
+                        position: "absolute",
+                        left: `${this.state.position}px`,
+                        whiteSpace: "nowrap",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "20px",
+                      }}
+                    >
+                      {skills}
+                    </div>
+                  </div>
+                </ul>
               </div>
             </div>
+
           </div>
         </Slide>
       </section>

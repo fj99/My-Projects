@@ -1,7 +1,7 @@
-# Skills:
+# Skills
+
 - C#
-- .NET Core 
-- ASP.NET Core
+- .NET Core
 - System Administration
 - Data Architect
 - SQL
@@ -9,8 +9,9 @@
 - Data Science
 - Git
 - Azure
-- Angular 
+- Angular
 - React
+- Python
 - AI
 - Machine Learning
 - Data Analysis
@@ -19,5 +20,5 @@
 - Data Warehousing
 - Statistical Data Analysis
 - Machine Learning Algorithms
-- Data Mining 
+- Data Mining
 - Linux

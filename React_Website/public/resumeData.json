@@ -104,36 +104,44 @@
     ],
     "skills": [
       {
-        "name": "Python",
-        "level": "100%"
+        "name": "C#",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png"
+      },
+      {
+        "name": ".NET Core",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png"
       },
       {
         "name": "SQL",
-        "level": "95%"
+        "link": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
       },
       {
-        "name": "C#",
-        "level": "95%"
+        "name": "Git",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png"
+      },
+      {
+        "name": "Python",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/701px-Python-logo-notext.svg.png"
       },
       {
         "name": "Angular",
-        "level": "95%"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png"
       },
       {
         "name": "JS",
-        "level": "90%"
+        "link": "https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
       },
       {
         "name": "JAVA",
-        "level": "80%"
+        "link": "https://banner2.cleanpng.com/20181109/oll/kisspng-java-development-kit-logo-programming-language-por-java-logo-svg-1713924793188.webp"
       },
       {
         "name": "PHP",
-        "level": "80%"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
       },
       {
-        "name": "REACT JS",
-        "level": "60%"
+        "name": "REACT",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
       }
     ]
   },
