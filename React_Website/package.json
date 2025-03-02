@@ -21,6 +21,7 @@
     "react-icons": "^4.10.1",
     "react-reveal": "^1.2.2",
     "react-scripts": "^5.0.1",
+    "react-tooltip": "^5.28.0",
     "react-zmage": "^0.8.5-beta.36",
     "swiper": "^9.4.1",
     "tsparticles": "^1.43.1",

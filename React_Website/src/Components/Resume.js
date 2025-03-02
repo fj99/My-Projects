@@ -1,34 +1,34 @@
 import React, { Component, useState, useEffect } from "react";
 import Slide from "react-reveal";
+import { Tooltip } from "react-tooltip";
 
 class Resume extends Component {
   constructor(props) {
     super(props);
-    const rowCount = 4; // Adjust to test different row counts
+    const rowCount = 4;
 
     this.state = {
-      positions: Array(rowCount).fill(0), // Position for each row
-      contentWidths: Array(rowCount).fill(0), // Content width tracking
-      containerHeight: rowCount * 60, // Dynamic height based on rowCount
+      positions: Array(rowCount).fill(0),
+      contentWidths: Array(rowCount).fill(0),
+      containerHeight: rowCount * 60,
       rowCount,
     };
 
     this.contentRefs = Array(rowCount).fill(null).map(() => React.createRef());
-    this.containerRef = React.createRef(); // Correct ref initialization
+    this.containerRef = React.createRef();
   }
 
   componentDidMount() {
     this.updateWidths();
 
-    // Create independent intervals for each row
     this.intervals = this.state.positions.map((_, rowIndex) =>
       setInterval(() => {
         this.setState((prevState) => {
           const newPositions = [...prevState.positions];
           newPositions[rowIndex] =
             newPositions[rowIndex] < this.containerRef.current.offsetWidth
-              ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 4 : 2) // Alternating speeds
-              : -prevState.contentWidths[rowIndex]; // Reset smoothly
+              ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 4 : 2)
+              : -prevState.contentWidths[rowIndex];
 
           return { positions: newPositions };
         });
@@ -48,7 +48,7 @@ class Resume extends Component {
       const contentWidths = this.contentRefs.map(ref => ref.current?.offsetWidth || 0);
       this.setState({
         contentWidths,
-        containerHeight: this.state.rowCount * 60, // Adjust height dynamically
+        containerHeight: this.state.rowCount * 60,
       });
     }
   };
@@ -106,17 +106,17 @@ class Resume extends Component {
               <div className="bars">
                 <ul className="skills">
                   <div
-                    ref={this.containerRef} // Measure container
+                    ref={this.containerRef}
                     style={{
                       position: "relative",
                       width: "100%",
-                      height: `${this.state.containerHeight}px`, // Dynamically adjusts height
+                      height: `${this.state.containerHeight}px`,
                       overflow: "hidden",
                       display: "flex",
                       flexDirection: "column",
-                      justifyContent: "center", // Center all rows properly
+                      justifyContent: "center",
                       gap: "15px",
-                      border: "1px solid red", // Debugging
+                      // border: "1px solid red", // Debugging
                     }}
                   >
                     {skillsMatrix.map((row, rowIndex) => (
@@ -130,22 +130,37 @@ class Resume extends Component {
                           display: "flex",
                           alignItems: "center",
                           gap: "20px",
-                          top: `${(this.state.containerHeight / this.state.rowCount) * rowIndex}px`, // Proper spacing
+                          top: `${(this.state.containerHeight / this.state.rowCount) * rowIndex}px`,
+                          // border: "1px solid red", // Debugging
                         }}
                       >
                         {row.map((skill, imgIndex) => (
-                          <img key={imgIndex} src={skill.link} alt={skill.name} style={{ height: "50px" }} />
+                          <img
+                            key={imgIndex}
+                            src={skill.link}
+                            alt={skill.name}
+                            style={{
+                              height: "50px",
+                              // border: "1px solid red", // Debugging
+                            }}
+                            // data-tooltip-id={imgIndex}
+                            data-tooltip-id="my-tooltip"
+                            data-tooltip-content={skill.description}
+                          />
                         ))}
+
                       </div>
                     ))}
+                    <Tooltip id="my-tooltip" />
                   </div>
                 </ul>
               </div>
-            </div>
 
+
+            </div>
           </div>
         </Slide>
-      </section>
+      </section >
     );
   }
 }

@@ -105,43 +105,64 @@
     "skills": [
       {
         "name": "C#",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png"
+        "_link": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png",
+        "description": "C#"
       },
       {
         "name": ".NET Core",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png",
+        "description": ".NET Core"
       },
       {
         "name": "SQL",
-        "link": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg"
+        "link": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
+        "description": "SQL"
       },
       {
         "name": "Git",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+        "description": "Git"
+      },
+      {
+        "name": "Azure",
+        "link": "https://swimburger.net/media/ppnn3pcl/azure.png",
+        "description": "Azure"
       },
       {
         "name": "Python",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/701px-Python-logo-notext.svg.png"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/701px-Python-logo-notext.svg.png",
+        "description": "Python"
       },
       {
         "name": "Angular",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png",
+        "description": "Angular"
       },
       {
         "name": "JS",
-        "link": "https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+        "link": "https://cdn.worldvectorlogo.com/logos/javascript-1.svg",
+        "description": "JS"
       },
       {
         "name": "JAVA",
-        "link": "https://banner2.cleanpng.com/20181109/oll/kisspng-java-development-kit-logo-programming-language-por-java-logo-svg-1713924793188.webp"
+        "link": "https://banner2.cleanpng.com/20181109/oll/kisspng-java-development-kit-logo-programming-language-por-java-logo-svg-1713924793188.webp",
+        "description": "JAVA"
       },
       {
         "name": "PHP",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png",
+        "description": "PHP"
       },
       {
         "name": "REACT",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+        "description": "React"
+      },
+      {
+        "name": "REACT",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+        "description": "React"
       }
     ]
   },
