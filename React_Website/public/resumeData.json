@@ -115,9 +115,9 @@
         "description": ".NET Core"
       },
       {
-        "name": "System Admin",
+        "name": "System Administration",
         "link": "images/Skills/System Administration.webp",
-        "description": "System Admin"
+        "description": "System Administration"
       },
       {
         "name": "Data Architect",
@@ -145,6 +145,11 @@
         "description": "Git"
       },
       {
+        "name": "Linux",
+        "link": "https://images.vexels.com/content/140692/preview/linux-logo-72ceef.png",
+        "description": "Linux"
+      },
+      {
         "name": "Azure",
         "link": "https://swimburger.net/media/ppnn3pcl/azure.png",
         "description": "Azure"
@@ -168,6 +173,36 @@
         "name": "AI",
         "link": "images/Skills/AI.jpg",
         "description": "AI"
+      },
+      {
+        "name": "Machine Learning",
+        "link": "images/Skills/Machine Learning.jpg",
+        "description": "Machine Learning"
+      },
+      {
+        "name": "Data Analysis",
+        "link": "images/Skills/Data Analysis.jpg",
+        "description": "Data Analysis"
+      },
+      {
+        "name": "Data Modeling",
+        "link": "images/Skills/Data Modeling.jpg",
+        "description": "Data Modeling"
+      },
+      {
+        "name": "Data Warehousing",
+        "link": "images/Skills/Data Warehousing.jpg",
+        "description": "Data Warehousing"
+      },
+      {
+        "name": "Statistical Data Analysis",
+        "link": "images/Skills/Statistical Data Analysis.jpg",
+        "description": "Statistical Data Analysis"
+      },
+      {
+        "name": "Data Mining",
+        "link": "images/Skills/Data Mining.jpg",
+        "description": "Data Mining"
       },
       {
         "name": "JS",

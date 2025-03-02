@@ -8,6 +8,7 @@
 - Extract, Transform, Load (ETL) Specialist
 - Data Science
 - Git
+- Linux
 - Azure
 - Angular
 - React
@@ -19,6 +20,9 @@
 - Data Management
 - Data Warehousing
 - Statistical Data Analysis
-- Machine Learning Algorithms
 - Data Mining
-- Linux
+- JS 
+- Java
+- PHP
+
+<!-- - Machine Learning Algorithms -->
