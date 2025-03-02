@@ -18,7 +18,7 @@ class Resume extends Component {
     this.containerRef = React.createRef();
   }
 
-  componentDidMount() {
+  _componentDidMount() {
     this.updateWidths();
 
     this.intervals = this.state.positions.map((_, rowIndex) =>
@@ -34,6 +34,30 @@ class Resume extends Component {
         });
       }, 30)
     );
+    window.addEventListener("resize", this.updateWidths);
+  }
+
+  componentDidMount() {
+    this.updateWidths();
+    this.intervals = this.state.positions.map((_, rowIndex) => {
+      let speed;
+      if (rowIndex === 0) speed = 1; // Slowest speed for first row
+      else if (rowIndex === 1) speed = 2; // Slightly faster for second row
+      else if (rowIndex % 2 === 0) speed = 4; // Normal speed for even rows
+      else speed = 3; // Slightly slower for odd rows
+
+      return setInterval(() => {
+        this.setState((prevState) => {
+          const newPositions = [...prevState.positions];
+          newPositions[rowIndex] =
+            newPositions[rowIndex] < this.containerRef.current.offsetWidth
+              ? newPositions[rowIndex] + speed
+              : -prevState.contentWidths[rowIndex];
+
+          return { positions: newPositions };
+        });
+      }, 30);
+    });
 
     window.addEventListener("resize", this.updateWidths);
   }
