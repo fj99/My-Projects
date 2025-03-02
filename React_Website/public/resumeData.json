@@ -131,8 +131,13 @@
       },
       {
         "name": "ETL",
-        "link": "images/Skills/ETL.jfif",
+        "link": "images/Skills/ETL.png",
         "description": "Extract, Transform, Load (ETL)"
+      },
+      {
+        "name": "Data Science",
+        "link": "images/Skills/Data Science.jpg",
+        "description": "Data Science"
       },
       {
         "name": "Git",
@@ -145,14 +150,24 @@
         "description": "Azure"
       },
       {
+        "name": "Angular",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png",
+        "description": "Angular"
+      },
+      {
+        "name": "REACT",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+        "description": "React"
+      },
+      {
         "name": "Python",
         "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/701px-Python-logo-notext.svg.png",
         "description": "Python"
       },
       {
-        "name": "Angular",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png",
-        "description": "Angular"
+        "name": "AI",
+        "link": "images/Skills/AI.jpg",
+        "description": "AI"
       },
       {
         "name": "JS",
@@ -168,16 +183,6 @@
         "name": "PHP",
         "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png",
         "description": "PHP"
-      },
-      {
-        "name": "REACT",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
-        "description": "React"
-      },
-      {
-        "name": "REACT",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
-        "description": "React"
       }
     ]
   },
