@@ -115,9 +115,24 @@
         "description": ".NET Core"
       },
       {
+        "name": "System Admin",
+        "link": "images/Skills/System Administration.webp",
+        "description": "System Admin"
+      },
+      {
+        "name": "Data Architect",
+        "link": "images/Skills/Data Architect.jfif",
+        "description": "Data Architect"
+      },
+      {
         "name": "SQL",
         "link": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
         "description": "SQL"
+      },
+      {
+        "name": "ETL",
+        "link": "images/Skills/ETL.jfif",
+        "description": "Extract, Transform, Load (ETL)"
       },
       {
         "name": "Git",
