@@ -5,7 +5,7 @@ import { Tooltip } from "react-tooltip";
 class Resume extends Component {
   constructor(props) {
     super(props);
-    const rowCount = 4;
+    const rowCount = 6;
 
     this.state = {
       positions: Array(rowCount).fill(0),
@@ -41,10 +41,10 @@ class Resume extends Component {
     this.updateWidths();
     this.intervals = this.state.positions.map((_, rowIndex) => {
       let speed;
-      if (rowIndex === 0) speed = 1; // Slowest speed for first row
-      else if (rowIndex === 1) speed = 2; // Slightly faster for second row
-      else if (rowIndex % 2 === 0) speed = 1; // Normal speed for even rows
-      else speed = 2; // Slightly slower for odd rows
+      if (rowIndex === 0) speed = 1; // for first row
+      else if (rowIndex === 1) speed = 2; // for second row
+      else if (rowIndex % 2 === 0) speed = 1.5; // for even rows
+      else speed = 2; // for odd rows
 
       return setInterval(() => {
         this.setState((prevState) => {
