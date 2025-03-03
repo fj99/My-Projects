@@ -5,7 +5,7 @@ import { Tooltip } from "react-tooltip";
 class Resume extends Component {
   constructor(props) {
     super(props);
-    const rowCount = 3;
+    const rowCount = 4;
 
     this.state = {
       positions: Array(rowCount).fill(0),
