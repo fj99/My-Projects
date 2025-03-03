@@ -104,36 +104,120 @@
     ],
     "skills": [
       {
-        "name": "Python",
-        "level": "100%"
+        "name": "C#",
+        "_link": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png",
+        "description": "C#"
+      },
+      {
+        "name": ".NET Core",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png",
+        "description": ".NET Core"
+      },
+      {
+        "name": "System Administration",
+        "link": "images/Skills/System Administration.webp",
+        "description": "System Administration"
+      },
+      {
+        "name": "Data Architect",
+        "link": "images/Skills/Data Architect.jfif",
+        "description": "Data Architect"
       },
       {
         "name": "SQL",
-        "level": "95%"
+        "link": "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
+        "description": "SQL"
       },
       {
-        "name": "C#",
-        "level": "95%"
+        "name": "ETL",
+        "link": "images/Skills/ETL.png",
+        "description": "Extract, Transform, Load (ETL)"
+      },
+      {
+        "name": "Data Science",
+        "link": "images/Skills/Data Science.jpg",
+        "description": "Data Science"
+      },
+      {
+        "name": "Git",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+        "description": "Git"
+      },
+      {
+        "name": "Linux",
+        "link": "https://images.vexels.com/content/140692/preview/linux-logo-72ceef.png",
+        "description": "Linux"
+      },
+      {
+        "name": "Azure",
+        "link": "https://swimburger.net/media/ppnn3pcl/azure.png",
+        "description": "Azure"
       },
       {
         "name": "Angular",
-        "level": "95%"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png",
+        "description": "Angular"
+      },
+      {
+        "name": "REACT",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+        "description": "React"
+      },
+      {
+        "name": "Python",
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/701px-Python-logo-notext.svg.png",
+        "description": "Python"
+      },
+      {
+        "name": "AI",
+        "link": "images/Skills/AI.jpg",
+        "description": "AI"
+      },
+      {
+        "name": "Machine Learning",
+        "link": "images/Skills/Machine Learning.jpg",
+        "description": "Machine Learning"
+      },
+      {
+        "name": "Data Analysis",
+        "link": "images/Skills/Data Analysis.jpg",
+        "description": "Data Analysis"
+      },
+      {
+        "name": "Data Modeling",
+        "link": "images/Skills/Data Modeling.jpg",
+        "description": "Data Modeling"
+      },
+      {
+        "name": "Data Warehousing",
+        "link": "images/Skills/Data Warehousing.jpg",
+        "description": "Data Warehousing"
+      },
+      {
+        "name": "Statistical Data Analysis",
+        "link": "images/Skills/Statistical Data Analysis.jpg",
+        "description": "Statistical Data Analysis"
+      },
+      {
+        "name": "Data Mining",
+        "link": "images/Skills/Data Mining.jpg",
+        "description": "Data Mining"
       },
       {
         "name": "JS",
-        "level": "90%"
+        "link": "https://cdn.worldvectorlogo.com/logos/javascript-1.svg",
+        "description": "JS"
       },
       {
         "name": "JAVA",
-        "level": "80%"
+        "link": "https://banner2.cleanpng.com/20181109/oll/kisspng-java-development-kit-logo-programming-language-por-java-logo-svg-1713924793188.webp",
+        "description": "JAVA"
       },
       {
         "name": "PHP",
-        "level": "80%"
-      },
-      {
-        "name": "REACT JS",
-        "level": "60%"
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png",
+        "description": "PHP"
       }
     ]
   },
