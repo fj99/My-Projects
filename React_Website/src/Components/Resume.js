@@ -5,12 +5,12 @@ import { Tooltip } from "react-tooltip";
 class Resume extends Component {
   constructor(props) {
     super(props);
-    const rowCount = 4;
+    const rowCount = 3;
 
     this.state = {
       positions: Array(rowCount).fill(0),
       contentWidths: Array(rowCount).fill(0),
-      containerHeight: rowCount * 60,
+      containerHeight: rowCount * 120,
       rowCount,
     };
 
@@ -43,8 +43,8 @@ class Resume extends Component {
       let speed;
       if (rowIndex === 0) speed = 1; // Slowest speed for first row
       else if (rowIndex === 1) speed = 2; // Slightly faster for second row
-      else if (rowIndex % 2 === 0) speed = 4; // Normal speed for even rows
-      else speed = 3; // Slightly slower for odd rows
+      else if (rowIndex % 2 === 0) speed = 1; // Normal speed for even rows
+      else speed = 2; // Slightly slower for odd rows
 
       return setInterval(() => {
         this.setState((prevState) => {
@@ -72,7 +72,7 @@ class Resume extends Component {
       const contentWidths = this.contentRefs.map(ref => ref.current?.offsetWidth || 0);
       this.setState({
         contentWidths,
-        containerHeight: this.state.rowCount * 60,
+        containerHeight: this.state.rowCount * 120,
       });
     }
   };
@@ -164,7 +164,7 @@ class Resume extends Component {
                             src={skill.link}
                             alt={skill.name}
                             style={{
-                              height: "50px",
+                              height: "100px",
                               // border: "1px solid red", // Debugging
                             }}
                             // data-tooltip-id={imgIndex}
@@ -182,6 +182,8 @@ class Resume extends Component {
 
 
             </div>
+
+
           </div>
         </Slide>
       </section >
