@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component } from "react";
 import Slide from "react-reveal";
 import { Tooltip } from "react-tooltip";
 
@@ -8,8 +8,8 @@ class Resume extends Component {
     const rowCount = 3;
 
     this.state = {
-      positions: Array(rowCount).fill(0),
-      contentWidths: Array(rowCount).fill(0),
+      positions: Array(rowCount).fill(0), // Initialize positions to 0
+      contentWidths: Array(rowCount).fill(0), // To store the width of the images
       containerHeight: rowCount * 120,
       rowCount,
     };
@@ -18,63 +18,49 @@ class Resume extends Component {
     this.containerRef = React.createRef();
   }
 
-  _componentDidMount() {
-    this.updateWidths();
-
-    this.intervals = this.state.positions.map((_, rowIndex) =>
-      setInterval(() => {
-        this.setState((prevState) => {
-          const newPositions = [...prevState.positions];
-          newPositions[rowIndex] =
-            newPositions[rowIndex] < this.containerRef.current.offsetWidth
-              ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 4 : 2)
-              : -prevState.contentWidths[rowIndex];
-
-          return { positions: newPositions };
-        });
-      }, 30)
-    );
-    window.addEventListener("resize", this.updateWidths);
-  }
-
   componentDidMount() {
     this.updateWidths();
-    this.intervals = this.state.positions.map((_, rowIndex) => {
-      let speed;
-      if (rowIndex === 0) speed = 1; // Slowest speed for first row
-      else if (rowIndex === 1) speed = 2; // Slightly faster for second row
-      else if (rowIndex % 2 === 0) speed = 1; // Normal speed for even rows
-      else speed = 2; // Slightly slower for odd rows
-
-      return setInterval(() => {
-        this.setState((prevState) => {
-          const newPositions = [...prevState.positions];
-          newPositions[rowIndex] =
-            newPositions[rowIndex] < this.containerRef.current.offsetWidth
-              ? newPositions[rowIndex] + speed
-              : -prevState.contentWidths[rowIndex];
-
-          return { positions: newPositions };
-        });
-      }, 30);
-    });
-
+    this.startAnimation(); // Start animation after setting initial widths
     window.addEventListener("resize", this.updateWidths);
   }
 
   componentWillUnmount() {
+    // Clear intervals on unmount
     this.intervals.forEach(clearInterval);
     window.removeEventListener("resize", this.updateWidths);
   }
 
   updateWidths = () => {
     if (this.containerRef.current) {
-      const contentWidths = this.contentRefs.map(ref => ref.current?.offsetWidth || 0);
+      const contentWidths = this.contentRefs.map((ref) => ref.current?.offsetWidth || 0);
       this.setState({
         contentWidths,
         containerHeight: this.state.rowCount * 120,
       });
     }
+  };
+
+  startAnimation = () => {
+    // Set an interval to update the position of each row
+    this.intervals = this.state.positions.map((_, rowIndex) => {
+      let speed = rowIndex % 2 === 0 ? 2 : 3; // Different speed for rows
+
+      return setInterval(() => {
+        this.setState((prevState) => {
+          const newPositions = [...prevState.positions]; // Make a copy of positions
+
+          // Update positions for each row independently
+          newPositions[rowIndex] = newPositions[rowIndex] + speed;
+
+          // If a row's position goes beyond the container's width, reset it
+          if (newPositions[rowIndex] >= this.containerRef.current.offsetWidth) {
+            newPositions[rowIndex] = -prevState.contentWidths[rowIndex]; // Loop back
+          }
+
+          return { positions: newPositions };
+        });
+      }, 30); // Update every 30ms
+    });
   };
 
   render() {
@@ -140,7 +126,6 @@ class Resume extends Component {
                       flexDirection: "column",
                       justifyContent: "center",
                       gap: "15px",
-                      // border: "1px solid red", // Debugging
                     }}
                   >
                     {skillsMatrix.map((row, rowIndex) => (
@@ -149,13 +134,12 @@ class Resume extends Component {
                         ref={this.contentRefs[rowIndex]}
                         style={{
                           position: "absolute",
-                          left: `${this.state.positions[rowIndex]}px`,
+                          left: `${this.state.positions[rowIndex]}px`, // Move the row by its position
                           whiteSpace: "nowrap",
                           display: "flex",
                           alignItems: "center",
                           gap: "20px",
                           top: `${(this.state.containerHeight / this.state.rowCount) * rowIndex}px`,
-                          // border: "1px solid red", // Debugging
                         }}
                       >
                         {row.map((skill, imgIndex) => (
@@ -165,22 +149,20 @@ class Resume extends Component {
                             alt={skill.name}
                             style={{
                               height: "100px",
-                              // border: "1px solid red", // Debugging
+                              width: "auto", // Let images keep their natural width
+                              border: "1px solid red", // Debugging
+                              display: "inline-block", // Prevents collapsing width
                             }}
-                            // data-tooltip-id={imgIndex}
                             data-tooltip-id="my-tooltip"
                             data-tooltip-content={skill.description}
                           />
                         ))}
-
                       </div>
                     ))}
                     <Tooltip id="my-tooltip" />
                   </div>
                 </ul>
               </div>
-
-
             </div>
 
 
