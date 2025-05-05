@@ -9,6 +9,7 @@ class About extends Component {
 
     const name = this.props.data.name;
     const profile_pic = this.props.data.profile_pic;
+    const profile_pic_alt = this.props.data.profile_pic_alt;
     const bio = this.props.data.bio;
     const city = this.props.data.address.city;
     const state = this.props.data.address.state;
@@ -34,7 +35,7 @@ class About extends Component {
               <img
                 className="profile-pic"
                 src={profile_pic}
-                alt="Profile Pic"
+                alt={profile_pic_alt}
               />
             </div>
             <div className="nine columns main-col">
