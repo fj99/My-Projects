@@ -5,65 +5,52 @@ import { Tooltip } from "react-tooltip";
 class Resume extends Component {
   constructor(props) {
     super(props);
-    const rowCount = 3;
 
+    // Set the initial state
     this.state = {
-      positions: Array(rowCount).fill(0), // Initialize positions to 0
-      contentWidths: Array(rowCount).fill(0), // To store the width of the images
-      containerHeight: rowCount * 120,
-      rowCount,
+      images: [],
+      rowCount: 3, // Default to 3 rows (you can change this to any value)
     };
 
-    this.contentRefs = Array(rowCount).fill(null).map(() => React.createRef());
-    this.containerRef = React.createRef();
+    this.speed = 2; // Movement speed
+    this.imageWidth = 100; // Adjust based on actual image size
+    this.imageHeight = 100; // Adjust based on actual image height (same for all images)
   }
 
   componentDidMount() {
-    this.updateWidths();
-    this.startAnimation(); // Start animation after setting initial widths
-    window.addEventListener("resize", this.updateWidths);
+    // Make sure the data is passed down via props and then process it
+    const allImages = this.props.data?.skills?.map((skill) => skill.link) || [];
+
+    // Update state with the images after component mounts
+    this.setState({
+      images: allImages.map((src, index) => ({
+        id: index,
+        left: Math.random() * window.innerWidth, // Random start position
+        src, // Store the image source (link)
+      })),
+    });
+
+    this.interval = setInterval(this.moveImages, 16); // Smooth movement
   }
 
   componentWillUnmount() {
-    // Clear intervals on unmount
-    this.intervals.forEach(clearInterval);
-    window.removeEventListener("resize", this.updateWidths);
+    clearInterval(this.interval);
   }
 
-  updateWidths = () => {
-    if (this.containerRef.current) {
-      const contentWidths = this.contentRefs.map((ref) => ref.current?.offsetWidth || 0);
-      this.setState({
-        contentWidths,
-        containerHeight: this.state.rowCount * 120,
-      });
-    }
-  };
-
-  startAnimation = () => {
-    // Set an interval to update the position of each row
-    this.intervals = this.state.positions.map((_, rowIndex) => {
-      let speed = rowIndex % 2 === 0 ? 2 : 3; // Different speed for rows
-
-      return setInterval(() => {
-        this.setState((prevState) => {
-          const newPositions = [...prevState.positions]; // Make a copy of positions
-
-          // Update positions for each row independently
-          newPositions[rowIndex] = newPositions[rowIndex] + speed;
-
-          // If a row's position goes beyond the container's width, reset it
-          if (newPositions[rowIndex] >= this.containerRef.current.offsetWidth) {
-            newPositions[rowIndex] = -prevState.contentWidths[rowIndex]; // Loop back
-          }
-
-          return { positions: newPositions };
-        });
-      }, 30); // Update every 30ms
-    });
+  moveImages = () => {
+    this.setState((prevState) => ({
+      images: prevState.images.map((img) => {
+        let newLeft = img.left + this.speed;
+        if (newLeft > window.innerWidth) {
+          newLeft = -this.imageWidth; // Move back to the left side
+        }
+        return { ...img, left: newLeft };
+      }),
+    }));
   };
 
   render() {
+    console.log(this.props.data)
     if (!this.props.data) return null;
 
     const skillmessage = this.props.data.skillmessage;
@@ -83,10 +70,14 @@ class Resume extends Component {
       );
     });
 
-    // **Split skills dynamically into `rowCount` rows**
-    const skillsMatrix = Array.from({ length: this.state.rowCount }, (_, i) =>
-      this.props.data.skills.filter((_, index) => index % this.state.rowCount === i)
-    );
+    const { images, rowCount } = this.state;
+
+    // Calculate how many images per row
+    const imagesPerRow = Math.ceil(images.length / rowCount);
+
+    // Calculate vertical spacing (top position) for each row
+    const rowHeight = this.imageHeight + 20; // Extra spacing between rows (20px)
+
 
     return (
       <section id="resume">
@@ -115,52 +106,39 @@ class Resume extends Component {
 
               <div className="bars">
                 <ul className="skills">
+
                   <div
-                    ref={this.containerRef}
                     style={{
                       position: "relative",
                       width: "100%",
-                      height: `${this.state.containerHeight}px`,
+                      height: `${rowCount * rowHeight}px`, // Set the height based on row count
                       overflow: "hidden",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      gap: "15px",
                     }}
                   >
-                    {skillsMatrix.map((row, rowIndex) => (
-                      <div
-                        key={rowIndex}
-                        ref={this.contentRefs[rowIndex]}
-                        style={{
-                          position: "absolute",
-                          left: `${this.state.positions[rowIndex]}px`, // Move the row by its position
-                          whiteSpace: "nowrap",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "20px",
-                          top: `${(this.state.containerHeight / this.state.rowCount) * rowIndex}px`,
-                        }}
-                      >
-                        {row.map((skill, imgIndex) => (
-                          <img
-                            key={imgIndex}
-                            src={skill.link}
-                            alt={skill.name}
-                            style={{
-                              height: "100px",
-                              width: "auto", // Let images keep their natural width
-                              border: "1px solid red", // Debugging
-                              display: "inline-block", // Prevents collapsing width
-                            }}
-                            data-tooltip-id="my-tooltip"
-                            data-tooltip-content={skill.description}
-                          />
-                        ))}
-                      </div>
-                    ))}
-                    <Tooltip id="my-tooltip" />
+                    {images.map((img, index) => {
+                      // Calculate the row number based on index and the number of rows
+                      const rowIndex = Math.floor(index / imagesPerRow);
+                      const topPosition = rowIndex * rowHeight; // Vertical position
+
+                      return (
+                        <img
+                          key={img.id}
+                          src={img.src} // Use the link from props as the image source
+                          alt=""
+                          style={{
+                            position: "absolute",
+                            left: img.left,
+                            top: topPosition,
+                            transform: "translateY(-50%)",
+                            width: `${this.imageWidth}px`,
+                            height: `${this.imageHeight}px`,
+                            border: "2px solid red",
+                          }}
+                        />
+                      );
+                    })}
                   </div>
+
                 </ul>
               </div>
             </div>
