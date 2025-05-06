@@ -32,11 +32,11 @@ class About extends Component {
         <Fade duration={1000}>
           <div className="row">
             <div className="three columns">
-              <img
+              {/* <img
                 className="profile-pic"
                 src={profile_pic}
                 alt={profile_pic_alt}
-              />
+              /> */}
             </div>
             <div className="nine columns main-col">
               <h2>About Me</h2>
