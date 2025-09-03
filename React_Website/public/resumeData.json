@@ -25,7 +25,7 @@
     ],
     "profile_pic": "",
     "profile_pic_alt": " ",
-    "bio": "Innovative, deadline-driven and problem solving Full Stack Developer with 4 + years of experience designing and developing for a corporation everyday. I love technology and problem solving I'm always looking how to make things more efficient, and when the opportunity arrives I always try to teach myself new things since I love learning.",
+    "bio": "Innovative, deadline-driven and problem solving Full Stack Developer with 6 + years of experience designing and developing for a corporation everyday. I love technology and problem solving I'm always looking how to make things more efficient, and when the opportunity arrives I always try to teach myself new things since I love learning.",
     "email": "fj99.fernandez@gmail.com",
     "phone": "203-691-0817",
     "project": "#portfolio",
@@ -94,13 +94,13 @@
         "company": "PetVetCare",
         "title": "Full Stack Developer",
         "years": "August 2023 - Now",
-        "description": "As interim Lead Full Stack Developer at Pet-Vet, I design and build mission-critical applications, architect data infrastructure, and drive innovation across the enterprise. I created and own two cornerstone platforms: Data Farm, which reduced the company's month-end financial close process from several days to under 3 hours, and Watchdog, a dynamic ETL system that processes data from 700+ clinics daily, powering essential business operations by handling hundreds of terabytes within hours. My role spans full-stack development (Angular 18 / .NET Core 8), database architecture, server management (IIS/SQL Server), and AI strategy. I lead the internal AI team, serve as substitute lead developer, and regularly collaborate with executive leadership to align tech initiatives with business goals. A key highlight includes upgrading the company's SQL Server infrastructure from 2013 to 2024 with zero downtime, ensuring a seamless transition for all enterprise apps. Skills & Tools: Angular 18, .NET Core 8, SQL Server, IIS, ETL pipelines, AI Systems, DevOps, System Architecture. Business Impact: Streamlined financial operations, enabled scalable data ingestion, strengthened infrastructure reliability, and aligned technology with enterprise growth strategy."
+        "description": "As interim Lead Full Stack Developer at Pet-Vet, I design and build mission-critical applications, architect data infrastructure, and drive innovation across the enterprise. I created and own two cornerstone platforms: Data Farm, which reduced the company's month-end financial close process from several days to under 3 hours, and Watchdog, a dynamic ETL system that processes data from 700+ clinics daily, powering essential business operations by handling hundreds of terabytes within hours. My role spans full-stack development (Angular 18 / .NET Core 8), database architecture, server management (IIS/SQL Server), and AI strategy. I lead the internal AI team, serve as substitute lead developer, and regularly collaborate with executive leadership to align tech initiatives with business goals. A key highlight includes upgrading the company's SQL Server infrastructure from 2013 to 2024 with zero downtime, ensuring a seamless transition for all enterprise apps. Skills & Tools: Angular 18, .NET Core 8 & 9, SQL Server, IIS, ETL pipelines, AI Systems, DevOps, System Architecture. Business Impact: Streamlined financial operations, enabled scalable data ingestion, strengthened infrastructure reliability, and aligned technology with enterprise growth strategy."
       },
       {
         "company": "Southern Connecticut State University",
         "title": "Full Stack Developer",
         "years": "Sept 2019 - August 2023",
-        "description": "At Southern Connecticut State University, I was a Full Stack Web Developer, leading modernization initiatives across web infrastructure, database architecture, and internal systems. I played a central role in developing and managing the university’s Drupal-based main website, delivering responsive, accessible content aligned with institutional priorities. A key achievement includes consolidating 12 disparate databases into a unified schema, dramatically improving data integrity and reducing maintenance overhead. I also enhanced mission-critical systems such as the Guest Sign-In System and Student Staff Portal—integrating APIs, automating tasks via Linux Cron Jobs, and implementing scalable PHP/MySQL solutions. As the lead of a 4-person development team for nearly two years, I streamlined onboarding processes, introduced version control (Git), and established thorough documentation protocols via Confluence to ensure project continuity. I also successfully led multiple server migrations, boosting reliability and performance across the IT infrastructure. Skills & Tools: Drupal, PHP, MySQL, JavaScript, Git, Cron Jobs, Linux, Confluence, API Integration. Business Impact: Reduced database redundancy, improved system uptime, automated key workflows, and elevated team productivity through technical leadership and structured documentation."
+        "description": "At Southern Connecticut State University, I was a Full Stack Web Developer, leading modernization initiatives across web infrastructure, database architecture, and internal systems. I played a central role in developing and managing the university's Drupal-based main website, delivering responsive, accessible content aligned with institutional priorities. A key achievement includes consolidating 12 disparate databases into a unified schema, dramatically improving data integrity and reducing maintenance overhead. I also enhanced mission-critical systems such as the Guest Sign-In System and Student Staff Portal—integrating APIs, automating tasks via Linux Cron Jobs, and implementing scalable PHP/MySQL solutions. As the lead of a 4-person development team for nearly two years, I streamlined onboarding processes, introduced version control (Git), and established thorough documentation protocols via Confluence to ensure project continuity. I also successfully led multiple server migrations, boosting reliability and performance across the IT infrastructure. Skills & Tools: Drupal, PHP, MySQL, JavaScript, Git, Cron Jobs, Linux, Confluence, API Integration. Business Impact: Reduced database redundancy, improved system uptime, automated key workflows, and elevated team productivity through technical leadership and structured documentation."
       }
     ],
     "skills": [
@@ -119,11 +119,6 @@
         "name": "System Administration",
         "link": "images/Skills/System Administration.webp",
         "description": "System Administration"
-      },
-      {
-        "name": "Data Architect",
-        "link": "images/Skills/Data Architect.jfif",
-        "description": "Data Architect"
       },
       {
         "name": "SQL",

@@ -24,5 +24,6 @@
 - JS 
 - Java
 - PHP
+- PyTorch 
 
 <!-- - Machine Learning Algorithms -->
