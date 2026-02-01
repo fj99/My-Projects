@@ -18,64 +18,64 @@ class Resume extends Component {
     this.containerRef = React.createRef();
   }
 
-  _componentDidMount() {
-    this.updateWidths();
+  // _componentDidMount() {
+  //   this.updateWidths();
 
-    this.intervals = this.state.positions.map((_, rowIndex) =>
-      setInterval(() => {
-        this.setState((prevState) => {
-          const newPositions = [...prevState.positions];
-          newPositions[rowIndex] =
-            newPositions[rowIndex] < this.containerRef.current.offsetWidth
-              ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 4 : 2)
-              : -prevState.contentWidths[rowIndex];
+  //   this.intervals = this.state.positions.map((_, rowIndex) =>
+  //     setInterval(() => {
+  //       this.setState((prevState) => {
+  //         const newPositions = [...prevState.positions];
+  //         // newPositions[rowIndex] =
+  //         // newPositions[rowIndex] < this.containerRef.current.offsetWidth
+  //         // ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 4 : 2)
+  //         // : -prevState.contentWidths[rowIndex];
 
-          return { positions: newPositions };
-        });
-      }, 30)
-    );
-    window.addEventListener("resize", this.updateWidths);
-  }
+  //         return { positions: newPositions };
+  //       });
+  //     }, 30)
+  //   );
+  //   window.addEventListener("resize", this.updateWidths);
+  // }
 
-  componentDidMount() {
-    this.updateWidths();
-    this.intervals = this.state.positions.map((_, rowIndex) => {
-      let speed;
-      if (rowIndex === 0) speed = 1; // for first row
-      else if (rowIndex === 1) speed = 2; // for second row
-      else if (rowIndex % 2 === 0) speed = 1.5; // for even rows
-      else speed = 2; // for odd rows
+  // componentDidMount() {
+  //   this.updateWidths();
+  //   this.intervals = this.state.positions.map((_, rowIndex) => {
+  //     let speed;
+  //     if (rowIndex === 0) speed = 1; // for first row
+  //     else if (rowIndex === 1) speed = 2; // for second row
+  //     else if (rowIndex % 2 === 0) speed = 1.5; // for even rows
+  //     else speed = 2; // for odd rows
 
-      return setInterval(() => {
-        this.setState((prevState) => {
-          const newPositions = [...prevState.positions];
-          newPositions[rowIndex] =
-            newPositions[rowIndex] < this.containerRef.current.offsetWidth
-              ? newPositions[rowIndex] + speed
-              : -prevState.contentWidths[rowIndex];
+  //     return setInterval(() => {
+  //       this.setState((prevState) => {
+  //         const newPositions = [...prevState.positions];
+  //         newPositions[rowIndex] =
+  //         newPositions[rowIndex] < this.containerRef.current.offsetWidth
+  //         ? newPositions[rowIndex] + speed
+  //         : -prevState.contentWidths[rowIndex];
 
-          return { positions: newPositions };
-        });
-      }, 30);
-    });
+  //         return { positions: newPositions };
+  //       });
+  //     }, 30);
+  //   });
 
-    window.addEventListener("resize", this.updateWidths);
-  }
+  //   window.addEventListener("resize", this.updateWidths);
+  // }
 
   componentWillUnmount() {
     this.intervals.forEach(clearInterval);
     window.removeEventListener("resize", this.updateWidths);
   }
 
-  updateWidths = () => {
-    if (this.containerRef.current) {
-      const contentWidths = this.contentRefs.map(ref => ref.current?.offsetWidth || 0);
-      this.setState({
-        contentWidths,
-        containerHeight: this.state.rowCount * 120,
-      });
-    }
-  };
+  // updateWidths = () => {
+  //   if (this.containerRef.current) {
+  //     // const contentWidths = this.contentRefs.map(ref => ref.current?.offsetWidth || 0);
+  //     this.setState({
+  //       contentWidths,
+  //       containerHeight: this.state.rowCount * 120,
+  //     });
+  //   }
+  // };
 
   render() {
     if (!this.props.data) return null;
@@ -127,65 +127,43 @@ class Resume extends Component {
             <div className="nine columns main-col">
               <p>{this.props.skillmessage}</p>
 
-              <div className="bars">
-                <ul className="skills">
-                  <div
-                    ref={this.containerRef}
-                    style={{
-                      position: "relative",
-                      width: "100%",
-                      height: `${this.state.containerHeight}px`,
-                      overflow: "hidden",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      gap: "15px",
-                      // border: "1px solid red", // Debugging
-                    }}
-                  >
-                    {skillsMatrix.map((row, rowIndex) => (
-                      <div
-                        key={rowIndex}
-                        ref={this.contentRefs[rowIndex]}
-                        style={{
-                          position: "absolute",
-                          left: `${this.state.positions[rowIndex]}px`,
-                          whiteSpace: "nowrap",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "20px",
-                          top: `${(this.state.containerHeight / this.state.rowCount) * rowIndex}px`,
-                          // border: "1px solid red", // Debugging
-                        }}
-                      >
-                        {row.map((skill, imgIndex) => (
-                          <img
-                            key={imgIndex}
-                            src={skill.link}
-                            alt={skill.name}
-                            style={{
-                              height: "100px",
-                              // border: "1px solid red", // Debugging
-                            }}
-                            // data-tooltip-id={imgIndex}
-                            data-tooltip-id="my-tooltip"
-                            data-tooltip-content={skill.description}
-                          />
-                        ))}
-
-                      </div>
-                    ))}
-                    <Tooltip id="my-tooltip" />
+              {/* The Marquee Container */}
+              <div className="skills-marquee-container">
+                {skillsMatrix.map((row, rowIndex) => (
+                  <div key={rowIndex} className="marquee-row">
+                    {/* Set 1: The original tape */}
+                    <div className="marquee-content">
+                      {row.map((skill, imgIndex) => (
+                        <img
+                          key={`orig-${imgIndex}`}
+                          src={skill.link}
+                          alt={skill.name}
+                          className="skill-image"
+                          data-tooltip-id="my-tooltip"
+                          data-tooltip-content={skill.description}
+                        />
+                      ))}
+                    </div>
+                    {/* Set 2: The mirror tape (creates the individual wrap illusion) */}
+                    <div className="marquee-content" aria-hidden="true">
+                      {row.map((skill, imgIndex) => (
+                        <img
+                          key={`copy-${imgIndex}`}
+                          src={skill.link}
+                          alt={skill.name}
+                          className="skill-image"
+                        />
+                      ))}
+                    </div>
                   </div>
-                </ul>
+                ))}
+                <Tooltip id="my-tooltip" />
               </div>
 
-
             </div>
-
-
           </div>
         </Slide>
+
       </section >
     );
   }

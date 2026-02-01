@@ -67,3 +67,63 @@
   z-index: -1;
   padding-bottom: 2em;
 }
+
+/* New for pics */
+/* Updated Marquee Row */
+.skills-marquee-container {
+  --gap: 3rem;
+  /* Space between individual items */
+  --duration: 40s;
+  /* Speed of the slide */
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  /* Optional: Fades the edges for a "nicer" look */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-row {
+  display: flex;
+  user-select: none;
+  gap: var(--gap);
+  margin-bottom: 2rem;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  /* CRITICAL: Prevents images from squishing and overlapping */
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  /* The animation moves exactly one full width of the content plus the gap */
+  animation: scroll var(--duration) linear infinite;
+}
+
+/* Pause on hover so users can read tooltips easily */
+.marquee-row:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.skill-image {
+  height: 80px;
+  /* Fixed height for consistency */
+  width: auto;
+  /* Maintain original aspect ratio */
+  transition: transform 0.2s ease-in-out;
+}
+
+.skill-image:hover {
+  transform: scale(1.15);
+  /* Adds a subtle pop-out effect */
+}
