@@ -46,7 +46,9 @@
 
 - Developed using Angular for the front-end and C# .NET Core for the back-end, this application is not compatible with GitHub Pages for deployment.
 
-- Engineered a centralized ETL (Extract, Transform, Load) system that accommodates all extraction types and enables data transformation into any format for seamless integration with any database. This system includes a data scoring feature, allowing users to review extraction processes and modify configurations as needed. Additionally, it empowers users to create new ETL processes by simply completing the required parameters.
+- Designed and developed a centralized, self-service ETL (Extract, Transform, Load) platform supporting multiple extraction sources including APIs, SFTP, S3, relational databases, and Azure services. Enabling flexible data transformation to various formats/types and seamless loading into target databases.
+
+- Implemented a user-friendly web based front end for self service management, allowing non-technical users to add/configure new data extracts, adjust parameters, activate predefined transformations (including column-level granularity), and perform on the fly data type conversions.
 
 ---
 
