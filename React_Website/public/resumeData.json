@@ -224,7 +224,7 @@
         "title": "Master Classification",
         "category": "Data Science",
         "date": "Sept. 2025",
-        "image": "images/portfolio/Extract_Master.jpg",
+        "image": "images/portfolio/AIClassification.jpg",
         "url": "Master_Classification/",
         "description": "Developed an AI-powered system to classify line items by SKU, creating a master categorization for services, inventory, and other types, improving efficiency, inventory management and reporting."
       },
