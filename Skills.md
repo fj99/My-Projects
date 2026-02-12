@@ -21,9 +21,9 @@
 - Data Warehousing
 - Statistical Data Analysis
 - Data Mining
-- JS 
+- JS
 - Java
 - PHP
-- PyTorch 
+- PyTorch
 
 <!-- - Machine Learning Algorithms -->
