@@ -117,7 +117,7 @@
       },
       {
         "name": "System Administration",
-        "link": "images/Skills/System Administration.webp",
+        "link": "images/Skills/SystemAdministration.webp",
         "description": "System Administration"
       },
       {
@@ -132,7 +132,7 @@
       },
       {
         "name": "Data Science",
-        "link": "images/Skills/Data Science.jpg",
+        "link": "images/Skills/DataScience.jpg",
         "description": "Data Science"
       },
       {
@@ -172,32 +172,32 @@
       },
       {
         "name": "Machine Learning",
-        "link": "images/Skills/Machine Learning.jpg",
+        "link": "images/Skills/MachineLearning.jpg",
         "description": "Machine Learning"
       },
       {
         "name": "Data Analysis",
-        "link": "images/Skills/Data Analysis.jpg",
+        "link": "images/Skills/DataAnalysis.jpg",
         "description": "Data Analysis"
       },
       {
         "name": "Data Modeling",
-        "link": "images/Skills/Data Modeling.jpg",
+        "link": "images/Skills/DataModeling.jpg",
         "description": "Data Modeling"
       },
       {
         "name": "Data Warehousing",
-        "link": "images/Skills/Data Warehousing.jpg",
+        "link": "images/Skills/DataWarehousing.jpg",
         "description": "Data Warehousing"
       },
       {
         "name": "Statistical Data Analysis",
-        "link": "images/Skills/Statistical Data Analysis.jpg",
+        "link": "images/Skills/StatisticalDataAnalysis.jpg",
         "description": "Statistical Data Analysis"
       },
       {
         "name": "Data Mining",
-        "link": "images/Skills/Data Mining.jpg",
+        "link": "images/Skills/DataMining.jpg",
         "description": "Data Mining"
       },
       {
