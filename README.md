@@ -98,6 +98,22 @@ This project encompasses the following recommendation systems:
 
 ---
 
+## [PetVetMaster](https://github.com/fj99/My-Projects/tree/main/PetVetMaster)
+
+- Developed in C# .NET Core library, this is not compatible with GitHub Pages for deployment.
+
+- Architected and maintained a centralized enterprise level DLL that serves as the single source of truth for all corporate data models and core utilities across the organization. By standardizing data structures across the entire application ecosystem, this initiative streamlined development workflows and accelerated the deployment of new services, providing a robust, pre-validated foundation for cross-platform data handling and consistency.
+
+---
+
+## [PetVetMaster.API](https://github.com/fj99/My-Projects/tree/main/PetVetMaster.API)
+
+- Developed in C# .NET Core this application is not compatible with GitHub Pages for deployment.
+
+- I engineered a centralized Identity and Access Management (IAM) API that serves as the unified "Source of Truth" for user governance and security across the entire infrastructure. Rather than managing users in silos, I developed a robust system that allows for the global administration of user lifecycles, including the ability to provision access, revoke permissions, and manage application specific Role Based Access Control (RBAC) from a single interface. The API facilitates the dynamic deployment of authentication methods for individual applications and serves as a shared services layer for distributing critical metadata and global configurations. By centralizing these functions, I created a scalable architecture that ensures consistent security standards, streamlines administrative oversight, and provides granular control over how users interact with every application in the ecosystem.
+
+---
+
 ## [Pima Indians Diabetes Analysis](https://github.com/fj99/My-Projects/tree/main/Pima_Indians_Diabetes_Analysis)
 
 - Built using Python
