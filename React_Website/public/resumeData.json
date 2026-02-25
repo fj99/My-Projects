@@ -29,7 +29,7 @@
     "email": "fj99.fernandez@gmail.com",
     "phone": "203-691-0817",
     "project": "#portfolio",
-    "contactmessage": "If you wish to get in touch with me just state your name and your business and I will get back to you as soon as I get the chance. ",
+    "contactmessage": "If you wish to get in touch with me just state your name and reason for contacting me and I will get back to you at my earliest convenience. ",
     "contact_side_heading": "",
     "contact_side_msg": [
       {
@@ -237,19 +237,19 @@
         "description": "Developed a centralized ETL (Extract, Transform, Load) system that would allows for all extraction types and allow the data to be transformed to any data type to be pushed to any database. The system would also have a data score on the front for users to check what happened to the extraction and change the configuration of it."
       },
       {
-        "title": "PeVet Master API",
+        "title": "PetVet Master API",
         "category": "Full Stack Development",
         "date": "Feb. 2024",
         "image": "images/portfolio/PetVetMasterAPI.jpg",
-        "url": "PeVetMaster.API/",
+        "url": "PetVetMaster.API/",
         "description": "Architected a centralized Identity and Access Management (IAM) API that serves as the infrastructure's 'Source of Truth' enabling granular control over user provisioning, role based permissions, and authentication protocols across all integrated applications."
       },
       {
-        "title": "PeVet Master",
+        "title": "PetVet Master",
         "category": "Full Stack Development",
         "date": "Jan. 2024",
         "image": "images/portfolio/PetVetMaster.jpg",
-        "url": "PeVetMaster/",
+        "url": "PetVetMaster/",
         "description": "Architected a centralized enterprise DLL that serves as the single source of truth for all corporate data models and core utilities, ensuring total data consistency across the company's entire application ecosystem."
       },
       {
