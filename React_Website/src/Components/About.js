@@ -11,6 +11,8 @@ class About extends Component {
     const profile_pic = this.props.data.profile_pic;
     const profile_pic_alt = this.props.data.profile_pic_alt;
     const bio = this.props.data.bio;
+    const years = new Date().getFullYear() - 2019;
+    const renderedBio = bio.replace("{years}", years);
     const city = this.props.data.address.city;
     const state = this.props.data.address.state;
     const zip = this.props.data.address.zip;
@@ -41,7 +43,7 @@ class About extends Component {
             <div className="nine columns main-col">
               <h2>About Me</h2>
 
-              <p>{bio}</p>
+              <p>{renderedBio}</p>
               <div className="row">
                 <div className="columns contact-details">
                   <h2>Contact Details</h2>
