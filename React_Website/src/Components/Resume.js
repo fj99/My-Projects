@@ -23,7 +23,6 @@ class Resume extends Component {
 
     const work_title = this.props.data.work_title;
     const skills_title = this.props.data.skills_title;
-    const skillsMessage = this.props.data.message;
 
     const work = this.props.data.work.map(function (work) {
       return (
@@ -65,8 +64,6 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              <p className="skills-intro">{skillsMessage}</p>
-
               <div className="skills-marquee-container">
                 {skillsMatrix.map((row, rowIndex) => (
                   <div
@@ -77,7 +74,12 @@ class Resume extends Component {
                     {[0, 1].map((setIndex) => (
                       <ul key={setIndex} className="marquee-content" aria-hidden={setIndex === 1}>
                         {row.map((skill) => (
-                          <li key={`${setIndex}-${skill.name}`} className="skill-tile">
+                          <li
+                            key={`${setIndex}-${skill.name}`}
+                            className="skill-tile"
+                            data-tooltip-id="my-tooltip"
+                            data-tooltip-content={skill.description}
+                          >
                             <img
                               src={skill.link}
                               alt={skill.name}
@@ -86,8 +88,6 @@ class Resume extends Component {
                               onError={(event) => {
                                 event.currentTarget.closest(".skill-tile")?.classList.add("skill-tile-fallback");
                               }}
-                              data-tooltip-id="my-tooltip"
-                              data-tooltip-content={skill.description}
                             />
                             <span className="skill-label">{skill.name}</span>
                           </li>
@@ -96,8 +96,8 @@ class Resume extends Component {
                     ))}
                   </div>
                 ))}
-                <Tooltip id="my-tooltip" />
               </div>
+              <Tooltip id="my-tooltip" className="skill-tooltip" />
 
             </div>
           </div>
