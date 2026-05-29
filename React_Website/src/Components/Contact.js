@@ -14,10 +14,6 @@ class Contact extends Component {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
     const phone = this.props.data.phone;
     const email = this.props.data.email;
     const message = this.props.data.contactmessage;
@@ -25,12 +21,12 @@ class Contact extends Component {
 
     const msg = this.props.data.contact_side_msg.map(function (contact_side_msg) {
       return (
-        <ul id="twitter">
+        <ul id="twitter" key={`${contact_side_msg.message}-${contact_side_msg.date}`}>
           <li>
             <span>
               {contact_side_msg.message}
               <br></br>
-              <a href="">{contact_side_msg.url}</a>
+              <span>{contact_side_msg.url}</span>
             </span>
             <b>
               <a href="./">{contact_side_msg.date}</a>

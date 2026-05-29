@@ -1,21 +1,16 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
 // import { IoIosCall } from "react-icons/io";
-import { FaPhone, FaEnvelope, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone, FaEnvelope } from "react-icons/fa";
 
 class About extends Component {
   render() {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
-    const profile_pic = this.props.data.profile_pic;
-    const profile_pic_alt = this.props.data.profile_pic_alt;
     const bio = this.props.data.bio;
     const years = new Date().getFullYear() - 2019;
     const renderedBio = bio.replace("{years}", years);
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
     const phone = this.props.data.phone;
     const email = this.props.data.email;
     const resume = this.props.data.resume;
@@ -23,7 +18,7 @@ class About extends Component {
     const networkElement = (
       <>
         <i className={network.className}></i>{" "}
-        <a href={network.url} target="_blank">
+        <a href={network.url} target="_blank" rel="noreferrer">
           {name}
         </a>
       </>
@@ -56,7 +51,7 @@ class About extends Component {
                     <br />
                     <FaPhone /> <span>{phone}</span>
                     <br />
-                    <FaEnvelope /> <a href={`mailto:${email}`} target="_blank">{email}</a>
+                    <FaEnvelope /> <a href={`mailto:${email}`}>{email}</a>
                   </p>
                 </div>
                 <div className="columns download">
@@ -68,7 +63,7 @@ class About extends Component {
                 </div>
                 <div className="columns download">
                   <p>
-                    <a href={resume} target="_blank" className="button">
+                    <a href={resume} target="_blank" rel="noreferrer" className="button">
                       <i className="fa fa-folder-open"></i>Open Resume
                     </a>
                   </p>

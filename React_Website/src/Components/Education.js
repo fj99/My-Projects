@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import Slide from "react-reveal";
-import Fade from "react-reveal";
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
-
-// Install Swiper modules
-SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 class Education extends Component {
   render() {
     if (!this.props.data) return null;
-
-    const name = this.props.data.name;
 
     const educationSlides = this.props.data.education.map(function (education) {
       return (
@@ -40,6 +36,7 @@ class Education extends Component {
         <div className="banner">
           <Slide left duration={1300}>
             <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
               slidesPerView={1}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               loop={true}

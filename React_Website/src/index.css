@@ -1,0 +1,71 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply bg-ink text-slate-100 antialiased;
+  }
+
+  ::selection {
+    @apply bg-sky-300 text-ink;
+  }
+
+  #nav-wrap {
+    @apply backdrop-blur-xl;
+  }
+
+  #nav a {
+    @apply transition-colors duration-200 ease-out;
+  }
+
+  header .banner-text h1 {
+    @apply drop-shadow-2xl;
+  }
+
+  header .banner-text h3 {
+    @apply text-slate-200;
+  }
+
+  .button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    @apply rounded-md border border-white/10 shadow-snap-soft transition duration-200 ease-out;
+  }
+
+  .button:hover,
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover {
+    @apply -translate-y-0.5 shadow-snap;
+  }
+
+  #about,
+  #contact {
+    @apply bg-slate-950/[0.92];
+  }
+
+  #resume {
+    @apply bg-gradient-to-b from-ink via-ink-soft to-ink;
+  }
+
+  #about .main-col,
+  #contact form,
+  #contact .widget {
+    @apply rounded-sm border border-white/[0.025] bg-white/[0.01] p-5 shadow-none;
+  }
+
+  #contact input,
+  #contact textarea,
+  #contact select {
+    @apply rounded-md border border-slate-700 bg-slate-950/80 transition duration-200 ease-out;
+  }
+
+  #contact input:focus,
+  #contact textarea:focus,
+  #contact select:focus {
+    @apply border-sky-300 outline-none ring-2 ring-sky-300/35;
+  }
+}

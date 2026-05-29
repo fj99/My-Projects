@@ -11,7 +11,8 @@
 }
 
 .custom-btn {
-  color: goldenrod !important;
+  color: #f59e0b !important;
+  font-weight: 700 !important;
 }
 
 .custom-expand {
@@ -20,11 +21,12 @@
 }
 
 #portfolio {
-  background: transparent !important;
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 32%),
+    linear-gradient(180deg, rgba(5, 8, 22, 0.78), rgba(15, 23, 42, 0.88)) !important;
 }
 
 #resume {
-  background-color: #000524 !important;
+  background-color: #050816 !important;
 }
 
 * {
@@ -34,8 +36,9 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: stretch;
 }
 
 .swiper-pagination-bullet {
@@ -62,68 +65,188 @@
   overflow: hidden;
 }
 
-.hover-zoom:hover {
-  transform: scale(1.25);
-  z-index: -1;
-  padding-bottom: 2em;
+.portfolio-card {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px !important;
+  background: rgba(15, 23, 42, 0.88) !important;
+  color: #f8fafc !important;
+  box-shadow: 0 16px 40px rgba(2, 8, 23, 0.28) !important;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
-/* New for pics */
-/* Updated Marquee Row */
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 24px 55px rgba(2, 8, 23, 0.38) !important;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.08);
+}
+
+.hover-zoom {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.custom-swiper {
+  width: min(1040px, calc(100vw - 32px));
+  padding: 32px 12px 48px !important;
+}
+
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  color: #38bdf8;
+  filter: drop-shadow(0 10px 24px rgba(2, 8, 23, 0.6));
+}
+
+.edu-pic {
+  max-height: 122px;
+  width: auto;
+  margin: 0 auto 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 28px rgba(2, 8, 23, 0.46));
+}
+
 .skills-marquee-container {
-  --gap: 3rem;
-  /* Space between individual items */
-  --duration: 40s;
-  /* Speed of the slide */
+  --marquee-gap: 1rem;
   overflow: hidden;
   width: 100%;
-  padding: 20px 0;
-  /* Optional: Fades the edges for a "nicer" look */
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  margin-top: 2.25rem;
+  padding: 0.25rem 0;
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+#resume .skill .main-col {
+  padding-top: 0.75rem;
+}
+
+.skills-intro {
+  max-width: 720px;
+  margin-bottom: 0 !important;
+  color: #cbd5e1 !important;
+  line-height: 1.7;
 }
 
 .marquee-row {
   display: flex;
   user-select: none;
-  gap: var(--gap);
-  margin-bottom: 2rem;
+  gap: var(--marquee-gap);
+  margin-bottom: 1rem;
+  width: max-content;
+  animation: infinite-scroll var(--duration, 38s) linear infinite;
+  will-change: transform;
+}
+
+.marquee-row-reverse {
+  animation-direction: reverse;
 }
 
 .marquee-content {
   display: flex;
   flex-shrink: 0;
-  /* CRITICAL: Prevents images from squishing and overlapping */
-  justify-content: space-around;
-  min-width: 100%;
-  gap: var(--gap);
-  /* The animation moves exactly one full width of the content plus the gap */
-  animation: scroll var(--duration) linear infinite;
+  align-items: center;
+  justify-content: center;
+  gap: var(--marquee-gap);
+  min-width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Pause on hover so users can read tooltips easily */
-.marquee-row:hover .marquee-content {
+.marquee-row:hover {
   animation-play-state: paused;
 }
 
-@keyframes scroll {
+@keyframes infinite-scroll {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(calc(-100% - var(--gap)));
+    transform: translateX(calc(-50% - (var(--marquee-gap) / 2)));
   }
 }
 
+.skill-tile {
+  display: grid;
+  place-items: center;
+  width: clamp(82px, 9vw, 116px);
+  aspect-ratio: 1;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
+    rgba(15, 23, 42, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.skill-tile:hover {
+  border-color: rgba(56, 189, 248, 0.34);
+  background:
+    linear-gradient(180deg, rgba(56, 189, 248, 0.12), rgba(255, 255, 255, 0.035)),
+    rgba(15, 23, 42, 0.78);
+  transform: translateY(-2px);
+}
+
 .skill-image {
-  height: 80px;
-  /* Fixed height for consistency */
+  max-height: 54px;
+  max-width: 68px;
   width: auto;
-  /* Maintain original aspect ratio */
-  transition: transform 0.2s ease-in-out;
+  object-fit: contain;
+  filter: saturate(0.9) contrast(1.02);
+  transition: transform 180ms ease, filter 180ms ease;
 }
 
 .skill-image:hover {
-  transform: scale(1.15);
-  /* Adds a subtle pop-out effect */
+  transform: scale(1.08);
+  filter: saturate(1.05) contrast(1.08);
+}
+
+.skill-label {
+  display: none;
+  max-width: 78%;
+  color: #e2e8f0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.skill-tile-fallback .skill-image {
+  display: none;
+}
+
+.skill-tile-fallback .skill-label {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-swiper {
+    width: min(100%, calc(100vw - 20px));
+    padding-inline: 0 !important;
+  }
+
+  .skills-marquee-container {
+    --marquee-gap: 0.75rem;
+  }
+
+  .skill-tile {
+    width: 78px;
+  }
+
+  .skill-image {
+    max-height: 44px;
+    max-width: 56px;
+  }
 }

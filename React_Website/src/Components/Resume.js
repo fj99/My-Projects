@@ -1,70 +1,11 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component } from "react";
 import Slide from "react-reveal";
 import { Tooltip } from "react-tooltip";
 
 class Resume extends Component {
   constructor(props) {
     super(props);
-    const rowCount = 6;
-
-    this.state = {
-      positions: Array(rowCount).fill(0),
-      contentWidths: Array(rowCount).fill(0),
-      containerHeight: rowCount * 120,
-      rowCount,
-    };
-
-    this.contentRefs = Array(rowCount).fill(null).map(() => React.createRef());
-    this.containerRef = React.createRef();
-  }
-
-  // _componentDidMount() {
-  //   this.updateWidths();
-
-  //   this.intervals = this.state.positions.map((_, rowIndex) =>
-  //     setInterval(() => {
-  //       this.setState((prevState) => {
-  //         const newPositions = [...prevState.positions];
-  //         // newPositions[rowIndex] =
-  //         // newPositions[rowIndex] < this.containerRef.current.offsetWidth
-  //         // ? newPositions[rowIndex] + (rowIndex % 2 === 0 ? 4 : 2)
-  //         // : -prevState.contentWidths[rowIndex];
-
-  //         return { positions: newPositions };
-  //       });
-  //     }, 30)
-  //   );
-  //   window.addEventListener("resize", this.updateWidths);
-  // }
-
-  // componentDidMount() {
-  //   this.updateWidths();
-  //   this.intervals = this.state.positions.map((_, rowIndex) => {
-  //     let speed;
-  //     if (rowIndex === 0) speed = 1; // for first row
-  //     else if (rowIndex === 1) speed = 2; // for second row
-  //     else if (rowIndex % 2 === 0) speed = 1.5; // for even rows
-  //     else speed = 2; // for odd rows
-
-  //     return setInterval(() => {
-  //       this.setState((prevState) => {
-  //         const newPositions = [...prevState.positions];
-  //         newPositions[rowIndex] =
-  //         newPositions[rowIndex] < this.containerRef.current.offsetWidth
-  //         ? newPositions[rowIndex] + speed
-  //         : -prevState.contentWidths[rowIndex];
-
-  //         return { positions: newPositions };
-  //       });
-  //     }, 30);
-  //   });
-
-  //   window.addEventListener("resize", this.updateWidths);
-  // }
-
-  componentWillUnmount() {
-    this.intervals.forEach(clearInterval);
-    window.removeEventListener("resize", this.updateWidths);
+    this.rowCount = 3;
   }
 
   // updateWidths = () => {
@@ -80,9 +21,9 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const skillmessage = this.props.data.skillmessage;
     const work_title = this.props.data.work_title;
     const skills_title = this.props.data.skills_title;
+    const skillsMessage = this.props.data.message;
 
     const work = this.props.data.work.map(function (work) {
       return (
@@ -97,9 +38,8 @@ class Resume extends Component {
       );
     });
 
-    // **Split skills dynamically into `rowCount` rows**
-    const skillsMatrix = Array.from({ length: this.state.rowCount }, (_, i) =>
-      this.props.data.skills.filter((_, index) => index % this.state.rowCount === i)
+    const skillsMatrix = Array.from({ length: this.rowCount }, (_, i) =>
+      this.props.data.skills.filter((_, index) => index % this.rowCount === i)
     );
 
     return (
@@ -125,36 +65,35 @@ class Resume extends Component {
             </div>
 
             <div className="nine columns main-col">
-              <p>{this.props.skillmessage}</p>
+              <p className="skills-intro">{skillsMessage}</p>
 
-              {/* The Marquee Container */}
               <div className="skills-marquee-container">
                 {skillsMatrix.map((row, rowIndex) => (
-                  <div key={rowIndex} className="marquee-row">
-                    {/* Set 1: The original tape */}
-                    <div className="marquee-content">
-                      {row.map((skill, imgIndex) => (
-                        <img
-                          key={`orig-${imgIndex}`}
-                          src={skill.link}
-                          alt={skill.name}
-                          className="skill-image"
-                          data-tooltip-id="my-tooltip"
-                          data-tooltip-content={skill.description}
-                        />
-                      ))}
-                    </div>
-                    {/* Set 2: The mirror tape (creates the individual wrap illusion) */}
-                    <div className="marquee-content" aria-hidden="true">
-                      {row.map((skill, imgIndex) => (
-                        <img
-                          key={`copy-${imgIndex}`}
-                          src={skill.link}
-                          alt={skill.name}
-                          className="skill-image"
-                        />
-                      ))}
-                    </div>
+                  <div
+                    key={rowIndex}
+                    className={`marquee-row ${rowIndex % 2 === 1 ? "marquee-row-reverse" : ""}`}
+                    style={{ "--duration": `${34 + rowIndex * 6}s` }}
+                  >
+                    {[0, 1].map((setIndex) => (
+                      <ul key={setIndex} className="marquee-content" aria-hidden={setIndex === 1}>
+                        {row.map((skill) => (
+                          <li key={`${setIndex}-${skill.name}`} className="skill-tile">
+                            <img
+                              src={skill.link}
+                              alt={skill.name}
+                              className="skill-image"
+                              loading="lazy"
+                              onError={(event) => {
+                                event.currentTarget.closest(".skill-tile")?.classList.add("skill-tile-fallback");
+                              }}
+                              data-tooltip-id="my-tooltip"
+                              data-tooltip-content={skill.description}
+                            />
+                            <span className="skill-label">{skill.name}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ))}
                   </div>
                 ))}
                 <Tooltip id="my-tooltip" />
