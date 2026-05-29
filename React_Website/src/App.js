@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   getResumeData() {
-    fetch(`${process.env.PUBLIC_URL}/resumeData.json`, { cache: "no-store" })
+    fetch(`${import.meta.env.BASE_URL}resumeData.json`, { cache: "no-store" })
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Unable to load resume data: ${response.status}`);
