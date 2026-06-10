@@ -107,12 +107,12 @@
       {
         "name": "C#",
         "_link": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png",
+        "link": "images/Skills/CSharp.svg",
         "description": "C#"
       },
       {
         "name": ".NET Core",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png",
+        "link": "images/Skills/DotNetCore.svg",
         "description": ".NET Core"
       },
       {
@@ -122,7 +122,7 @@
       },
       {
         "name": "SQL",
-        "link": "https://brandlogos.net/wp-content/uploads/2025/03/microsoft_sql_server-logo_brandlogos.net_wykhq.png",
+        "link": "images/Skills/SQL.svg",
         "description": "SQL"
       },
       {
@@ -137,32 +137,32 @@
       },
       {
         "name": "Git",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+        "link": "images/Skills/Git.svg",
         "description": "Git"
       },
       {
         "name": "Linux",
-        "link": "https://images.vexels.com/content/140692/preview/linux-logo-72ceef.png",
+        "link": "images/Skills/Linux.svg",
         "description": "Linux"
       },
       {
         "name": "Azure",
-        "link": "https://swimburger.net/media/ppnn3pcl/azure.png",
+        "link": "images/Skills/Azure.svg",
         "description": "Azure"
       },
       {
         "name": "Angular",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/6/67/Angular_gradient_logo.png",
+        "link": "images/Skills/Angular.svg",
         "description": "Angular"
       },
       {
         "name": "REACT",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+        "link": "images/Skills/React.svg",
         "description": "React"
       },
       {
         "name": "Python",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/701px-Python-logo-notext.svg.png",
+        "link": "images/Skills/Python.svg",
         "description": "Python"
       },
       {
@@ -202,17 +202,17 @@
       },
       {
         "name": "JS",
-        "link": "https://cdn.worldvectorlogo.com/logos/javascript-1.svg",
+        "link": "images/Skills/JavaScript.svg",
         "description": "JS"
       },
       {
         "name": "JAVA",
-        "link": "https://banner2.cleanpng.com/20181109/oll/kisspng-java-development-kit-logo-programming-language-por-java-logo-svg-1713924793188.webp",
+        "link": "images/Skills/Java.svg",
         "description": "JAVA"
       },
       {
         "name": "PHP",
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png",
+        "link": "images/Skills/PHP.svg",
         "description": "PHP"
       }
     ]
