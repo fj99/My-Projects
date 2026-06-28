@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-06-28T01:02:12.027Z",
+  "projects": {
+    "masterclassification": {
+      "key": "masterclassification",
+      "title": "Master Classification",
+      "folder": "Master_Classification",
+      "source": "public/Master_Classification",
+      "markdown": "# Master Classification\r\n\r\n- Developed using Python and MSSQl\r\n\r\n- I engineered an advanced AI-driven system that intelligently classifies line items by their SKUs, generating a comprehensive master classification for all line items. This solution enhances operational efficiency by accurately categorizing each item as a service, inventory, or other relevant type, streamlining inventory management and decision-making processes.\r\n"
+    },
+    "extractmaster": {
+      "key": "extractmaster",
+      "title": "Extract Master",
+      "folder": "ExtractMaster",
+      "source": "../ExtractMaster",
+      "markdown": "# Extract Master\r\n\r\n- Developed using Angular for the front-end and C# .NET Core for the back-end, this application is not compatible with GitHub Pages for deployment.\r\n\r\n- Engineered a centralized ETL (Extract, Transform, Load) system that accommodates all extraction types and enables data transformation into any format for seamless integration with any database. This system includes a data scoring feature, allowing users to review extraction processes and modify configurations as needed. Additionally, it empowers users to create new ETL processes by simply completing the required parameters.\r\n"
+    },
+    "petvetmasterapi": {
+      "key": "petvetmasterapi",
+      "title": "PetVet Master API",
+      "folder": "PetVetMaster.API",
+      "source": "../PetVetMaster.API",
+      "markdown": "# PetVet Master API\r\n\r\n- Developed in C# .NET Core this application is not compatible with GitHub Pages for deployment.\r\n\r\n- I engineered a centralized Identity and Access Management (IAM) API that serves as the unified \"Source of Truth\" for user governance and security across the entire infrastructure. Rather than managing users in silos, I developed a robust system that allows for the global administration of user lifecycles, including the ability to provision access, revoke permissions, and manage application specific Role Based Access Control (RBAC) from a single interface. The API facilitates the dynamic deployment of authentication methods for individual applications and serves as a shared services layer for distributing critical metadata and global configurations. By centralizing these functions, I created a scalable architecture that ensures consistent security standards, streamlines administrative oversight, and provides granular control over how users interact with every application in the ecosystem.\r\n"
+    },
+    "petvetmaster": {
+      "key": "petvetmaster",
+      "title": "PetVet Master",
+      "folder": "PetVetMaster",
+      "source": "../PetVetMaster",
+      "markdown": "# PeVet Master\r\n\r\n- Developed in C# .NET Core library, this is not compatible with GitHub Pages for deployment.\r\n\r\n- Architected and maintained a centralized enterprise level DLL that serves as the single source of truth for all corporate data models and core utilities across the organization. By standardizing data structures across the entire application ecosystem, this initiative streamlined development workflows and accelerated the deployment of new services, providing a robust, pre-validated foundation for cross-platform data handling and consistency.\r\n"
+    },
+    "datafarm": {
+      "key": "datafarm",
+      "title": "DataFarm",
+      "folder": "DataFarm",
+      "source": "../DataFarm",
+      "markdown": "# DataFarm\r\n\r\n- Utilized Angular for the front-end development and C# ASP.NET Core for the back-end architecture.\r\n\r\n- Implemented a comprehensive system that fully automates the End of Month (EOM) financial process, ensuring seamless integration and real-time data availability for enhanced accuracy and efficiency in financial reporting.\r\n"
+    },
+    "netflixmovierecommendation": {
+      "key": "netflixmovierecommendation",
+      "title": "Netflix Movie Recommendation",
+      "folder": "Netflix_Movie_Recommendation",
+      "source": "../Netflix_Movie_Recommendation",
+      "markdown": "# Netflix Movie Recommendation\r\n- Developed using Python.\r\n\r\n- Online streaming platforms like **Netflix** have a vast collection of movies in their repository. To enhance customer satisfaction and improve revenue, I built a **Recommendation System** that suggests relevant movies to users based on their historical interactions. The techniques employed in this project extend beyond movies and can be applied to any item for which a recommendation system is desired.\r\n\r\nThis project encompasses the following recommendation systems:\r\n- Knowledge/Rank-based recommendation system\r\n- Similarity-based Collaborative Filtering\r\n- Matrix Factorization-based Collaborative Filtering"
+    },
+    "hotelbookingcancellationprediction": {
+      "key": "hotelbookingcancellationprediction",
+      "title": "Hotel Booking Cancellation Prediction",
+      "folder": "Hotel_Booking_Cancellation_Prediction",
+      "source": "../Hotel_Booking_Cancellation_Prediction",
+      "markdown": "# Hotel Booking Cancellation Prediction\r\n- Developed using Python.\r\n\r\n- The increasing number of cancellations in the hotel industry demands a Machine Learning-based solution to predict which bookings are likely to be canceled. Hotels are grappling with this issue and have sought data-driven solutions from your firm. After analyzing the provided data, I identified the factors that strongly influence booking cancellations. I then built a predictive model capable of forecasting which bookings are likely to be canceled in advance. These insights can be utilized to formulate profitable policies for cancellations and refunds."
+    },
+    "pimaindiansdiabetesanalysis": {
+      "key": "pimaindiansdiabetesanalysis",
+      "title": "Pima Indians Diabetes Analysis",
+      "folder": "Pima_Indians_Diabetes_Analysis",
+      "source": "../Pima_Indians_Diabetes_Analysis",
+      "markdown": "# Pima Indians Diabetes Analysis\r\n- Built using Python\r\n\r\n- A few years ago research was done on a tribe in America which is called the Pima tribe. In this tribe, it was found that the ladies are prone to diabetes very early. Several constraints were placed on the selection of these instances from a larger database. In particular, all patients were females at least 21 years old of Pima tribe. \r\n\r\n- Here, I'am analyzing different aspects of Diabetes in the Pima Diabetes Analysis by doing Exploratory Data Analysis.\r\n"
+    },
+    "ss": {
+      "key": "ss",
+      "title": "Sign in System",
+      "folder": "SS",
+      "source": "../SS",
+      "markdown": "# Sign in System (SS)\r\n- Built using CodeIgniter 4, a PHP framework\r\n\r\n- The Sign in System, designed for specific computer access, monitors student guests, services, packages, and keys in dormitories.\r\n\r\n- Developed a secure sign-in system for Res-Life, accessible only to authorized computers, to manage student entries and guest tracking.\r\n<!-- \r\n# Presentation of Sign in System\r\n\r\n## Home\r\nThis is where the the person at the desk will sign the students guest in.\r\n![This is the entire homepage](Presentation/Home.png)\r\n\r\n## Search Student\r\n![Look up student](Presentation/Search_student.png)\r\n\r\n## Get Student\r\n![Get student's info](Presentation/Get_student.png)\r\n\r\n## Search Guest\r\n![Look up Guest](Presentation/Search_guest.png)\r\n\r\n## Get Guest\r\n![Get Guest's info](Presentation/Get_student.png)\r\n\r\n## Sign in Guest\r\n![Sign in Guest](Presentation/Sign_in_guest.png)\r\n\r\n## Sign out Guest Log\r\n![Sign out Guest](Presentation/Sign_out_guest_log.png)\r\n\r\n## Sign out After \r\n![Sign out Log](Presentation/Sign_out_guest_after.png)\r\n\r\n## Guest Log\r\nThis page is simply a log of all the guest that have not been signed out yet \r\n![Guest Log](Presentation/Guest.png)\r\n\r\n## Service Page\r\nThis page is used to keep track of the students that used any service provided by the building.\r\n![Service](Presentation/Service.png)\r\n\r\n## Sign in Service\r\n![Sign in Service](Presentation/Service_sign_in.png)\r\n \r\n## Sign out your Service\r\n![Sign out Service](Presentation/Service_sign_out_log.png)\r\n \r\n## Sign out Service log\r\n![Sign out Service Log](Presentation/Service_sign_out.png)\r\n \r\n## Package Page\r\nWhen a package arrives the person at the desk will register the package\r\n![Package Page](Presentation/Package.png)\r\n \r\n## Search User in hall for Package\r\n![Search User](Presentation/Search_Package_1.png)\r\n \r\n## Results \r\n![Search User](Presentation/Search_Package_2.png)\r\n\r\n## Package Form page\r\n![Package Form](Presentation/Search_Package_3.png)\r\n\r\n## Register Package\r\n![Register Package](Presentation/Register_package.png)\r\n \r\n## Pick up Package\r\n![Pick up Package](Presentation/Pick_up_package_log.png)\r\n \r\n## Pick up Package log\r\n![Pick up Package log](Presentation/Pick_up_package.png)\r\n \r\n## Equipment Page\r\nAny equipment the student wants to use they must check out so we can keep track of it.\r\n![Equipment Page](Presentation/Equipment.png)\r\n \r\n## Register Equipment\r\n![Register Equipment](Presentation/Register_equipment.png)\r\n \r\n## Pick up Equipment\r\n![Pick up Equipment](Presentation/Pick_up_equipment.png)\r\n \r\n## Equipment Log\r\n![Equipment Log](Presentation/Equipment_log.png)\r\n \r\n## Key Page\r\nThis is the page for students to sign out a key this way we can keep track of them.\r\n![Key Page](Presentation/Key.png)\r\n \r\n## Register Key\r\n![Register Key](Presentation/Register_key.png)\r\n \r\n## Pick up Key\r\n![Pick up Key](Presentation/Pick_up_key.png)\r\n \r\n## Key Log\r\n![Key Log](Presentation/key_log.png)\r\n \r\n## Time Clock page\r\nThis is the page where student workers clock in and out so their supervisor knows how long they worked.\r\n![Time Clock page](Presentation/Clock.png)\r\n \r\n## Enter id to Clock in \r\n![Enter id to Clock in](Presentation/Clock_check.png)\r\n\r\n## Clock in\r\n![Clock in](Presentation/clock_in.png)\r\n\r\n## Verified Clock in\r\n![Verified](Presentation/clock_verify_in.png)\r\n\r\n## Enter id to Clock out \r\n![Enter id to Clock out](Presentation/Clock_check.png)\r\n\r\n## Clock out\r\n![Clock out](Presentation/clock_in.png)\r\n\r\n## Verified Clock out\r\n![Verified](Presentation/clock_verify_out.png)\r\n\r\n## Failed page\r\nThis is a log of the recent students who did not sing out on time\r\n![Failed page](Presentation/Failed.png)\r\n\r\n## Regular Fails\r\n![Regular fails](Presentation/reg_fails.png)\r\n\r\n## Overnight Fails\r\n![Overnight Fails](Presentation/over_fails.png)\r\n\r\n## Banned List\r\nThis page is a log of all the students banned \r\n![Banned List](Presentation/banned_list.png)\r\n\r\n## Support Form\r\nThis page is if anything goes wrong they can report it.\r\n![Support Form](Presentation/Support.png) -->\r\n"
+    },
+    "360tour": {
+      "key": "360tour",
+      "title": "Southern Virtual Tour",
+      "folder": "360-tour",
+      "source": "../360-tour",
+      "markdown": "# 360 Tour\r\n\r\n- Developed a virtual university tour enabling users to explore the campus and building interiors virtually.\r\n\r\n- [View Southern Site](https://inside.southernct.edu/virtual-tour)\r\n\r\n- [View Tour](https://fj99.github.io/360-Tour/)"
+    },
+    "sap": {
+      "key": "sap",
+      "title": "Staff Admin Portal",
+      "folder": "SAP",
+      "source": "../SAP",
+      "markdown": "# Staff Admin Portal (SAP)\r\n\r\n- Crafted with CodeIgniter 4, a PHP framework\r\n\r\n- The Staff Administration Portal is a web application streamlining employee permission management within the Residence Life system.\r\n\r\n<!-- # Presentation of App\r\n## Home\r\n![This is the entire homepage](Presentation%20images/Home.png)\r\n\r\n## Creating Notifications\r\n![Here you create the notifications](Presentation%20images/make%20notifications.png)\r\n\r\n## User views the notification\r\n![Here you can see the notifications](Presentation%20images/notifications.png)\r\n\r\n## User submits the notification to show the task is completed\r\n![Here you can see how you would submit](Presentation%20images/submit%20notification.png)\r\n\r\n## Once submitted admin can view the finished notification \r\n![notification log](Presentation%20images/view%20notifications.png)\r\n\r\n## This is where you hire new user\r\n![Hire page](Presentation%20images/Hire.png)\r\n\r\n## This page is where you search users to update them\r\n![Update page](Presentation%20images/update.png)\r\n\r\n## Results when you search a user using advanced search in homepage\r\n![update results](Presentation%20images/update-results-no-id.png)\r\n\r\n## Update user\r\n![updating user](Presentation%20images/updating-closed.png)\r\n\r\n## Update name or username\r\n![update results](Presentation%20images/updating-name.png)\r\n\r\n## Show all options\r\n![updating user](Presentation%20images/updating-open.png)\r\n\r\n## Confirmation page\r\n![confirmation page](Presentation%20images/confirmation%20page.png)\r\n\r\n## Deactivation page\r\n![deactivation page](Presentation%20images/deactivate.png)\r\n\r\n## Confirm deactivation\r\n![confirm deactivation](Presentation%20images/deactivate-confirm.png)\r\n\r\n## View and edit Hall directors\r\n![Hall Directors](Presentation%20images/Hall-Directors.png) -->\r\n"
+    },
+    "graphics": {
+      "key": "graphics",
+      "title": "Graphics Portal",
+      "folder": "Graphics",
+      "source": "../Graphics",
+      "markdown": "# Graphics Portal\r\n- Built using CodeIgniter 4, PHP, JavaScript, HTML, and CSS.\r\n\r\n- Developed an application for Southern Connecticut State University's graphic designers. This app manages and maintains request lists, operating similarly to a ticket system.\r\n\r\n# Presentation of App\r\n\r\n## Homepage/Incomplete\r\n![Incomplete](Presentation/Home.png)\r\n\r\n## Denied\r\n![Denied](Presentation/Denied.png)\r\n\r\n## Complete\r\n![Complete](Presentation/Complete.png)\r\n"
+    },
+    "oaportal": {
+      "key": "oaportal",
+      "title": "OA Portal",
+      "folder": "OA-Portal",
+      "source": "../OA-Portal",
+      "markdown": "## OA Portal\r\n- Constructed using CodeIgniter 4, PHP, JavaScript, HTML, and CSS but cannot be showcased on Git-pages\r\n\r\n- Developed an app for Southern Connecticut State University's Operation Assistants to manage and maintain a list of requests, operating as a ticket system.\r\n\r\n# Presentation of App\r\n\r\n## Homepage/Incomplete\r\n![Incomplete](Presentation/Home.png)\r\n\r\n## Denied\r\n![Denied](Presentation/Denied.png)\r\n\r\n## Complete\r\n![Complete](Presentation/Complete.png)\r\n"
+    },
+    "cardapp": {
+      "key": "cardapp",
+      "title": "Card-App",
+      "folder": "Card-app",
+      "source": "../Card-app",
+      "markdown": "# Card App\r\n- Developed using the CodeIgniter 4 framework; not displayable on Git-pages.\r\n\r\n- Developed an application for the Southern Connecticut State University to handle temporary ID cards for residents or students having trouble with their IDs, offering an interim solution until their issues are resolved.\r\n \r\n# Presentation App\r\n\r\n## Home\r\n![Home](Presentation/Home.png)\r\n\r\n## Enter a new temporary ID card into the db\r\n![Card Form](Presentation/Card%20Form.png)\r\n\r\n## Use Card reader to collect insert card\r\n![Card Form Swipe](Presentation/Card%20Form%20Swipe.png)\r\n\r\n## Confirmation Page\r\n![Confirmation Page](Presentation/Confirmation.png)\r\n\r\n## Form to request a new\r\n![Temp Card Form](Presentation/Temporary%20Card%20Form.png)\r\n\r\n## Email Reminding user ID is due\r\n![Email](Presentation/email.png)\r\n\r\n## Return Card Form\r\n![Return card form](Presentation/return%20form.png)\r\n\r\n## View of the cards and who has it\r\n- This view can close the tables by simply clicking the header\r\n\r\n![View Cards](Presentation/View%20Cards.png)\r\n\r\n![Tables hidden](Presentation/View%20Cards%20Hidden.png)"
+    },
+    "daycaresystem": {
+      "key": "daycaresystem",
+      "title": "Happy Children Daycare",
+      "folder": "Daycare_System",
+      "source": "../Daycare_System",
+      "markdown": "# Happy Children Daycare\r\n- Created with PHP; cannot be displayed on Git-pages\r\n\r\n- Developed a website for parents to register, sign in, provide contact details, and enroll their children in daycare while facilitating communication with assigned caretakers. Employees can also register, sign in, and view their work schedules and assigned children's information.\r\n\r\n# Presentation of App\r\n\r\n## Homepage\r\n![homepage](Presentation/Children Daycare Full.png)\r\n\r\n## Create Employee account\r\n![This page allows you to create an employee account](Presentation/Employee%20Sign%20up.png)\r\n\r\n## Employee account created successfully\r\n![This page shows all the information of the employee account created](Presentation/Employee%20account%20successfully%20made.png)\r\n\r\n## Employee Sign in\r\n![This page allows you to sign in as an employee](Presentation/Employee%20Sign%20in.png)\r\n\r\n## Employee signed in\r\n![This is the homepage when an employee is signed in](Presentation/Employee%20Signed%20in%20page.png)\r\n\r\n## Update your information\r\n![This form is to change your any of your information](Presentation/Employee%20account%20page.png)\r\n\r\n## Make your working Shifts\r\n![This form is to make your work schedule and select the kids you will be taking care of](Presentation/Shift%20form.png)\r\n\r\n## Confirm Shift\r\n![This page confirms your shift being made](Presentation/shift%20created.png)\r\n\r\n## Update your shift\r\n![This form is to change your shift](Presentation/update%20shift.png)\r\n\r\n## Employee Status\r\n![This page shows all the information of the employee, also select your time and kid](Presentation/employee%20status.png)\r\n\r\n## Employee and Child Status\r\n![This page shows all the information of the employee and the child selected](Presentation/employee%20full%20status.png)\r\n\r\n## Create Parent account\r\n![This page allows you to create a parent account](Presentation/Employee%20Sign%20up.png)\r\n\r\n## Parent account created successfully\r\n![This page shows all the information of the parent account created](Presentation/Parent%20account%20successfully%20made.png)\r\n\r\n## Parent sign in\r\n![This page allows you to sign in as a parent](Presentation/Employee%20Sign%20in.png)\r\n\r\n## Parent signed in\r\n![This is the homepage when an employee is signed in](Presentation/Parent%20Signed%20in%20page.png)\r\n\r\n## Update your information\r\n![This form is to change your any of your information](Presentation/Parent%20account%20page.png)\r\n\r\n## Add your children\r\n![This form is to add each of your children](Presentation/child%20form.png)\r\n\r\n## Child added successfully\r\n![This page confirms that you added your kid to the system](Presentation/Child%20added.png)\r\n\r\n## Select your child\r\n![Choose which of your children you want to update the information](Presentation/select%20child.png)\r\n\r\n## Update your child's information\r\n![This form is to change the information for the child you selected](Presentation/update%20child.png)\r\n\r\n## Parent status\r\n![This page shows all the information of the parent, also select your kid](Presentation/parent%20status.png)\r\n\r\n## Parent Child and Employee status\r\n![This page shows all the information of the parent and the child selected, as well as the employee incharge of them](Presentation/parent%20full%20status.png)\r\n\r\n## Delete account\r\n![This is the page to delete your account if parent it will also delete your children as well.](Presentation/delete%20page.png)"
+    },
+    "jobapp": {
+      "key": "jobapp",
+      "title": "Collaborative Information Center",
+      "folder": "Job_App",
+      "source": "../Job_App",
+      "markdown": "# Collaborative Information Center\r\n- Developed using Python Flask cannot be showcased on Git-pages\r\n\r\n- The app enables user registration with email verification, job listing creation by employers, and job applications from employees. Email notifications keep both parties informed, and employers can access employee information.\r\n\r\n# Presentation of App\r\n\r\n## Website:\r\n![This is the entire homepage](Presentation%20images/Home.png)\r\n## User can contact the system using this form from the homepage:\r\n![contact form on the homepage to send the system some information](Presentation%20images/contact-system.png)\r\n\r\n## But if user is not in the homepage they can use this mail form \r\n![mail](Presentation%20images/mail.png?raw=true)\r\n\r\n## Search users by username:\r\n![search](Presentation%20images/search.png?raw=true)\r\n\r\n## Search Results:\r\n![search results](Presentation%20images/search-results.png?raw=true)\r\n\r\n## Menu for not signed in user:\r\n![menu when user is not logged in](Presentation%20images/menu.png?raw=true)\r\n\r\n## Menu for employee users:\r\n![menu for employee users](Presentation%20images/menu-employee.png?raw=true)\r\n\r\n## Menu for employer users:\r\n![menu for employer users](Presentation%20images/menu-employer.png?raw=true)\r\n\r\n## User register:\r\n![homepage will take you to register form](Presentation%20images/register-home.png?raw=true)\r\n![form to register](Presentation%20images/register.png?raw=true)\r\n\r\n## User will receive an email with all their information to confirm their register\r\n![email of register form](Presentation%20images/register-email.png?raw=true)\r\n\r\n## User must verify their email to finish signing up:\r\n![verifying user email](Presentation%20images/verifyEmail.png?raw=true)\r\n![verify email](Presentation%20images/verifyEmail-email.png?raw=true)\r\n\r\n## User goes to Log in:\r\n![log in](Presentation%20images/log-in.png?raw=true)\r\n\r\n## Reset password:\r\n![reset password](Presentation%20images/reset-password.png?raw=true)\r\n\r\n## new password is sent to email:\r\n![new password](Presentation%20images/reset-password-email.png?raw=true)\r\n\r\n## Change password while signed in:\r\n![change password](Presentation%20images/change%20password.png?raw=true)\r\n\r\n## Employer users Create Job:\r\n![create job](Presentation%20images/create-job.png?raw=true)\r\n## email of job you created:\r\n![email job](Presentation%20images/create-job-email.png?raw=true)\r\n\r\n## View the jobs you created:\r\n![view jobs](Presentation%20images/view-jobs.png?raw=true)\r\n\r\n## View applicants to your job:\r\n![view employees](Presentation%20images/view%20applicants.png?raw=true)\r\n\r\n## Employee users Apply to jobs available:\r\n![view available jobs](Presentation%20images/view-apply-jobs.png?raw=true)\r\n\r\n## Apply to specific job:\r\n![apply to job](Presentation%20images/apply-to-speciofic-job.png?raw=true)\r\n\r\n## Employer will receive email with information about the employee who applied:\r\n![apply to job email](Presentation%20images/apply-to-speciofic-job-email.png?raw=true)\r\n"
+    },
+    "airchat": {
+      "key": "airchat",
+      "title": "Air Chat",
+      "folder": "Air_Chat",
+      "source": "../Air_Chat",
+      "markdown": "# Air Message\r\n- This was built using python Flask so it can't be showcased on git-pages\r\n\r\n- Built a python chat room encrypted end to end where users can make a username to identify and join a room with a room number that identifies the room they then can talk to other users in that room. Instant messaging web application using Flask (Python web development framework), and Socket.io for real time socket package transfers the goal is to not allow packet capture software like WireShark to capture the network packets.\r\n\r\n# Presentation of App\r\n\r\n## Website:\r\n![homepage](Presentation/Home.png)\r\n\r\n## Create Chat Room\r\n![Room](Presentation/Create%20Room.png)\r\n## Enter Room\r\n![Enter room](Presentation/Enter%20Room.png)\r\n\r\n## Second User\r\n![Second User](Presentation/Second%20Enter%20Room.png)\r\n\r\n## Second User's room\r\n![Enter room](Presentation/Enter%20Room.png)\r\n\r\n## Someone joined your room\r\n![second user joined the room](Presentation/join-room.png)\r\n\r\n\r\n## Send a message in your room\r\n![sent message](Presentation/send-message.png)\r\n\r\n## Second User receive message\r\n![received message](Presentation/second-receive-message.png)\r\n\r\n## Second User sends message\r\n![sent message](Presentation/second-send-message.png)\r\n\r\n## Receive a message in your room\r\n![received message](Presentation/receive-message.png)\r\n\r\n## Second user left the room\r\n![left room](Presentation/leave%20room.png)\r\n"
+    }
+  },
+  "warnings": []
+}

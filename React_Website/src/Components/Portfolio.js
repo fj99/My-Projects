@@ -9,6 +9,8 @@ import { Button, CardActionArea, CardActions, IconButton } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";
 import { createTheme } from "@mui/material/styles";
+import ProjectReadme, { getProjectReadmeKey } from "./ProjectReadme";
+import projectReadmes from "../generated/projectReadmes.json";
 
 const theme = createTheme();
 
@@ -18,13 +20,52 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       expanded: false,
+      selectedProjectKey: this.getSelectedProjectKey(),
     };
   }
+
+  componentDidMount() {
+    window.addEventListener("hashchange", this.handleHashChange);
+    window.addEventListener("popstate", this.handleHashChange);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this.handleHashChange);
+    window.removeEventListener("popstate", this.handleHashChange);
+  }
+
+  getSelectedProjectKey = () => {
+    const match = window.location.hash.match(/^#project\/(.+)$/);
+    return match ? decodeURIComponent(match[1]) : null;
+  };
+
+  handleHashChange = () => {
+    const selectedProjectKey = this.getSelectedProjectKey();
+    this.setState({ selectedProjectKey }, () => {
+      if (!selectedProjectKey) {
+        document.getElementById("portfolio")?.scrollIntoView({ block: "start" });
+      }
+    });
+  };
 
   handleExpandClick = () => {
     this.setState((prevState) => ({
       expanded: !prevState.expanded,
     }));
+  };
+
+  handleProjectClick = (event, project) => {
+    const key = getProjectReadmeKey(project);
+    if (!projectReadmes.projects[key]) {
+      return;
+    }
+
+    event.preventDefault();
+    window.location.hash = `project/${key}`;
+  };
+
+  handleBackToProjects = () => {
+    window.location.hash = "portfolio";
   };
 
   render() {
@@ -43,10 +84,25 @@ class Portfolio extends Component {
       }),
     }));
 
+    const selectedProject = this.props.data.projects.find(
+      (project) => getProjectReadmeKey(project) === this.state.selectedProjectKey
+    );
+    const selectedReadme = this.state.selectedProjectKey
+      ? projectReadmes.projects[this.state.selectedProjectKey]
+      : null;
+
     const projects = this.props.data.projects.map((project) => {
+      const readmeKey = getProjectReadmeKey(project);
+      const hasReadme = Boolean(projectReadmes.projects[readmeKey]);
+      const href = hasReadme ? `#project/${readmeKey}` : project.url;
+
       return (
         <Card sx={{ maxWidth: 500 }} key={project.id || project.title} className="portfolio-card">
-          <a className="Project_links" href={project.url}>
+          <a
+            className="Project_links"
+            href={href}
+            onClick={(event) => this.handleProjectClick(event, project)}
+          >
             <CardActionArea className="img-wrapper">
               <CardMedia
                 className="hover-zoom"
@@ -91,7 +147,15 @@ class Portfolio extends Component {
             <div className="row">
               <div className="twelve columns collapsed">
                 <h1 className="white">{portfolio_title}</h1>
-                <div className="portfolio-grid">{projects}</div>
+                {selectedProject && selectedReadme ? (
+                  <ProjectReadme
+                    project={selectedProject}
+                    readme={selectedReadme}
+                    onBack={this.handleBackToProjects}
+                  />
+                ) : (
+                  <div className="portfolio-grid">{projects}</div>
+                )}
               </div>
             </div>
           </Fade>
