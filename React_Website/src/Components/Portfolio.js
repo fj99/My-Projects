@@ -42,7 +42,9 @@ class Portfolio extends Component {
   handleHashChange = () => {
     const selectedProjectKey = this.getSelectedProjectKey();
     this.setState({ selectedProjectKey }, () => {
-      if (!selectedProjectKey) {
+      // Only scroll to portfolio when hash is exactly "#portfolio"
+      // This handles direct URL navigation or back/forward button navigation
+      if (window.location.hash === "#portfolio") {
         document.getElementById("portfolio")?.scrollIntoView({ block: "start" });
       }
     });
