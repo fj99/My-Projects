@@ -14,51 +14,23 @@ class Contact extends Component {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
     const phone = this.props.data.phone;
     const email = this.props.data.email;
     const message = this.props.data.contactmessage;
-    const header = this.props.data.contact_side_heading;
-
-    const msg = this.props.data.contact_side_msg.map(function (contact_side_msg) {
-      return (
-        <ul id="twitter">
-          <li>
-            <span>
-              {contact_side_msg.message}
-              <br></br>
-              <a href="">{contact_side_msg.url}</a>
-            </span>
-            <b>
-              <a href="./">{contact_side_msg.date}</a>
-            </b>
-          </li>
-        </ul>
-      );
-    });
 
     return (
       <section id="contact">
         <Fade bottom duration={1000}>
           <div className="row section-head">
-            <div className="two columns header-col">
-              <h1>
-                <span>Get In Touch.</span>
-              </h1>
-            </div>
-
-            <div className="ten columns">
-              <p className="lead">{message}</p>
-            </div>
+            <p className="section-eyebrow">Contact</p>
+            <h2>Let&apos;s build something useful.</h2>
+            <p className="lead">{message}</p>
           </div>
         </Fade>
 
-        <div className="row">
+        <div className="row contact-layout">
           <Slide left duration={1000}>
-            <div className="eight columns">
+            <div className="contact-form-card">
               <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" name="contactForm" onSubmit={this.onSubmit}>
                 <fieldset>
                   <div>
@@ -73,8 +45,9 @@ class Contact extends Component {
                       defaultValue=""
                       size="35"
                       id="contactName"
-                      // name="contactName"
                       name="name"
+                      autoComplete="name"
+                      required
                       onChange={this.handleChange}
                     />
                   </div>
@@ -84,11 +57,13 @@ class Contact extends Component {
                       Email <span className="required">*</span>
                     </label>
                     <input
-                      type="text"
+                      type="email"
                       defaultValue=""
                       size="35"
                       id="contactEmail"
                       name="email"
+                      autoComplete="email"
+                      required
                       onChange={this.handleChange}
                     />
                   </div>
@@ -112,8 +87,9 @@ class Contact extends Component {
                     <textarea
                       cols="50"
                       rows="15"
-                      id="message"
+                      id="contactMessage"
                       name="contactMessage"
+                      required
                     ></textarea>
                   </div>
 
@@ -135,9 +111,10 @@ class Contact extends Component {
           </Slide>
 
           <Slide right duration={1000}>
-            <aside className="four columns footer-widgets">
+            <aside className="contact-info-card footer-widgets">
               <div className="widget widget_contact">
-                <h4>Phone and Email</h4>
+                <p className="section-eyebrow">Direct contact</p>
+                <h3>Phone and email</h3>
                 <p className="address">
                   {name}
                   <br />
@@ -147,13 +124,6 @@ class Contact extends Component {
                     <a href={`mailto:${email}`}>{email}</a>
                   </span>
                 </p>
-              </div>
-
-              <div className="widget widget_tweets">
-                <h4 className="widget-title">{header}</h4>
-                <ul id="twitter">
-                  {msg}
-                </ul>
               </div>
 
             </aside>

@@ -7,12 +7,10 @@ class Footer extends Component {
 
     const name = this.props.data.name;
     const company = this.props.data.company;
-    const linkedin = this.props.data.linkedin;
-
     const networks = this.props.data.social.map(function (network) {
       return (
         <li key={network.name}>
-          <a href={network.url}>
+          <a href={network.url} target="_blank" rel="noreferrer" aria-label={network.name}>
             <i className={network.className}></i>
           </a>
         </li>
@@ -30,7 +28,7 @@ class Footer extends Component {
                 <li>&copy; {company} </li>
                 <li>
                   Created by{" "}
-                  <a title="Author" href={linkedin}>
+                  <a title="Back to top" href="#home">
                     {name}
                   </a>
                 </li>

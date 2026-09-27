@@ -2,20 +2,13 @@ import React, { Component } from "react";
 import { tsParticles } from "tsparticles";
 
 class Background extends Component {
-  constructor(props) {
-    super(props);
-    this.containerRef = React.createRef();
-  }
-
   containerRef = React.createRef();
 
   componentDidMount() {
     // if (!this.props.data) return null;
-    if (this.props.data) {
-      var background = this.props.data.background_colors;
-    } else {
-      var background = ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"];
-    }
+    const background = this.props.data
+      ? this.props.data.background_colors
+      : ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"];
 
     if (this.containerRef.current) {
       tsParticles.load("tsparticles", {
