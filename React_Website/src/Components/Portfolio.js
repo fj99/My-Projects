@@ -9,6 +9,10 @@ import { Button, CardActionArea, CardActions, IconButton } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";
 import { createTheme } from "@mui/material/styles";
+import ProjectReadme, {
+  getProjectReadmeKey,
+  isExternalProjectUrl,
+} from "./ProjectReadme";
 
 const theme = createTheme();
 
@@ -18,8 +22,31 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       expanded: false,
+      selectedProjectKey: this.getSelectedProjectKey(),
     };
   }
+
+  componentDidMount() {
+    window.addEventListener("hashchange", this.handleHashChange);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this.handleHashChange);
+  }
+
+  getSelectedProjectKey = () => {
+    const match = window.location.hash.match(/^#project\/([^/]+)$/);
+    return match ? decodeURIComponent(match[1]) : null;
+  };
+
+  handleHashChange = () => {
+    const selectedProjectKey = this.getSelectedProjectKey();
+    this.setState({ selectedProjectKey }, () => {
+      if (window.location.hash === "#portfolio" || selectedProjectKey) {
+        document.getElementById("portfolio")?.scrollIntoView({ block: "start" });
+      }
+    });
+  };
 
   handleExpandClick = () => {
     this.setState((prevState) => ({
@@ -28,17 +55,16 @@ class Portfolio extends Component {
   };
 
   handleProjectClick = (event, project) => {
-    // For projects with README files, open the actual README file directly
-    // For external projects, use the original URL
-    if (project.url && !project.url.includes("://")) {
-      // This is a local project (relative path), open its README.md
-      event.preventDefault();
-      window.location.href = `/${project.url}README.md`;
-    } else {
-      // This is an external URL, use it as-is
-      event.preventDefault();
-      window.location.href = project.url;
+    if (!project.url || isExternalProjectUrl(project.url)) {
+      return;
     }
+
+    event.preventDefault();
+    window.location.hash = `project/${encodeURIComponent(getProjectReadmeKey(project))}`;
+  };
+
+  handleBackToProjects = () => {
+    window.location.hash = "portfolio";
   };
 
   render() {
@@ -57,12 +83,20 @@ class Portfolio extends Component {
       }),
     }));
 
+    const selectedProject = this.props.data.projects.find(
+      (project) => getProjectReadmeKey(project) === this.state.selectedProjectKey
+    );
+
     const projects = this.props.data.projects.map((project) => {
+      const href = isExternalProjectUrl(project.url)
+        ? project.url
+        : `#project/${encodeURIComponent(getProjectReadmeKey(project))}`;
+
       return (
         <Card sx={{ maxWidth: 500 }} key={project.id || project.title} className="portfolio-card">
           <a
             className="Project_links"
-            href={project.url && !project.url.includes("://") ? `/${project.url}README.md` : project.url}
+            href={href}
             onClick={(event) => this.handleProjectClick(event, project)}
           >
             <CardActionArea className="img-wrapper">
@@ -109,7 +143,15 @@ class Portfolio extends Component {
             <div className="row">
               <div className="twelve columns collapsed">
                 <h1 className="white">{portfolio_title}</h1>
-                <div className="portfolio-grid">{projects}</div>
+                {selectedProject ? (
+                  <ProjectReadme
+                    project={selectedProject}
+                    repository={this.props.data.repository}
+                    onBack={this.handleBackToProjects}
+                  />
+                ) : (
+                  <div className="portfolio-grid">{projects}</div>
+                )}
               </div>
             </div>
           </Fade>

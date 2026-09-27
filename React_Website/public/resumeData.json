@@ -219,6 +219,11 @@
   },
   "portfolio": {
     "portfolio_title": "Check Out Some of My Works",
+    "repository": {
+      "owner": "fj99",
+      "name": "My-Projects",
+      "branch": "main"
+    },
     "projects": [
       {
         "title": "Master Classification",
@@ -338,7 +343,7 @@
         "date": "Dec. 2021",
         "full_image": "images/portfolio/Children Daycare Full.jpg",
         "image": "images/portfolio/Children Daycare.jpg",
-        "url": "Daycare_system/",
+        "url": "Daycare_System/",
         "description": "Developed a website for parents to register, sign in, enroll children in daycare, and communicate with caretakers. Employees can also sign in, view work schedules, and access assigned children's information."
       },
       {
@@ -347,7 +352,7 @@
         "date": "Sep. 2018",
         "image": "images/portfolio/Job App Full.jpg",
         "short_image": "images/portfolio/Job App.jpg",
-        "url": "Job_app/",
+        "url": "Job_App/",
         "description": "The app allows user registration with email verification, job listing creation, and applications. Email notifications provide updates, and employers can access employee information."
       },
       {
