@@ -8,16 +8,6 @@ class Resume extends Component {
     this.rowCount = 3;
   }
 
-  // updateWidths = () => {
-  //   if (this.containerRef.current) {
-  //     // const contentWidths = this.contentRefs.map(ref => ref.current?.offsetWidth || 0);
-  //     this.setState({
-  //       contentWidths,
-  //       containerHeight: this.state.rowCount * 120,
-  //     });
-  //   }
-  // };
-
   render() {
     if (!this.props.data) return null;
 

@@ -9,10 +9,6 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.5",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "anix": "^1.3.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.1",
@@ -21,15 +17,12 @@
     "react-markdown": "8.0.7",
     "react-reveal": "^1.2.2",
     "react-tooltip": "^5.28.0",
-    "react-zmage": "^0.8.5-beta.36",
     "remark-gfm": "3.0.1",
     "swiper": "^12.2.0",
     "tsparticles": "^1.43.1",
-    "typed.js": "3.0.0",
-    "web-vitals": "^1.1.2"
+    "typed.js": "3.0.0"
   },
   "scripts": {
-    "stop": "node bar.js",
     "validate:readmes": "node scripts/validate-project-readmes.cjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -37,14 +30,7 @@
     "start": "vite --host 0.0.0.0 --port 3000",
     "prebuild": "npm run validate:readmes",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0 --port 3000",
-    "test": "echo \"No test runner configured\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "preview": "vite preview --host 0.0.0.0 --port 3000"
   },
   "browserslist": {
     "production": [
@@ -61,7 +47,6 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.20",
-    "chokidar": "^3.5.3",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.19",

@@ -17,11 +17,6 @@ class Contact extends Component {
     const phone = this.props.data.phone;
     const email = this.props.data.email;
     const message = this.props.data.contactmessage;
-    const header = this.props.data.contact_side_heading;
-
-    const messages = (this.props.data.contact_side_msg || []).filter(
-      ({ message: itemMessage, url, date }) => itemMessage || url || date
-    );
 
     return (
       <section id="contact">
@@ -130,25 +125,6 @@ class Contact extends Component {
                   </span>
                 </p>
               </div>
-
-              {(header || messages.length > 0) && (
-                <div className="widget widget_tweets">
-                  {header && <h4 className="widget-title">{header}</h4>}
-                  {messages.length > 0 && (
-                    <ul id="twitter">
-                      {messages.map(({ message: itemMessage, url, date }) => (
-                        <li key={`${itemMessage}-${date}`}>
-                          <span>
-                            {itemMessage}
-                            {url && <span>{url}</span>}
-                          </span>
-                          {date && <b>{date}</b>}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              )}
 
             </aside>
           </Slide>

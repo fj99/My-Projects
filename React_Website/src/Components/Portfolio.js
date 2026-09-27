@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { styled, ThemeProvider } from "@mui/system";
 import Fade from "react-reveal";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -8,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions, IconButton } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";
-import { createTheme } from "@mui/material/styles";
+import { createTheme, styled, ThemeProvider } from "@mui/material/styles";
 import ProjectReadme, {
   getProjectReadmeKey,
   isExternalProjectUrl,
