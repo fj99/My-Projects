@@ -26,14 +26,14 @@ class Resume extends Component {
 
     const work = this.props.data.work.map(function (work) {
       return (
-        <div key={work.company}>
+        <article className="experience-card" key={work.company}>
           <h3 className="white">{work.company}</h3>
           <p className="info off-white">
             {work.title}
             <span>&bull;</span> <em className="date">{work.years}</em>
           </p>
           <p className="off-white">{work.description}</p>
-        </div>
+        </article>
       );
     });
 
@@ -45,25 +45,24 @@ class Resume extends Component {
       <section id="resume">
         <Slide left duration={1300}>
           <div className="row work">
-            <div className="three columns header-col">
-              <h1 className="white">
-                <span>{work_title}</span>
-              </h1>
+            <div className="section-heading section-heading-left">
+              <p className="section-eyebrow">Career</p>
+              <h2>{work_title}</h2>
             </div>
-
-            <div className="nine columns main-col">{work}</div>
+            <div className="experience-list">{work}</div>
           </div>
         </Slide>
 
         <Slide left duration={1300}>
           <div className="row skill">
-            <div className="three columns header-col">
-              <h1 className="white">
-                <span>{skills_title}</span>
-              </h1>
+            <div className="section-heading section-heading-left">
+              <p className="section-eyebrow">Toolbox</p>
+              <h2>{skills_title}</h2>
+              <p className="skills-intro">
+                A practical mix of application development, cloud, data, and AI technologies.
+              </p>
             </div>
-
-            <div className="nine columns main-col">
+            <div className="skills-panel">
               <div className="skills-marquee-container">
                 {skillsMatrix.map((row, rowIndex) => (
                   <div

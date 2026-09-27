@@ -17,7 +17,6 @@ class About extends Component {
     const network = this.props.data.social[0];
     const networkElement = (
       <>
-        <i className={network.className}></i>{" "}
         <a href={network.url} target="_blank" rel="noreferrer">
           {name}
         </a>
@@ -27,49 +26,36 @@ class About extends Component {
     return (
       <section id="about">
         <Fade duration={1000}>
-          <div className="row">
-            <div className="three columns">
-              {/* <img
-                className="profile-pic"
-                src={profile_pic}
-                alt={profile_pic_alt}
-              /> */}
-            </div>
-            <div className="nine columns main-col">
-              <h2>About Me</h2>
-
-              <p>{renderedBio}</p>
-              <div className="row">
-                <div className="columns contact-details">
-                  <h2>Contact Details</h2>
-                  <p className="address">
-                    {networkElement}
-                    {/* <FaLinkedin /> <a href={linkedin} target="_blank">{name}</a> */}
-                    {/* <FaMapMarkerAlt /> <span>
-                      {city} {state}, {zip}
-                    </span> */}
-                    <br />
-                    <FaPhone /> <span>{phone}</span>
-                    <br />
-                    <FaEnvelope /> <a href={`mailto:${email}`}>{email}</a>
-                  </p>
-                </div>
-                <div className="columns download">
-                  <p>
-                    <a href={resume} download="Felix-Fernandez-Resume" className="button">
-                      <i className="fa fa-download"></i>Download Resume
-                    </a>
-                  </p>
-                </div>
-                <div className="columns download">
-                  <p>
-                    <a href={resume} target="_blank" rel="noreferrer" className="button">
-                      <i className="fa fa-folder-open"></i>Open Resume
-                    </a>
-                  </p>
-                </div>
+          <div className="row about-shell">
+            <div className="about-copy">
+              <p className="section-eyebrow">About me</p>
+              <h2>Engineering with curiosity and measurable impact.</h2>
+              <p className="about-bio">{renderedBio}</p>
+              <div className="about-actions">
+                <a href={resume} download="Felix-Fernandez-Resume" className="button button-primary">
+                  <i className="fa fa-download"></i>Download Resume
+                </a>
+                <a href={resume} target="_blank" rel="noreferrer" className="button button-secondary">
+                  <i className="fa fa-folder-open"></i>Open Resume
+                </a>
               </div>
             </div>
+            <aside className="about-contact-card">
+              <p className="section-eyebrow">Contact details</p>
+              <h3>Let&apos;s connect</h3>
+              <div className="contact-detail-row">
+                <span className="contact-detail-icon"><i className={network.className}></i></span>
+                <span>{networkElement}</span>
+              </div>
+              <div className="contact-detail-row">
+                <span className="contact-detail-icon"><FaPhone /></span>
+                <a href={`tel:${phone.replace(/[^\d+]/g, "")}`}>{phone}</a>
+              </div>
+              <div className="contact-detail-row">
+                <span className="contact-detail-icon"><FaEnvelope /></span>
+                <a href={`mailto:${email}`}>{email}</a>
+              </div>
+            </aside>
           </div>
         </Fade>
       </section>

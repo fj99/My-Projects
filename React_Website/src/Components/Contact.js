@@ -19,42 +19,23 @@ class Contact extends Component {
     const message = this.props.data.contactmessage;
     const header = this.props.data.contact_side_heading;
 
-    const msg = this.props.data.contact_side_msg.map(function (contact_side_msg) {
-      return (
-        <ul id="twitter" key={`${contact_side_msg.message}-${contact_side_msg.date}`}>
-          <li>
-            <span>
-              {contact_side_msg.message}
-              <br></br>
-              <span>{contact_side_msg.url}</span>
-            </span>
-            <b>
-              <a href="./">{contact_side_msg.date}</a>
-            </b>
-          </li>
-        </ul>
-      );
-    });
+    const messages = (this.props.data.contact_side_msg || []).filter(
+      ({ message: itemMessage, url, date }) => itemMessage || url || date
+    );
 
     return (
       <section id="contact">
         <Fade bottom duration={1000}>
           <div className="row section-head">
-            <div className="two columns header-col">
-              <h1>
-                <span>Get In Touch.</span>
-              </h1>
-            </div>
-
-            <div className="ten columns">
-              <p className="lead">{message}</p>
-            </div>
+            <p className="section-eyebrow">Contact</p>
+            <h2>Let&apos;s build something useful.</h2>
+            <p className="lead">{message}</p>
           </div>
         </Fade>
 
-        <div className="row">
+        <div className="row contact-layout">
           <Slide left duration={1000}>
-            <div className="eight columns">
+            <div className="contact-form-card">
               <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" name="contactForm" onSubmit={this.onSubmit}>
                 <fieldset>
                   <div>
@@ -69,8 +50,9 @@ class Contact extends Component {
                       defaultValue=""
                       size="35"
                       id="contactName"
-                      // name="contactName"
                       name="name"
+                      autoComplete="name"
+                      required
                       onChange={this.handleChange}
                     />
                   </div>
@@ -80,11 +62,13 @@ class Contact extends Component {
                       Email <span className="required">*</span>
                     </label>
                     <input
-                      type="text"
+                      type="email"
                       defaultValue=""
                       size="35"
                       id="contactEmail"
                       name="email"
+                      autoComplete="email"
+                      required
                       onChange={this.handleChange}
                     />
                   </div>
@@ -108,8 +92,9 @@ class Contact extends Component {
                     <textarea
                       cols="50"
                       rows="15"
-                      id="message"
+                      id="contactMessage"
                       name="contactMessage"
+                      required
                     ></textarea>
                   </div>
 
@@ -131,9 +116,10 @@ class Contact extends Component {
           </Slide>
 
           <Slide right duration={1000}>
-            <aside className="four columns footer-widgets">
+            <aside className="contact-info-card footer-widgets">
               <div className="widget widget_contact">
-                <h4>Phone and Email</h4>
+                <p className="section-eyebrow">Direct contact</p>
+                <h3>Phone and email</h3>
                 <p className="address">
                   {name}
                   <br />
@@ -145,12 +131,24 @@ class Contact extends Component {
                 </p>
               </div>
 
-              <div className="widget widget_tweets">
-                <h4 className="widget-title">{header}</h4>
-                <ul id="twitter">
-                  {msg}
-                </ul>
-              </div>
+              {(header || messages.length > 0) && (
+                <div className="widget widget_tweets">
+                  {header && <h4 className="widget-title">{header}</h4>}
+                  {messages.length > 0 && (
+                    <ul id="twitter">
+                      {messages.map(({ message: itemMessage, url, date }) => (
+                        <li key={`${itemMessage}-${date}`}>
+                          <span>
+                            {itemMessage}
+                            {url && <span>{url}</span>}
+                          </span>
+                          {date && <b>{date}</b>}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
 
             </aside>
           </Slide>

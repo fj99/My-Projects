@@ -90,27 +90,32 @@ const Header = (props) => {
 
       <div className="row banner">
         <div className="banner-text">
+          <Fade bottom duration={800}>
+            <p className="hero-kicker">Full-stack engineering · Data · AI</p>
+          </Fade>
           <Fade bottom>
             <h1 className="responsive-headline">{name}</h1>
           </Fade>
           <Fade bottom duration={1200}>
-            <div className="App">
+            <div className="hero-role">
               <h3>
-                a <span ref={type} />
+                I&apos;m a <span ref={type} />
               </h3>
             </div>
           </Fade>
-          <hr />
+          <p className="hero-summary">
+            I build dependable software, data platforms, and thoughtful digital experiences
+            that turn complex problems into practical results.
+          </p>
           <Fade bottom duration={2000}>
-            <ul className="social">
+            <div className="hero-actions">
               <a href={project} className="button btn project-btn">
                 <i className="fa fa-book"></i>Projects
               </a>
               <a href={github} target="_blank" rel="noreferrer" className="button btn github-btn">
                 <i className="fa fa-github"></i>Github
               </a>
-              {/* {networkElement} */}
-            </ul>
+            </div>
           </Fade>
         </div>
       </div>

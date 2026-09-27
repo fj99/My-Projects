@@ -13,7 +13,7 @@ class Education extends Component {
     const educationSlides = this.props.data.education.map(function (education) {
       return (
         <SwiperSlide key={education.school}>
-          <div className="center">
+          <div className="education-card center">
             <img
               className="edu-pic"
               src={education.image}
@@ -31,9 +31,12 @@ class Education extends Component {
     });
 
     return (
-      <header id="edu">
-
-        <div className="banner">
+      <section id="edu">
+        <div className="row section-heading">
+          <p className="section-eyebrow">Education</p>
+          <h2>A foundation built on continuous learning.</h2>
+        </div>
+        <div className="education-slider-shell">
           <Slide left duration={1300}>
             <Swiper
               modules={[Autoplay, Navigation, Pagination]}
@@ -48,7 +51,7 @@ class Education extends Component {
             </Swiper>
           </Slide>
         </div>
-      </header>
+      </section>
     );
   }
 }
