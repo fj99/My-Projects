@@ -62,8 +62,14 @@
     "work": [
       {
         "company": "PetVetCare",
+        "title": "Senior Full Stack Developer",
+        "years": "Sept 2026 - Present",
+        "description": "As Senior Full Stack Developer at Pet-Vet, I provide architectural and technical leadership for the enterprise systems that support and scale the business. Building on the platforms delivered in my previous role, I now own their long-term strategy, system design, reliability, and optimization while guiding the developers responsible for their continued evolution. I translate business priorities into cohesive technical roadmaps, mentor and train engineers, set development standards, and coordinate cross-functional delivery across applications, data infrastructure, AI initiatives, and production operations. I partner with executive leadership to identify growth opportunities, modernize the technology landscape, and ensure the company's systems remain secure, scalable, and aligned with business goals."
+      },
+      {
+        "company": "PetVetCare",
         "title": "Full Stack Developer",
-        "years": "August 2023 - Now",
+        "years": "August 2023 - Sept 2026",
         "description": "As interim Lead Full Stack Developer at Pet-Vet, I design and build mission-critical applications, architect data infrastructure, and drive innovation across the enterprise. I created and own two cornerstone platforms: Data Farm, which reduced the company's month-end financial close process from several days to under 3 hours, and Watchdog, a dynamic ETL system that processes data from 700+ clinics daily, powering essential business operations by handling hundreds of terabytes within hours. My role spans full-stack development (Angular 18 / .NET Core 8 & 9), database architecture, server management (IIS/SQL Server), and AI strategy. I lead the internal AI team, serve as substitute lead developer, and regularly collaborate with executive leadership to align tech initiatives with business goals. A key highlight includes upgrading the company's SQL Server infrastructure from 2013 to 2024 with zero downtime, ensuring a seamless transition for all enterprise apps. Skills & Tools: Angular 18, .NET Core 8 & 9, SQL Server, IIS, ETL pipelines, AI Systems, DevOps, System Architecture. Business Impact: Streamlined financial operations, enabled scalable data ingestion, strengthened infrastructure reliability, and aligned technology with enterprise growth strategy."
       },
       {
