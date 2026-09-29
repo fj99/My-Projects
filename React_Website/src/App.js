@@ -29,7 +29,20 @@ class App extends Component {
         }
         return response.json();
       })
-      .then((data) => this.setState({ resumeData: data }))
+      .then((data) => {
+        this.setState({ resumeData: data }, () => {
+          const hash = window.location.hash;
+          const targetId = hash.startsWith("#project/")
+            ? "portfolio"
+            : hash.slice(1);
+
+          if (targetId) {
+            window.requestAnimationFrame(() => {
+              document.getElementById(targetId)?.scrollIntoView({ block: "start" });
+            });
+          }
+        });
+      })
       .catch((err) => {
         console.error(err);
         alert(err.message);

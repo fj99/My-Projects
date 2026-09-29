@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Fade from "react-reveal";
 import Typed from 'typed.js';
 
 const Header = (props) => {
   const type = useRef(null);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     if (props.data) {
@@ -21,6 +22,19 @@ const Header = (props) => {
     }
   }, [props.data]);
 
+  useEffect(() => {
+    if (!isNavOpen) return undefined;
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") {
+        setIsNavOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [isNavOpen]);
+
   if (!props.data) return null;
 
   const project = props.data.project;
@@ -30,47 +44,51 @@ const Header = (props) => {
   return (
     <header id="home">
 
-      <nav id="nav-wrap">
-        <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-          Show navigation
-        </a>
-        <a className="mobile-btn" href="#home" title="Hide navigation">
-          Hide navigation
-        </a>
+      <nav id="nav-wrap" className={isNavOpen ? "is-open" : ""}>
+        <button
+          className="mobile-menu-toggle"
+          type="button"
+          aria-label={isNavOpen ? "Close navigation" : "Open navigation"}
+          aria-controls="nav"
+          aria-expanded={isNavOpen}
+          onClick={() => setIsNavOpen((open) => !open)}
+        >
+          <span aria-hidden="true"></span>
+        </button>
 
         <ul id="nav" className="nav">
           <li className="current">
-            <a className="smoothscroll" href="#home">
+            <a className="smoothscroll" href="#home" onClick={() => setIsNavOpen(false)}>
               home
             </a>
           </li>
 
           <li>
-            <a className="smoothscroll" href="#about">
+            <a className="smoothscroll" href="#about" onClick={() => setIsNavOpen(false)}>
               About
             </a>
           </li>
 
           <li>
-            <a className="smoothscroll" href="#edu">
+            <a className="smoothscroll" href="#edu" onClick={() => setIsNavOpen(false)}>
               Education
             </a>
           </li>
 
           <li>
-            <a className="smoothscroll" href="#resume">
+            <a className="smoothscroll" href="#resume" onClick={() => setIsNavOpen(false)}>
               Experience
             </a>
           </li>
 
           <li>
-            <a className="smoothscroll" href="#portfolio">
+            <a className="smoothscroll" href="#portfolio" onClick={() => setIsNavOpen(false)}>
               Projects
             </a>
           </li>
 
           <li>
-            <a className="smoothscroll" href="#contact">
+            <a className="smoothscroll" href="#contact" onClick={() => setIsNavOpen(false)}>
               Contact
             </a>
           </li>
