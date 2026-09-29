@@ -114,7 +114,7 @@ class Contact extends Component {
             <aside className="contact-info-card footer-widgets">
               <div className="widget widget_contact">
                 <p className="section-eyebrow">Direct contact</p>
-                <h3>Phone and email</h3>
+                <h3>Phone and Email</h3>
                 <p className="address">
                   {name}
                   <br />

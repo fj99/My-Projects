@@ -14,16 +14,23 @@ class Resume extends Component {
     const work_title = this.props.data.work_title;
     const skills_title = this.props.data.skills_title;
 
-    const work = this.props.data.work.map(function (work) {
+    const work = this.props.data.work.map(function (work, index) {
       return (
-        <article className="experience-card" key={work.company}>
-          <h3 className="white">{work.company}</h3>
-          <p className="info off-white">
-            {work.title}
-            <span>&bull;</span> <em className="date">{work.years}</em>
-          </p>
-          <p className="off-white">{work.description}</p>
-        </article>
+        <Slide
+          left
+          duration={1100}
+          delay={index * 140}
+          key={`${work.company}-${work.title}-${work.years}`}
+        >
+          <article className="experience-card">
+            <h3 className="white">{work.company}</h3>
+            <p className="info off-white">
+              {work.title}
+              <span>&bull;</span> <em className="date">{work.years}</em>
+            </p>
+            <p className="off-white">{work.description}</p>
+          </article>
+        </Slide>
       );
     });
 
@@ -33,15 +40,15 @@ class Resume extends Component {
 
     return (
       <section id="resume">
-        <Slide left duration={1300}>
-          <div className="row work">
+        <div className="row work">
+          <Slide left duration={1300}>
             <div className="section-heading section-heading-left">
               <p className="section-eyebrow">Career</p>
               <h2>{work_title}</h2>
             </div>
-            <div className="experience-list">{work}</div>
-          </div>
-        </Slide>
+          </Slide>
+          <div className="experience-list">{work}</div>
+        </div>
 
         <Slide left duration={1300}>
           <div className="row skill">
