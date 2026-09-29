@@ -9,6 +9,7 @@ import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 import Background from "./Components/Backgrounds/Bounce";
+import InteractiveDepth from "./Components/InteractiveDepth";
 
 class App extends Component {
   constructor(props) {
@@ -56,6 +57,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <InteractiveDepth />
         <Background data={this.state.resumeData.main} />
         <Header data={this.state.resumeData.main} />
         <About data={this.state.resumeData.main} />

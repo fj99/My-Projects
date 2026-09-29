@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import Fade from "react-reveal";
 import Typed from 'typed.js';
+import HeroScene from "./HeroScene";
 
 const Header = (props) => {
   const type = useRef(null);
@@ -96,9 +97,10 @@ const Header = (props) => {
       </nav>
 
       <div className="row banner">
-        <div className="banner-text">
+        <div className="hero-shell">
+        <div className="banner-text hero-copy">
           <Fade bottom duration={800}>
-            <p className="hero-kicker">Full-stack engineering · Data · AI</p>
+            <p className="hero-kicker"><span className="hero-status-dot" /> Available for ambitious projects</p>
           </Fade>
           <Fade bottom>
             <h1 className="responsive-headline">{name}</h1>
@@ -111,8 +113,8 @@ const Header = (props) => {
             </div>
           </Fade>
           <p className="hero-summary">
-            I build dependable software, data platforms, and thoughtful digital experiences
-            that turn complex problems into practical results.
+            I architect dependable software, intelligent data platforms, and digital
+            experiences that turn complex operations into measurable results.
           </p>
           <Fade bottom duration={2000}>
             <div className="hero-actions">
@@ -125,10 +127,15 @@ const Header = (props) => {
             </div>
           </Fade>
         </div>
+        <Fade right duration={1200} distance="30px">
+          <HeroScene />
+        </Fade>
+        </div>
       </div>
 
       <p className="scrolldown">
         <a className="smoothscroll" href="#about">
+          <span>Scroll to explore</span>
           <i className="icon-down-circle"></i>
         </a>
       </p>
