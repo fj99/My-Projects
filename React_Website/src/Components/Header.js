@@ -43,8 +43,8 @@ const Header = (props) => {
   const name = props.data.name;
 
   return (
-    <header id="home">
-
+    <>
+      {/* Keep fixed navigation outside the hero's perspective container. */}
       <nav id="nav-wrap" className={isNavOpen ? "is-open" : ""}>
         <button
           className="mobile-menu-toggle"
@@ -96,6 +96,7 @@ const Header = (props) => {
         </ul>
       </nav>
 
+    <header id="home">
       <div className="row banner">
         <div className="hero-shell">
         <div className="banner-text hero-copy">
@@ -140,6 +141,7 @@ const Header = (props) => {
         </a>
       </p>
     </header>
+    </>
   );
 };
 
