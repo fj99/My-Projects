@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { A11y, Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -39,11 +39,21 @@ class Education extends Component {
         <div className="education-slider-shell">
           <Slide left duration={1300}>
             <Swiper
-              modules={[Autoplay, Navigation, Pagination]}
+              modules={[A11y, Autoplay, Navigation, Pagination]}
               slidesPerView={1}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
-              loop={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
+                stopOnLastSlide: true,
+              }}
+              loop={false}
               navigation
+              a11y={{
+                prevSlideMessage: 'Previous education card',
+                nextSlideMessage: 'Next education card',
+                slideLabelMessage: 'Education card {{index}} of {{slidesLength}}',
+              }}
               pagination={{ clickable: true }}
               className={'custom-swiper'}
             >

@@ -884,10 +884,20 @@ header .scrolldown a:hover {
   color: var(--accent);
 }
 
-.custom-swiper .swiper-button-next::after,
-.custom-swiper .swiper-button-prev::after {
-  font-size: 15px;
-  font-weight: 900;
+.custom-swiper .swiper-navigation-icon {
+  width: 12px;
+  height: 20px;
+}
+
+.custom-swiper .swiper-button-disabled {
+  opacity: 0.3;
+  color: var(--text-muted);
+}
+
+.custom-swiper .swiper-button-prev:focus-visible,
+.custom-swiper .swiper-button-next:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 /* Career and skills */
@@ -1394,7 +1404,7 @@ footer .copyright a {
   }
 
   .custom-swiper {
-    padding: 4px 10px 48px !important;
+    padding: 4px 10px 72px !important;
   }
 
   .education-card {
@@ -1402,9 +1412,19 @@ footer .copyright a {
     padding: 28px 24px 36px;
   }
 
-  .custom-swiper .swiper-button-next,
-  .custom-swiper .swiper-button-prev {
-    display: none;
+  .custom-swiper.swiper-horizontal .swiper-button-next,
+  .custom-swiper.swiper-horizontal .swiper-button-prev {
+    top: auto;
+    bottom: 4px;
+    display: flex;
+    margin-top: 0;
+  }
+
+  .custom-swiper.swiper-horizontal > .swiper-pagination {
+    right: 58px;
+    bottom: 14px;
+    left: 58px;
+    width: auto;
   }
 
   #resume .row.work,
