@@ -23,6 +23,7 @@
     "typed.js": "3.0.0"
   },
   "scripts": {
+    "test:contact": "node --test scripts/test-contact-submission.mjs",
     "validate:readmes": "node scripts/validate-project-readmes.cjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

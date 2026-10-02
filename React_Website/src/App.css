@@ -1183,6 +1183,29 @@ header .scrolldown a:hover {
   letter-spacing: -0.025em;
 }
 
+#contact button.submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
+}
+
+.contact-status:not(:empty) {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.contact-status p {
+  margin-bottom: 8px;
+}
+
+.contact-status-success {
+  color: #86efac;
+}
+
+.contact-status-error {
+  color: #fda4af;
+}
+
 #contact .contact-info-card .address {
   color: var(--text-muted);
   font: 400 16px/1.85 Inter, ui-sans-serif, system-ui, sans-serif;
