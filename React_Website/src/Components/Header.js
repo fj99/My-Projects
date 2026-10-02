@@ -109,13 +109,12 @@ const Header = (props) => {
           <Fade bottom duration={1200}>
             <div className="hero-role">
               <h3>
-                I&apos;m a <span ref={type} />
+                <span ref={type} />
               </h3>
             </div>
           </Fade>
           <p className="hero-summary">
-            I architect dependable software, intelligent data platforms, and digital
-            experiences that turn complex operations into measurable results.
+            {props.data.summary}
           </p>
           <Fade bottom duration={2000}>
             <div className="hero-actions">
