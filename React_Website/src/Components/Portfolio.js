@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Fade from "react-reveal";
+import scrollToProjectContent from "../scrollToProjectContent";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -43,7 +43,7 @@ class Portfolio extends Component {
     const selectedProjectKey = this.getSelectedProjectKey();
     this.setState({ selectedProjectKey }, () => {
       if (window.location.hash === "#portfolio" || selectedProjectKey) {
-        document.getElementById("portfolio")?.scrollIntoView({ block: "start" });
+        scrollToProjectContent();
       }
     });
   };
@@ -143,7 +143,6 @@ class Portfolio extends Component {
     return (
       <ThemeProvider theme={theme}>
         <section id="portfolio">
-          <Fade left duration={1000} distance="40px">
             <div className="row">
               <div className="twelve columns collapsed">
                 <div className="section-heading">
@@ -162,7 +161,6 @@ class Portfolio extends Component {
                 )}
               </div>
             </div>
-          </Fade>
         </section>
       </ThemeProvider>
     );

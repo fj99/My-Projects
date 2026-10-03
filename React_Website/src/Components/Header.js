@@ -2,10 +2,58 @@ import React, { useRef, useEffect, useState } from "react";
 import Fade from "react-reveal";
 import Typed from 'typed.js';
 import HeroScene from "./HeroScene";
+import scrollToProjectContent from "../scrollToProjectContent";
+
+const navigation = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "edu", label: "Education" },
+  { id: "resume", label: "Experience" },
+  { id: "portfolio", label: "Projects" },
+  { id: "contact", label: "Contact" },
+];
 
 const Header = (props) => {
   const type = useRef(null);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    if (!props.data) return undefined;
+    const sections = navigation.map(({ id }) => document.getElementById(id)).filter(Boolean);
+    let frame = null;
+
+    const updateActiveSection = () => {
+      frame = null;
+      // Track the section near the top of the reading area, below the fixed nav.
+      const navOffset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 84;
+      const readingLine = Math.max(navOffset, window.innerHeight * 0.3);
+      let current = sections[0]?.id || "home";
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= readingLine) current = section.id;
+      }
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        current = sections[sections.length - 1]?.id || current;
+      }
+      setActiveSection(current);
+    };
+
+    const scheduleUpdate = () => {
+      if (frame === null) frame = window.requestAnimationFrame(updateActiveSection);
+    };
+    const observer = new ResizeObserver(scheduleUpdate);
+    sections.forEach((section) => observer.observe(section));
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    scheduleUpdate();
+
+    return () => {
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+      observer.disconnect();
+      if (frame !== null) window.cancelAnimationFrame(frame);
+    };
+  }, [props.data]);
 
   useEffect(() => {
     if (props.data) {
@@ -36,6 +84,15 @@ const Header = (props) => {
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, [isNavOpen]);
 
+  const handleNavigationClick = (event) => {
+    setIsNavOpen(false);
+    if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (event.currentTarget.getAttribute("href") === "#portfolio" && window.location.hash === "#portfolio") {
+      event.preventDefault();
+      scrollToProjectContent();
+    }
+  };
+
   if (!props.data) return null;
 
   const project = props.data.project;
@@ -58,41 +115,18 @@ const Header = (props) => {
         </button>
 
         <ul id="nav" className="nav">
-          <li className="current">
-            <a className="smoothscroll" href="#home" onClick={() => setIsNavOpen(false)}>
-              home
-            </a>
-          </li>
-
-          <li>
-            <a className="smoothscroll" href="#about" onClick={() => setIsNavOpen(false)}>
-              About
-            </a>
-          </li>
-
-          <li>
-            <a className="smoothscroll" href="#edu" onClick={() => setIsNavOpen(false)}>
-              Education
-            </a>
-          </li>
-
-          <li>
-            <a className="smoothscroll" href="#resume" onClick={() => setIsNavOpen(false)}>
-              Experience
-            </a>
-          </li>
-
-          <li>
-            <a className="smoothscroll" href="#portfolio" onClick={() => setIsNavOpen(false)}>
-              Projects
-            </a>
-          </li>
-
-          <li>
-            <a className="smoothscroll" href="#contact" onClick={() => setIsNavOpen(false)}>
-              Contact
-            </a>
-          </li>
+          {navigation.map(({ id, label }) => (
+            <li key={id} className={activeSection === id ? "current" : undefined}>
+              <a
+                className="smoothscroll"
+                href={`#${id}`}
+                aria-current={activeSection === id ? "location" : undefined}
+                onClick={handleNavigationClick}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
 
@@ -118,7 +152,7 @@ const Header = (props) => {
           </p>
           <Fade bottom duration={2000}>
             <div className="hero-actions">
-              <a href={project} className="button btn project-btn">
+              <a href={project} className="button btn project-btn" onClick={handleNavigationClick}>
                 <i className="fa fa-book"></i>Projects
               </a>
               <a href={github} target="_blank" rel="noreferrer" className="button btn github-btn">

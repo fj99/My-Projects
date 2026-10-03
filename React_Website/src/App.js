@@ -10,6 +10,7 @@ import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 import Background from "./Components/Backgrounds/Bounce";
 import InteractiveDepth from "./Components/InteractiveDepth";
+import scrollToProjectContent from "./scrollToProjectContent";
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +48,8 @@ class App extends Component {
 
           if (targetId) {
             window.requestAnimationFrame(() => {
-              document.getElementById(targetId)?.scrollIntoView({ block: "start" });
+              if (targetId === "portfolio") scrollToProjectContent();
+              else document.getElementById(targetId)?.scrollIntoView({ block: "start" });
             });
           }
         });
