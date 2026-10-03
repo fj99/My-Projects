@@ -241,6 +241,14 @@
   border-radius: 8px;
 }
 
+.project-readme-image-fallback {
+  display: block;
+  padding: 16px;
+  border: 1px dashed rgba(148, 163, 184, 0.4);
+  border-radius: 8px;
+  color: #cbd5e1;
+}
+
 .hover-zoom:hover {
   transform: scale(1.08);
 }

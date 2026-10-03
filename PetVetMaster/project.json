@@ -1,0 +1,8 @@
+{
+  "title": "PetVet Master",
+  "category": "Full Stack Development",
+  "date": "Jan. 2024",
+  "description": "Architected a centralized enterprise DLL that serves as the single source of truth for all corporate data models and core utilities, ensuring total data consistency across the company's entire application ecosystem.",
+  "thumbnail": "portfolio-thumbnail.jpg",
+  "order": 3
+}

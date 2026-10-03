@@ -1,0 +1,8 @@
+{
+  "title": "PetVet Master API",
+  "category": "Full Stack Development",
+  "date": "Feb. 2024",
+  "description": "Architected a centralized Identity and Access Management (IAM) API that serves as the infrastructure's 'Source of Truth' enabling granular control over user provisioning, role based permissions, and authentication protocols across all integrated applications.",
+  "thumbnail": "portfolio-thumbnail.jpg",
+  "order": 2
+}

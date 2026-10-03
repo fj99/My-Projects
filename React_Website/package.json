@@ -17,14 +17,21 @@
     "react-markdown": "8.0.7",
     "react-reveal": "^1.2.2",
     "react-tooltip": "^5.28.0",
+    "rehype-raw": "^6.1.1",
+    "rehype-sanitize": "^5.0.1",
     "remark-gfm": "3.0.1",
+    "remark-parse": "^10.0.2",
+    "remark-rehype": "^10.1.0",
     "swiper": "^12.2.0",
     "tsparticles": "^1.43.1",
-    "typed.js": "3.0.0"
+    "typed.js": "3.0.0",
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.2"
   },
   "scripts": {
     "test:contact": "node --test scripts/test-contact-submission.mjs",
-    "validate:readmes": "node scripts/validate-project-readmes.cjs",
+    "validate:readmes": "node scripts/validate-project-readmes.mjs",
+    "test:projects": "node --test scripts/test-project-content.mjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "prestart": "npm run validate:readmes",

@@ -8,10 +8,11 @@ import { CardActionArea, CardActions, IconButton } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";
 import { createTheme, styled, ThemeProvider } from "@mui/material/styles";
-import ProjectReadme, {
+import ProjectReadme from "./ProjectReadme";
+import {
   getProjectReadmeKey,
   isExternalProjectUrl,
-} from "./ProjectReadme";
+} from "../projectContent";
 
 const theme = createTheme();
 
@@ -106,7 +107,7 @@ class Portfolio extends Component {
                 className="hover-zoom"
                 component="img"
                 height="140"
-                image={project.image}
+                image={`${import.meta.env.BASE_URL}${project.image}`}
                 alt={project.title}
               />
               <CardContent className="portfolio-card-title">

@@ -1,0 +1,8 @@
+{
+  "title": "DataFarm",
+  "category": "Full Stack Development",
+  "date": "Nov. 2023",
+  "description": "Developed a system that completely automates the End Of Month process (EOM) for finance and provides them with live data in their reports.",
+  "thumbnail": "portfolio-thumbnail.jpg",
+  "order": 4
+}

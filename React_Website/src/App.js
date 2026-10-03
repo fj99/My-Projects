@@ -31,6 +31,14 @@ class App extends Component {
         return response.json();
       })
       .then((data) => {
+        return fetch(`${import.meta.env.BASE_URL}project-catalog.json`, { cache: "no-store" })
+          .then((response) => {
+            if (!response.ok) throw new Error(`Unable to load project catalog: ${response.status}`);
+            return response.json();
+          })
+          .then((catalog) => ({ ...data, portfolio: { ...data.portfolio, projects: catalog.projects } }));
+      })
+      .then((data) => {
         this.setState({ resumeData: data }, () => {
           const hash = window.location.hash;
           const targetId = hash.startsWith("#project/")
