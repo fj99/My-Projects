@@ -1918,26 +1918,17 @@ header#home .hero-role h3 {
   box-shadow: 0 0 12px #34d399;
 }
 
-.scene-panel-metric {
+.scene-panel-sync {
+  top: auto;
+  left: auto;
   right: 5%;
   bottom: 13%;
-  padding: 14px 18px;
-  flex-direction: column;
   transform: translateZ(64px) rotateY(-10deg) rotateZ(-2deg);
   animation: panel-float 6.4s 0.5s ease-in-out infinite;
 }
 
-.scene-panel-metric strong {
-  color: #fff;
-  font-size: 24px;
-  letter-spacing: -0.04em;
-}
-
-.scene-panel-metric span {
-  color: #94a3b8;
-  font-size: 10px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.scene-panel-sync .panel-label {
+  color: #c4b5fd;
 }
 
 .scene-floor {
@@ -2221,7 +2212,7 @@ header .scrolldown a span {
   .orbit-three { width: 320px; height: 320px; margin: -160px; }
   .scene-panel-code { width: 136px; padding: 12px; }
   .scene-panel-status { right: 0; }
-  .scene-panel-metric { right: 1%; bottom: 8%; }
+  .scene-panel-sync { right: 1%; bottom: 8%; }
 
   header .scrolldown {
     display: none;

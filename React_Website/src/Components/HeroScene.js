@@ -57,9 +57,9 @@ export default function HeroScene() {
           <span className="status-dot" />
           <span>Systems online</span>
         </div>
-        <div className="scene-panel scene-panel-metric">
-          <strong>700+</strong>
-          <span>clinics connected</span>
+        <div className="scene-panel scene-panel-code scene-panel-sync">
+          <span className="panel-label">data.sync()</span>
+          <i /><i /><i />
         </div>
 
         <div className="scene-floor">
