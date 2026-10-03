@@ -304,12 +304,10 @@
   user-select: none;
   gap: var(--marquee-gap);
   margin-bottom: 1rem;
-  width: max-content;
-  animation: infinite-scroll var(--duration, 38s) linear infinite;
-  will-change: transform;
+  width: 100%;
 }
 
-.marquee-row-reverse {
+.marquee-row-reverse .marquee-content {
   animation-direction: reverse;
 }
 
@@ -317,16 +315,19 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: var(--marquee-gap);
-  min-width: max-content;
+  width: max-content;
+  min-width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
+  animation: infinite-scroll var(--duration, 38s) linear infinite;
+  will-change: transform;
 }
 
-/* Pause on hover so users can read tooltips easily */
-.marquee-row:hover {
+/* Keep both copies synchronized and pause over a stationary, full-width row. */
+.marquee-row:hover .marquee-content {
   animation-play-state: paused;
 }
 
@@ -336,12 +337,13 @@
   }
 
   to {
-    transform: translateX(calc(-50% - (var(--marquee-gap) / 2)));
+    transform: translateX(calc(-100% - var(--marquee-gap)));
   }
 }
 
 .skill-tile {
   display: grid;
+  flex-shrink: 0;
   place-items: center;
   width: clamp(82px, 9vw, 116px);
   aspect-ratio: 1;
@@ -1556,7 +1558,7 @@ footer .copyright a {
     scroll-behavior: auto;
   }
 
-  .marquee-row {
+  .marquee-content {
     animation-play-state: paused;
   }
 

@@ -66,7 +66,7 @@ export default function HeroScene() {
           <div className="floor-ring" />
         </div>
       </div>
-      <p className="scene-hint"><span /> Move to explore</p>
+      {/* <p className="scene-hint"><span /> Move to explore</p> */}
     </div>
   );
 }
