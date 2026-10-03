@@ -1,13 +1,30 @@
 import React, { Component } from "react";
 import { Fade, Slide } from "react-reveal";
-import { Helmet } from 'react-helmet';
+import { CONTACT_ENDPOINT, submitContact } from "../contactSubmission";
 
 class Contact extends Component {
-  onSubmit = (e) => {
+  state = { status: "idle", error: "" };
+  submitting = false;
+
+  onSubmit = async (e) => {
     e.preventDefault();
-    // Perform form submission logic here
-    e.target.submit();
-    // e.push('https://api.web3forms.com/submit');
+    if (this.submitting) return;
+
+    const form = e.currentTarget;
+    if (!form.reportValidity()) return;
+    const formData = new FormData(form);
+    this.submitting = true;
+    this.setState({ status: "sending", error: "" });
+
+    try {
+      await submitContact(formData);
+      form.reset();
+      this.setState({ status: "success" });
+    } catch (error) {
+      this.setState({ status: "error", error: error.message });
+    } finally {
+      this.submitting = false;
+    }
   };
 
   render() {
@@ -31,15 +48,17 @@ class Contact extends Component {
         <div className="row contact-layout">
           <Slide left duration={1000}>
             <div className="contact-form-card">
-              <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" name="contactForm" onSubmit={this.onSubmit}>
-                <fieldset>
+              <form action={CONTACT_ENDPOINT} method="POST" id="contactForm" name="contactForm" onSubmit={this.onSubmit} aria-busy={this.state.status === "sending"}>
+                <fieldset disabled={this.state.status === "sending"}>
                   <div>
                     <label htmlFor="contactName">
                       Name <span className="required">*</span>
                     </label>
                     <input type="hidden" name="access_key" value="2bfdd531-494d-44bf-9539-f8f008422ee2" />
-                    <input type="hidden" name="redirect" value="https://web3forms.com/success" />
                     <input type="hidden" name="from_name" value="My-Website" />
+                    <div hidden>
+                      <input type="checkbox" name="botcheck" tabIndex={-1} aria-label="Leave this field empty" />
+                    </div>
                     <input
                       type="text"
                       defaultValue=""
@@ -48,7 +67,6 @@ class Contact extends Component {
                       name="name"
                       autoComplete="name"
                       required
-                      onChange={this.handleChange}
                     />
                   </div>
 
@@ -64,7 +82,6 @@ class Contact extends Component {
                       name="email"
                       autoComplete="email"
                       required
-                      onChange={this.handleChange}
                     />
                   </div>
 
@@ -76,7 +93,6 @@ class Contact extends Component {
                       size="35"
                       id="contactSubject"
                       name="subject"
-                      onChange={this.handleChange}
                     />
                   </div>
 
@@ -88,25 +104,29 @@ class Contact extends Component {
                       cols="50"
                       rows="15"
                       id="contactMessage"
-                      name="contactMessage"
+                      name="message"
                       required
                     ></textarea>
                   </div>
 
                   <div>
-                    <button className="submit" type="submit">Submit</button>
-                    <span id="image-loader">
-                      <img alt="" src="images/loader.gif" />
-                    </span>
+                    <button className="submit" type="submit">
+                      {this.state.status === "sending" ? "Sending…" : "Send message"}
+                    </button>
                   </div>
                 </fieldset>
               </form>
 
-              <div id="message-warning"> Error boy</div>
-              <div id="message-success">
-                <i className="fa fa-check"></i>Your message was sent, thank you!
-                <br />
+              <div className="contact-status" role="status" aria-live="polite">
+                {this.state.status === "sending" && <p>Sending your message…</p>}
+                {this.state.status === "success" && <p className="contact-status-success">Thank you! Your message has been submitted.</p>}
               </div>
+              {this.state.status === "error" && (
+                <div className="contact-status contact-status-error" role="alert">
+                  <p>{this.state.error}</p>
+                  <a href={`mailto:${email}`}>Email me directly at {email}</a>
+                </div>
+              )}
             </div>
           </Slide>
 
@@ -129,9 +149,6 @@ class Contact extends Component {
             </aside>
           </Slide>
         </div >
-        <Helmet>
-          <script src="https://web3forms.com/client/script.js" async defer></script>
-        </Helmet>
       </section >
     );
 

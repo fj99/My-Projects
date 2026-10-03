@@ -1,0 +1,8 @@
+{
+  "title": "Air Chat",
+  "category": "Web Development",
+  "date": "Sep. 2018",
+  "description": "Developed an encrypted instant messaging web app with real-time communication using Flask and Socket.io. Users create usernames and join chat rooms using room numbers to prevent packet capture software interception.",
+  "thumbnail": "portfolio-thumbnail.jpg",
+  "order": 16
+}

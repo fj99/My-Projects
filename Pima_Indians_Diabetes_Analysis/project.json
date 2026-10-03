@@ -1,0 +1,11 @@
+{
+  "title": "Pima Indians Diabetes Analysis",
+  "category": "Data Science",
+  "date": "Mar. 2023",
+  "description": "Here, I'am analyzing different aspects of Diabetes in the Pima Diabetes Analysis by doing Exploratory Data Analysis.",
+  "thumbnail": "portfolio-thumbnail.jpg",
+  "order": 7,
+  "publicFiles": [
+    "Diabetes_analysis.html"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Collaborative Information Center",
+  "category": "Web Development",
+  "date": "Sep. 2018",
+  "description": "The app allows user registration with email verification, job listing creation, and applications. Email notifications provide updates, and employers can access employee information.",
+  "thumbnail": "portfolio-thumbnail.jpg",
+  "order": 15
+}

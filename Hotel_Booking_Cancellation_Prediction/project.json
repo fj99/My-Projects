@@ -1,0 +1,11 @@
+{
+  "title": "Hotel Booking Cancellation Prediction",
+  "category": "Data Science",
+  "date": "Apr. 2023",
+  "description": "The increasing number of cancellations in the hotel industry demands a Machine Learning-based solution to predict which bookings are likely to be canceled.",
+  "thumbnail": "portfolio-thumbnail.jpg",
+  "order": 6,
+  "publicFiles": [
+    "Booking_project.html"
+  ]
+}

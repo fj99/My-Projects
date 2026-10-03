@@ -6,7 +6,7 @@
 # Presentation of App
 
 ## Homepage
-![homepage](Presentation/Children Daycare Full.png)
+![homepage](Presentation/Children%20Daycare%20Full.png)
 
 ## Create Employee account
 ![This page allows you to create an employee account](Presentation/Employee%20Sign%20up.png)

@@ -1,0 +1,11 @@
+{
+  "title": "Netflix Movie Recommendation",
+  "category": "Data Science",
+  "date": "May. 2023",
+  "description": "To enhance customer satisfaction and improve revenue, I built a **Recommendation System** that suggests relevant movies to users based on their historical interactions.",
+  "thumbnail": "portfolio-thumbnail.jpg",
+  "order": 5,
+  "publicFiles": [
+    "Neflix_project.html"
+  ]
+}

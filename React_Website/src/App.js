@@ -9,6 +9,8 @@ import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
 import Background from "./Components/Backgrounds/Bounce";
+import InteractiveDepth from "./Components/InteractiveDepth";
+import scrollToProjectContent from "./scrollToProjectContent";
 
 class App extends Component {
   constructor(props) {
@@ -30,6 +32,14 @@ class App extends Component {
         return response.json();
       })
       .then((data) => {
+        return fetch(`${import.meta.env.BASE_URL}project-catalog.json`, { cache: "no-store" })
+          .then((response) => {
+            if (!response.ok) throw new Error(`Unable to load project catalog: ${response.status}`);
+            return response.json();
+          })
+          .then((catalog) => ({ ...data, portfolio: { ...data.portfolio, projects: catalog.projects } }));
+      })
+      .then((data) => {
         this.setState({ resumeData: data }, () => {
           const hash = window.location.hash;
           const targetId = hash.startsWith("#project/")
@@ -38,7 +48,8 @@ class App extends Component {
 
           if (targetId) {
             window.requestAnimationFrame(() => {
-              document.getElementById(targetId)?.scrollIntoView({ block: "start" });
+              if (targetId === "portfolio") scrollToProjectContent();
+              else document.getElementById(targetId)?.scrollIntoView({ block: "start" });
             });
           }
         });
@@ -56,6 +67,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <InteractiveDepth />
         <Background data={this.state.resumeData.main} />
         <Header data={this.state.resumeData.main} />
         <About data={this.state.resumeData.main} />

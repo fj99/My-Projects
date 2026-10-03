@@ -37,6 +37,12 @@ jobs:
         working-directory: React_Website
         run: npm ci --legacy-peer-deps
 
+      - name: Test website
+        working-directory: React_Website
+        run: |
+          npm run test:projects
+          npm run test:contact
+
       - name: Build website
         working-directory: React_Website
         run: npm run build
